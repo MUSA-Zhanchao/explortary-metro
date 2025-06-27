@@ -1,4 +1,4 @@
-# explortary-metro
+# exploratory-metro
 
 Zhanchao Yang
 
