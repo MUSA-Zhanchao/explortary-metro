@@ -18,12 +18,12 @@ dd <- read.xlsx("../Survey Data/Script/TripsAnalysis/TripsAnalysis/08-24_SurveyD
 # Hog
 # PART 1 - Basic household and house information
 # P1 housing type
-hog_housingtype<-hog %>% 
-  filter(!is.na(P1)) %>% 
-  group_by(P1) %>% 
-  summarise(Count=n()) %>% 
+hog_housingtype<-hog %>%
+  filter(!is.na(P1)) %>%
+  group_by(P1) %>%
+  summarise(Count=n()) %>%
   mutate(
-    Percentage_housingtype = (Count / sum(Count)) * 100) %>% 
+    Percentage_housingtype = (Count / sum(Count)) * 100) %>%
   mutate(
     label=case_when(
       P1 == 1 ~ "House",
@@ -33,7 +33,7 @@ hog_housingtype<-hog %>%
       P1 == 5 ~ "Indigenous dwelling",
       P1 == 89 ~ "Other type of dwelling"
     )
-  ) %>% 
+  ) %>%
   arrange(desc(Count))
 print(hog_housingtype)
 
@@ -50,29 +50,29 @@ hog_householdsnumber <- hog %>%
 print(hog_householdsnumber)
 
 # P3 total number of household members
-hog_householdmembers <- hog %>% 
-  filter(!is.na(P3)) %>% 
-  group_by(P3) %>% 
-  summarise(Count = n()) %>% 
+hog_householdmembers <- hog %>%
+  filter(!is.na(P3)) %>%
+  group_by(P3) %>%
+  summarise(Count = n()) %>%
   mutate(
     Percentage_householdmember = (Count / sum(Count)) * 100,
-    P3 = factor(P3, levels = as.character(1:20)) 
+    P3 = factor(P3, levels = as.character(1:20))
   )
 print(hog_householdmembers)
 
 # P4 how many people are over 5 years old
-hog_over5 <- hog %>% 
-  filter(!is.na(P4)) %>% 
-  group_by(P4) %>% 
-  summarise(Count = n()) %>% 
+hog_over5 <- hog %>%
+  filter(!is.na(P4)) %>%
+  group_by(P4) %>%
+  summarise(Count = n()) %>%
   mutate(
-    Percentage_over5 = (Count / sum(Count)) * 100) %>% 
+    Percentage_over5 = (Count / sum(Count)) * 100) %>%
   mutate(P4 = factor(as.character(P4)))
 print(hog_over5)
 
 # monthly income
 hog_income <- hog %>%
-  filter(!is.na(P50) & P50 != 99) %>%  
+  filter(!is.na(P50) & P50 != 99) %>%
   group_by(P50) %>%
   summarise(Count = n()) %>%
   mutate(
@@ -98,9 +98,9 @@ print(hog_income)
 # 1	Propietario(a)
 # 2	Arrendatario(a)
 homerent<- hog %>%
-  count(P82) %>%  
+  count(P82) %>%
   mutate(
-    Percentage = (n / sum(n)) * 100 
+    Percentage = (n / sum(n)) * 100
   )
 print(homerent)
 
@@ -108,9 +108,9 @@ print(homerent)
 # 1	Sí
 # 2	No
 privateparking<- hog %>%
-  count(P85) %>%  
+  count(P85) %>%
   mutate(
-    Percentage = (n / sum(n)) * 100  
+    Percentage = (n / sum(n)) * 100
   )
 print(privateparking)
 
@@ -136,11 +136,11 @@ print(hog_age)
 
 #P86 - What is the monthly rent?
 hog_rent <- hog %>%
-  filter(!is.na(P86) & P86 != 99) %>% 
+  filter(!is.na(P86) & P86 != 99) %>%
   group_by(P86) %>%
   summarise(Count = n()) %>%
   mutate(
-    Percentage_rent = (Count / sum(Count)) * 100,  
+    Percentage_rent = (Count / sum(Count)) * 100,
     Rent_range = case_when(
       P86 == 1  ~ "Less than or equal to $500,000",
       P86 == 2  ~ "More than $500,000 and up to $1,000,000",
@@ -153,7 +153,7 @@ hog_rent <- hog %>%
       P86 == 99 ~ "Does not know / No response"
     ),
     Rent_range = factor(Rent_range, levels = c(
-      "Less than or equal to $500,000", 
+      "Less than or equal to $500,000",
       "More than $500,000 and up to $1,000,000",
       "More than $1,000,000 and up to $1,500,000",
       "More than $1,500,000 and up to $2,000,000",
@@ -162,9 +162,9 @@ hog_rent <- hog %>%
       "More than $4,000,000 and up to $5,000,000",
       "More than $5,000,000",
       "Does not know / No response"
-    ))  
+    ))
   ) %>%
-  arrange(Rent_range)  
+  arrange(Rent_range)
 print(hog_rent)
 
 # PART 2 - Commute Transportation Mode
@@ -234,11 +234,11 @@ combined_matrix <- reduce(results, full_join, by = "label")
 
 # What mode of transportation do you use to connect to public transport?
 hog_meansconnectpublictran <- hog %>%
-  filter(!is.na(P80)) %>% 
+  filter(!is.na(P80)) %>%
   group_by(P80) %>%
   summarise(Count = n()) %>%
   mutate(
-    Percentage = (Count / sum(Count)) * 100,  
+    Percentage = (Count / sum(Count)) * 100,
     label = case_when(
       P80 == 1  ~ "A pie",
       P80 == 2  ~ "Bicicleta",
@@ -311,22 +311,22 @@ ggplot(reason_change, aes(x = reorder(Reason, -Count), y = Count, fill = Reason)
   geom_text(aes(label = Count), position = position_stack(vjust = 0.5), color = "black") +
   labs(
     title = "Reasons for Changes in Mobility",
-    x = NULL,  
+    x = NULL,
     y = "Count"
   ) +
   theme_minimal() +
   theme(
-    axis.text.x = element_blank(),   
-    axis.ticks.x = element_blank(),  
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
     legend.position = "right"
   )
 
 # travel frequency before 2019
 frequency_of_daily_trip <- hog %>%
-  filter(!is.na(P45)) %>% 
+  filter(!is.na(P45)) %>%
   group_by(P45) %>%
   summarise(Count = n()) %>%
-  mutate(Percentage = (Count / sum(Count)) * 100)  
+  mutate(Percentage = (Count / sum(Count)) * 100)
 
 frequency_of_daily_trip <- frequency_of_daily_trip %>%
   mutate(
@@ -366,20 +366,20 @@ generate_summary_table <- function(data, questions) {
       pivot_wider(names_from = response, values_from = percent)
     if (!"Yes" %in% colnames(temp)) temp$Yes <- 0
     if (!"No" %in% colnames(temp))  temp$No  <- 0
-    
+
     temp$Question <- question_map[[q]]
     return(temp)
   })
-  
+
   result <- bind_rows(summary_list) %>%
     select(Question, Yes, No)
-  
+
   return(result)
 }
 
 hog_transmil <- hog %>%
   select(all_of(questions)) %>%
-  mutate(across(everything(), as.character))  
+  mutate(across(everything(), as.character))
 
 attitude_pt_summarytable <- generate_summary_table(hog_transmil, questions)
 print(attitude_pt_summarytable)
@@ -388,7 +388,7 @@ print(attitude_pt_summarytable)
 hog_factor <- hog %>% select(P65_1, P65_2)
 hog_factor <- hog_factor %>%
   mutate(P65_1 = as.character(P65_1),
-         P65_2 = as.character(P65_2)) %>%  
+         P65_2 = as.character(P65_2)) %>%
   mutate(P65_1 = case_when(
     P65_1 == "1" ~ "Time of trip",
     P65_1 == "2" ~ "Closeness of station",
@@ -413,25 +413,25 @@ hog_factor <- hog_factor %>%
 table(hog_factor$P65_2)
 
 ggplot(hog_factor, aes(x = P65_1)) +
-  geom_bar(fill = "#9eadc8", color = "black") +  
-  labs(title = "Most Imporant Factor for a Pleasant Trip", 
-       x = "Response", 
+  geom_bar(fill = "#9eadc8", color = "black") +
+  labs(title = "Most Imporant Factor for a Pleasant Trip",
+       x = "Response",
        y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ggplot(hog_factor, aes(x = P65_2)) +
-  geom_bar(fill = "#d6d84f", color = "black") +  
-  labs(title = "Second Most Imporant Factor for a Pleasant Trip", 
-       x = "Response", 
+  geom_bar(fill = "#d6d84f", color = "black") +
+  labs(title = "Second Most Imporant Factor for a Pleasant Trip",
+       x = "Response",
        y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 filtered_data <- hog_factor %>% filter(P65_1 == "Security on the system")
 
 ggplot(filtered_data, aes(x = P65_2)) +
   geom_bar(fill = "#b9e28c", color = "black") +
-  labs(title = "Second Most Important Factor for a Pleasant Trip\n(Among Those Who Prioritized Security)", 
-       x = "Response", 
+  labs(title = "Second Most Important Factor for a Pleasant Trip\n(Among Those Who Prioritized Security)",
+       x = "Response",
        y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -439,24 +439,24 @@ ggplot(filtered_data, aes(x = P65_2)) +
 hog_lmg <- hog %>% select(P66, P67, P68, P70, P71, P72, P73, P78)
 #Travel time changes
 hog_lmg <- hog_lmg %>%
-  mutate(P66 = as.character(P66)) %>%  
+  mutate(P66 = as.character(P66)) %>%
   mutate(P66 = case_when(
     P66 == "1" ~ "More Time",
     P66 == "2" ~ "Same Amount of Time",
     P66 == "3" ~ "Less Time",
-    TRUE ~ P66  
+    TRUE ~ P66
   ))
 
 ggplot(hog_lmg, aes(x = P66)) +
-  geom_bar(fill = "#5b507a", color = "black") +  
-  labs(title = "How do you think travel time will change due to the construction of the Bogotá metro (LMB)?", 
-       x = "Response", 
+  geom_bar(fill = "#5b507a", color = "black") +
+  labs(title = "How do you think travel time will change due to the construction of the Bogotá metro (LMB)?",
+       x = "Response",
        y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #How optimistic are you about the LMB project?
 hog_lmg <- hog_lmg %>%
-  mutate(P67 = as.character(P67)) %>%  
+  mutate(P67 = as.character(P67)) %>%
   mutate(P67 = case_when(
     P67 == "1" ~ "Very Pessimistic",
     P67 == "2" ~ "Pessimistic",
@@ -464,7 +464,7 @@ hog_lmg <- hog_lmg %>%
     P67 == "4" ~ "Moderately Optimistic",
     P67 == "5" ~ "Optimistic",
     P67 == "6" ~ "Very Optimistic",
-    TRUE ~ P67  
+    TRUE ~ P67
   ))
 
 hog_lmg <- hog_lmg %>%
@@ -474,11 +474,11 @@ hog_lmg <- hog_lmg %>%
   )))
 
 ggplot(hog_lmg, aes(x = P67)) +
-  geom_bar(fill = "#5b618a", color = "black") +  
-  labs(title = "How optimistic are you about the LMB project?", 
-       x = "Response", 
+  geom_bar(fill = "#5b618a", color = "black") +
+  labs(title = "How optimistic are you about the LMB project?",
+       x = "Response",
        y = "Count") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #LMB route information
 info_levels <- c(
@@ -524,8 +524,8 @@ table(hog_lmg$P78)
 
 ggplot(hog_lmg, aes(x = P78)) +
   geom_bar(fill = "lightgreen", color = "black") +  # Use geom_bar() for categorical data
-  labs(title = "Will you use the LMB once it is operational?", 
-       x = "Response", 
+  labs(title = "Will you use the LMB once it is operational?",
+       x = "Response",
        y = "Count") +
   theme_minimal()
 
@@ -534,7 +534,7 @@ hog_future <- hog %>% select(P81, P87, P90, P91, P92, P95, P96, P98, P100, P101)
 
 #Willingness to pay
 hog_future <- hog_future %>%
-  mutate(P81 = as.character(P81)) %>%  
+  mutate(P81 = as.character(P81)) %>%
   mutate(P81 = case_when(
     P81 == "1" ~ "$3,200 or less",
     P81 == "2" ~ "$3,200-3,500",
@@ -547,13 +547,13 @@ hog_future <- hog_future %>%
 
 ggplot(hog_future, aes(x = P81)) +
   geom_bar(fill = "#5b618a", color = "black") +  # Use geom_bar() for categorical data
-  labs(title = "How much are you willing to pay to ride the LMB?", 
-       x = "Response", 
+  labs(title = "How much are you willing to pay to ride the LMB?",
+       x = "Response",
        y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-table(hog_future$P87) 
-table(hog_future$P90) 
+table(hog_future$P87)
+table(hog_future$P90)
 table(hog_future$P91)
 table(hog_future$P92)
 table(hog_future$P95)
@@ -584,19 +584,19 @@ generate_future_summary_table <- function(data, questions, label_map, question_m
       mutate(percent = round(100 * n / sum(n), 1)) %>%
       select(-n) %>%
       pivot_wider(names_from = response, values_from = percent)
-    
+
     for (opt in c("Increase", "Stay the Same", "Decrease")) {
       if (!(opt %in% colnames(temp))) temp[[opt]] <- 0
     }
-    
+
     temp$Question <- question_map[[q]]
     return(temp)
   })
-  
+
   result <- bind_rows(summary_list) %>%
     select(Question, Decrease, Increase, `Stay the Same`) %>%
     mutate(across(where(is.numeric), ~ sprintf("%.1f%%", .x)))
-  
+
   return(result)
 }
 
@@ -632,7 +632,7 @@ per$Edad <- recode(per$Edad,
                    "Mas de 65 años" = "Over 65 years",
                    "Other" = "Other")
 ggplot(per, aes(x = Edad)) +
-  geom_bar(fill = "skyblue") + 
+  geom_bar(fill = "skyblue") +
   labs(title = "Age Distribution", x = "Age Group", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -651,8 +651,8 @@ per$P14 <- recode(per$P14,
                   "Trabajador independiente" = "Independent worker",
                   "Patrón/empleador" = "Employer",
                   "Vendedor informal" = "Informal seller")
-ggplot(per, aes(x = P14)) + 
-  geom_bar(fill = "skyblue") + 
+ggplot(per, aes(x = P14)) +
+  geom_bar(fill = "skyblue") +
   labs(title = "Job Category Distribution", x = "Job Category", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
@@ -664,9 +664,9 @@ per$P10 <- recode(per$P10,
                   "Otro" = "Other",
                   "No binario" = "Non-binary",
                   "No sabe/No responde" = "Do not know/No response")
-ggplot(per, aes(x = P10)) + 
-  geom_bar(fill = "skyblue") + 
-  labs(title = "Gender Distribution", x = "Gender", y = "Count") + 
+ggplot(per, aes(x = P10)) +
+  geom_bar(fill = "skyblue") +
+  labs(title = "Gender Distribution", x = "Gender", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
@@ -679,16 +679,16 @@ per$P8 <- recode(per$P8,
                  "Nieto (a)" = "Grandchild",
                  "Otro pariente del jefe" = "Other Relative of Head",
                  "Otro NO pariente del jefe" = "Other Non-relative of Head")
-ggplot(per, aes(x = P8)) + 
-  geom_bar(fill = "skyblue") + 
-  labs(title = "Family Role Distribution", x = "Family Role", y = "Count") + 
+ggplot(per, aes(x = P8)) +
+  geom_bar(fill = "skyblue") +
+  labs(title = "Family Role Distribution", x = "Family Role", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
 ###---------------------------------------------------------------###
 
 # Trips
-trips <- trips %>% 
+trips <- trips %>%
   mutate(posicionActualE = as.factor(posicionActualE),
          posicionActualNumE = as.factor(posicionActualNumE),
          linea_M = as.factor(linea_M),
@@ -705,9 +705,9 @@ summarize_HHTS <- function(df, dd, varsOfInterest) {
   d3 <- data.frame()
   for (i in varsOfInterest) {
     d1 <- subset(dd, variable == i)
-    d2 <- trips %>% 
-      group_by(trips[,i]) %>% 
-      summarize(count = n()) %>% 
+    d2 <- trips %>%
+      group_by(trips[,i]) %>%
+      summarize(count = n()) %>%
       mutate(countPct = round(count/sum(count, na.rm = T)*100,1))
     colnames(d2)[1] <- "value"
     d1 <- merge(d2, d1, by = "value", all = T)
@@ -718,9 +718,9 @@ summarize_HHTS <- function(df, dd, varsOfInterest) {
 
 summary_counts_noTot <- summarize_HHTS(trips, dd, interestingVars)
 summary_counts_reclass <- drop_na(summary_counts_noTot) %>%
-  group_by(description, recode) %>% 
-  summarize(total_response = sum(count)) %>% 
-  group_by(description) %>% 
+  group_by(description, recode) %>%
+  summarize(total_response = sum(count)) %>%
+  group_by(description) %>%
   mutate(total_response_pct = round(total_response/sum(total_response)*100, 1))
 
 ggplot(summary_counts_reclass, aes(x = recode, y = total_response_pct)) +
@@ -743,35 +743,35 @@ ggplot(summary_counts_reclass, aes(x = recode, y = total_response_pct)) +
 #    axis.text.x = element_text(angle = 70, hjust = 1, size = 8)
 #   )
 # summary_age <- trips %>%
-#   group_by(Edad) %>% 
+#   group_by(Edad) %>%
 #   summarize(total = sum(Fact_Expa_Per)) %>%
-#   mutate(percent = total/sum(total)) %>% 
-#   left_join(dd %>% subset(variable == "Edad") %>% select(value, label), by = c("Edad" = "value")) %>% 
+#   mutate(percent = total/sum(total)) %>%
+#   left_join(dd %>% subset(variable == "Edad") %>% select(value, label), by = c("Edad" = "value")) %>%
 #   left_join(x = dd, by = "label")
- 
+
 # summary_age2 <- trips %>%
-#   group_by(P25) %>% 
+#   group_by(P25) %>%
 #   summarize(variable = "P25",
 #             count = n(),
-#             total = sum(Fact_Expa_Per)) %>% 
+#             total = sum(Fact_Expa_Per)) %>%
 #   mutate(countPct = round(count/sum(count)*100, 1),
 #          totalPct = round(total/sum(total)*100, 1))
-   
- 
+
+
 # summary_modeType <- trips %>%
-#   group_by(P24) %>% 
-#  summarize(total = sum(Fact_Expa_Per)) %>% 
-#  mutate(percent = total/sum(total)) %>% 
+#   group_by(P24) %>%
+#  summarize(total = sum(Fact_Expa_Per)) %>%
+#  mutate(percent = total/sum(total)) %>%
 #   left_join(dd %>% subset(variable == "P24") %>% select(value, label), by = c("P24" = "value"))
- 
+
 # varsOfInterest <- c('P10', 'Edad', 'linea_M','P24', 'P24_A', 'P25', 'P31')
 # summary_counts <- data.frame()
 # for (i in varsOfInterest){
 #  d1 <- subset(dd, variable == i)
 #   d2 <- trips %>%
-#     group_by(trips[,i]) %>% 
+#     group_by(trips[,i]) %>%
 #     summarize(count = n(),
-#               total = round(sum(Fact_Expa_Per), 0)) %>% 
+#               total = round(sum(Fact_Expa_Per), 0)) %>%
 #     mutate(countPct = round(count/sum(count)*100, 1),
 #            totalPct = round(total/sum(total)*100, 1))
 #   colnames(d2)[1] <- "value"
@@ -781,5 +781,3 @@ ggplot(summary_counts_reclass, aes(x = recode, y = total_response_pct)) +
 # summary_counts_long <- select(summary_counts_noTot, -total_response) %>%
 #   pivot_longer(cols = c(countPct, totalPct), names_to = "value_type", values_to = "data")
 # summary_counts_long[is.na(summary_counts_long$data), "data"] <- 0
-
-
