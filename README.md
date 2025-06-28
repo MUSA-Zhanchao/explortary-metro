@@ -1,4 +1,4 @@
-# exploratory-metro
+# Metro Line comparison in Bogota
 
 Zhanchao Yang
 
