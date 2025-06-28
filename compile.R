@@ -97,6 +97,10 @@ p87_line2 <- three_opt(line2, P87)
 p90_line1 <- three_opt(line1, P90)
 p90_line2 <- three_opt(line2, P90)
 
+#p91: living expense
+p91_line1 <- three_opt(line1, P91)
+p91_line2 <- three_opt(line2, P91)
+
 #P92: local commerical
 p92_line1 <- three_opt(line1, P92)
 p92_line2 <- three_opt(line2, P92)
