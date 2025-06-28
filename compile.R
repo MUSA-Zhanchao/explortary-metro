@@ -17,7 +17,7 @@ line2<- hog%>%
   filter(linea_M == 2)
 
 
-######## 
+########
 # metro attitute
 count_pct <- function(data, var) {
   data %>%
@@ -175,7 +175,7 @@ p83_line1 <- line1 %>%
       P83 == 5 ~ "More than 15 and up to 20 years",
       P83 == 6 ~ "More than 20 years"
     )
-  ) 
+  )
 
 P83_line2 <- line2 %>%
   filter(!is.na(P83)) %>%
