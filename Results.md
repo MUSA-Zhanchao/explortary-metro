@@ -30,17 +30,17 @@ Author: Zhanchao Yang, Chuwen Zhong
 ---
 
 ### P50. Monthly income
-1. $0 – $400,000  
-2. $400,001 – $800,000  
-3. $800,001 – $1,160,000  
-4. $1,160,000 – $1,500,000  
-5. $1,500,001 – $2,000,000  
-6. $2,000,001 – $2,500,000  
-7. $2,500,001 – $3,500,000  
-8. $3,500,001 – $4,900,000  
-9. $4,900,001 – $6,800,000  
-10. $6,800,001 – $9,000,000  
-11. Más de $9,000,000  
+1. $0 – $400,000
+2. $400,001 – $800,000
+3. $800,001 – $1,160,000
+4. $1,160,000 – $1,500,000
+5. $1,500,001 – $2,000,000
+6. $2,000,001 – $2,500,000
+7. $2,500,001 – $3,500,000
+8. $3,500,001 – $4,900,000
+9. $4,900,001 – $6,800,000
+10. $6,800,001 – $9,000,000
+11. Más de $9,000,000
 
 ![image](https://github.com/user-attachments/assets/42de9915-78ea-42da-96ef-4a6592315df3)
 
@@ -134,14 +134,14 @@ Author: Zhanchao Yang, Chuwen Zhong
 ---
 
 ### P69_1. First statement major disagreement
-1. The metro is elevated  
-2. Distrust in the district's ability to manage and properly maintain the metro system  
-3. Environmental impact  
-4. Noise impact  
-5. Fears about potential expropriation of properties or displacement of local communities  
-6. Preference for other forms of transportation  
-7. Financial costs of developing the project  
-8. Concerns about traffic congestion during metro construction  
+1. The metro is elevated
+2. Distrust in the district's ability to manage and properly maintain the metro system
+3. Environmental impact
+4. Noise impact
+5. Fears about potential expropriation of properties or displacement of local communities
+6. Preference for other forms of transportation
+7. Financial costs of developing the project
+8. Concerns about traffic congestion during metro construction
 
 ![image](https://github.com/user-attachments/assets/f447e676-38fe-44ce-8213-7bda5afa3009)
 
