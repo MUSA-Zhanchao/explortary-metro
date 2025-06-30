@@ -25,11 +25,33 @@ Author: Zhanchao Yang, Chuwen Zhong
 
 
 ## P42. In 2019, before the COVID-19 pandemic, what was the primary means of transportation you used for your daily commute?
-![image](https://github.com/user-attachments/assets/d4b9155d-2f7e-4e2c-aa13-49b7a0ee985a)
+
+| Transportation Mode| Metro 1 | Metro 2 |
+| -- | --------------| -------------- |
+| Bicycle | 21 (7.3%)     | 34 (13.8%)     |
+| Car | 22 (7.6%)     | 22 (8.9%)     |
+| Motorcycle | 22 (7.6%)     | 14 (5.7%)     |
+| Other | 11 (3.8%)     | 13 (5.3%)     |
+| Other public | 3 (1%)      | 2 (0.8%)      |
+| Public Bus | 168 (58.1%)| 138 (55.9%)      |
+| Taxi | 16 (5.5%)      | 5 (2%)      |
+| Walk | 26 (9%)      | 18 (7.3%)      |
+| Other private | 0      | 1 (0.4%)      |
 
 
 ## P43. In 2020, during the COVID-19 pandemic, what was the primary means of transportation you used for your daily commute?
-![image](https://github.com/user-attachments/assets/30b28b1e-ad15-4466-9798-5b107a720135)
+
+| Transportation Mode| Metro 1 | Metro 2 |
+| -- | --------------| -------------- |
+| Bicycle | 27 (9.3%)     | 39 (15.8%)     |
+| Car | 24 (8.3%)     | 23 (9.3%)     |
+| Motorcycle | 14 (4.8%)     | 10 (4%)     |
+| Other | 41 (14.2%)     | 41 (16.6%)     |
+| Other public | 2 (0.7%)      | 5 (2%)      |
+| Public Bus | 102 (35.3%)| 90 (36.4%)      |
+| Taxi | 20 (6.9%)      | 11 (4.5%)      |
+| Walk | 57 (19.7%)      | 26 (10.5%)      |
+| Other private | 2 (0.7%)      | 2 (0.8%)      |
 
 
 ## P50. Monthly income
