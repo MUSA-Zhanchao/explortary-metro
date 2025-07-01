@@ -12,10 +12,12 @@ By illuminating the perceptions held by various communities, we aim to inform bo
 
 # Method
 
-- exploratory: separate the Line 1 and Line 2 and map the key differences the two lines
+- Exploratory: separate the Line 1 and Line 2 and map the key differences the two lines
 
 
 # Results
+
+The travel survey compared the demographics, socio-economic conditions, and general perception between the metro 1 and metro 2 household. 
 
 ## Genral demographics
 
