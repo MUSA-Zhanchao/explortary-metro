@@ -11,15 +11,23 @@ This study examines how near subway line household perception different between 
 By illuminating the perceptions held by various communities, we aim to inform both policy adjustments and communication strategies that will maximize public support and ensure that Bogotá’s metro delivers on its promise of cleaner, more equitable urban mobility.
 
 # Method
+## Sampling and Participants
+This study employs a cross-sectional survey design to compare household perceptions and socio-economic profiles along Bogotá Metro Line 1 (elevated) and Line 2 (underground). A total of 537 households were collected, with 290 completed responses for Line 1 and 247 for Line 2 (response rates of 72.5% and 61.8%, respectively).
 
-- Exploratory: separate the Line 1 and Line 2 and map the key differences the two lines
 
+## Data Processing and Analysis
+- **Data Cleaning**: Responses were exported to R, where invalid entries were removed and categorical variables were recoded (e.g., income brackets standardized).
+- **Descriptive Statistics**: Frequencies and percentages were calculated for all variables by corridor.
+- **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential outcome*)
+- **Visualization**: Bar charts and cross-tabulations were generated to illustrate key contrasts.
+
+All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
 
 # Results
 
-The travel survey compared the demographics, socio-economic conditions, and general perception between the metro 1 and metro 2 household. 
+The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
 
-## Genral demographics
+## General demographics
 
 ### P1. What type of housing do you live in?
 | Housing Type         | Metro 1         | Metro 2         |
