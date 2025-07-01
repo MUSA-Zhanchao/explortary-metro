@@ -12,7 +12,7 @@ By illuminating the perceptions held by various communities, we aim to inform bo
 
 # Method
 ## Sampling and Participants
-This study employs a cross-sectional survey design to compare household perceptions and socio-economic profiles along Bogotá Metro Line 1 (elevated) and Line 2 (underground). A total of 537 households were collected, with 290 completed responses for Line 1 and 247 for Line 2 (response rates of 72.5% and 61.8%, respectively). 
+This study employs a cross-sectional survey design to compare household perceptions and socio-economic profiles along Bogotá Metro Line 1 (elevated) and Line 2 (underground). A total of 537 households were collected, with 290 completed responses for Line 1 and 247 for Line 2 (response rates of 72.5% and 61.8%, respectively).
 
 
 ## Data Processing and Analysis
@@ -25,7 +25,7 @@ All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggpl
 
 # Results
 
-The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation. 
+The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
 
 ## Genral demographics
 
