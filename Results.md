@@ -337,11 +337,11 @@
 
 ### Pre- and During-Pandemic Travel Modes
 - **Bicycle use**: Before COVID-19, 13.8% of Metro 2 commuters biked versus 7.3% for Metro 1; during the pandemic, this rose to 15.8% (Metro 2) vs. 9.3% (Metro 1)
-- **Walking**: Metro 1 saw higher walking rates during the pandemic (19.7%) compared to Metro 2 (10.5%) 
+- **Walking**: Metro 1 saw higher walking rates during the pandemic (19.7%) compared to Metro 2 (10.5%)
 
 ### Socio-economic profiles
-- **Income distributions**: Metro 1 has a higher share of respondents in the top income bracket of 2.5 – 3.5 million (16.5% vs. 9.0%), whereas Metro 2 peaks in the mid-range bracket of 1.16 – 1.5 million (24.2% vs. 15.5%) 
- 
+- **Income distributions**: Metro 1 has a higher share of respondents in the top income bracket of 2.5 – 3.5 million (16.5% vs. 9.0%), whereas Metro 2 peaks in the mid-range bracket of 1.16 – 1.5 million (24.2% vs. 15.5%)
+
 ### Perceptions and Attitudes
 - **Quick and efficient**: A larger share of Metro 1 respondents felt the system would be quick and efficient (62.6%) versus Metro 2 (53.4%)
 - **Optimism vs pessimism**: “Very optimistic” ratings were more common in Metro 1 (34.9%) than Metro 2 (23.5%), while Metro 2 had more “Very pessimistic” responses (13.8% vs. 5.9%)
@@ -351,7 +351,7 @@
 - **optimistics**: Metro one perceived the metro system more optimistics compared to metro 2 household. And Metro 1 is more support the system construction.
 
 ### Information and Awareness
-In general, information availability is generally low for both metro one and metro two household. People are not sure the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay lower price to ride the system. 
+In general, information availability is generally low for both metro one and metro two household. People are not sure the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay lower price to ride the system.
 
 - **Access to information**: Metro 1 respondents reported slightly better awareness of infrastructure details (13.2% “A lot of information” vs. 10.9%)
 
