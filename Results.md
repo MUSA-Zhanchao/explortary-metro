@@ -331,6 +331,7 @@
 # Key Takeaway
 
 ### Demographics
+- **Housing type**: Metro two has more single apartment home than metro 2.
 - **Homeownership**: Metro 2 users are far more likely to own their homes (70.04%) than Metro 1 users (48.79%)
 - **Household size**: Larger households (4+ members) are more common along Metro 2 (22.3% for four-person households) compared with Metro 1 (11.8%)
 
@@ -346,9 +347,16 @@
 - **Optimism vs pessimism**: “Very optimistic” ratings were more common in Metro 1 (34.9%) than Metro 2 (23.5%), while Metro 2 had more “Very pessimistic” responses (13.8% vs. 5.9%)
 - **Overall support**: Support for the project was higher in Metro 1 (93.8%) than in Metro 2 (89.1%)
 - **Preference for other modes**: Metro 2 users were somewhat more inclined to choose other transport options (70.4%) compared to Metro 1 (66.1%)
+- **Most important factors in travel**: Metro 2 has pay more attention to **Punctuality of buses** than Metro2 (20% vs 10%) ; while metro 1 pay more attention on **time of trips, comfort during trips, and cost of the trips**
+- **optimistics**: Metro one perceived the metro system more optimistics compared to metro 2 household. And Metro 1 is more support the system construction.
 
 ### Information and Awareness
+In general, information availability is generally low for both metro one and metro two household. People are not sure the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay lower price to ride the system. 
+
 - **Access to information**: Metro 1 respondents reported slightly better awareness of infrastructure details (13.2% “A lot of information” vs. 10.9%)
+
+### After implemented perception
+There is no statistics significant of implementation perception between metro 1 and metro 2 household responses.
 
 ## Summary
 These patterns suggest that Metro 1 respondents tend to be more optimistic, better informed, and perceive greater benefits (efficiency, support) from the new line, while Metro 2 respondents—many of whom own their homes and live in larger households—exhibit higher cycling rates, greater concern for punctuality and security, and slightly less overall enthusiasm.
