@@ -1,6 +1,6 @@
 # Results
 
-Author: Zhanchao Yang, Chuwen Zhong
+**Author: Zhanchao Yang, Chuwen Zhong**
 
 ## P1. What type of housing do you live in?
 | Housing Type         | Metro 1         | Metro 2         |
@@ -141,7 +141,14 @@ Author: Zhanchao Yang, Chuwen Zhong
 
 
 ## P67. On a scale of 1 to 6 where 1 means “Very pessimistic” and 6 “Very optimistic”, about the project and its implementation, do you feel:
-![image](https://github.com/user-attachments/assets/57593e5b-f5e7-4cc7-8332-eac0b9445bbb)
+| Scale                     | Metro 1         | Metro 2         |
+| ------------------------- | --------------- | --------------- |
+| 1 (Very pessimistic)      | 17 (5.9%)       | 34 (13.8%)      |
+| 2                         | 16 (5.5%)       | 12 (4.9%)       |
+| 3                         | 53 (18.3%)      | 54 (21.9%)      |
+| 4                         | 51 (17.6%)      | 48 (19.4%)      |
+| 5                         | 51 (17.6%)      | 41 (16.6%)      |
+| 6 Very Optimistic         | 101 (34.9%)     | 58 (23.5%)      |
 
 
 ## P68. Support or not support
@@ -161,7 +168,7 @@ Author: Zhanchao Yang, Chuwen Zhong
 7. Financial costs of developing the project
 8. Concerns about traffic congestion during metro construction
 
-![image](https://github.com/user-attachments/assets/f447e676-38fe-44ce-8213-7bda5afa3009)
+![image](https://github.com/user-attachments/assets/9c2fb2e3-23dc-45e3-96fd-9002330e301b)
 
 
 ## P70. Information availability: Infrastructure type (underground, surface, and elevated)
@@ -212,7 +219,14 @@ Author: Zhanchao Yang, Chuwen Zhong
 
 ## P81. If it were to go into operation tomorrow, what is the maximum amount you would be willing to pay for a ticket on the Bogotá Metro?
 
-![image](https://github.com/user-attachments/assets/b56631af-c141-483e-9bad-ac3e06843b8d)
+| Pay level            | Metro 1         | Metro 2         |
+| -------------------- | --------------- | --------------- |
+| lower than $3200     | 209 (72.3%)     | 186 (75.3%)     |
+| $3200 - $3500        | 54 (18.7%)      | 41 (16.6%)      |
+| $3500 - $3800        | 18 (6.2%)       | 14 (5.7%)       |
+| $3800 - $4100        | 5 (1.7%)        | 3 (1.2%)        |
+| $4100 - $4500        | 2 (0.7%)        | 0               |
+| More than $4500      | 1 (0.3%)        | 3 (1.2%)        |
 
 
 ## P82. Rent or own
