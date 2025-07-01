@@ -356,7 +356,7 @@ In general, information availability is generally low for both metro one and met
 - **Access to information**: Metro 1 respondents reported slightly better awareness of infrastructure details (13.2% “A lot of information” vs. 10.9%)
 
 ### After implemented perception
-There is no statistics significant of implementation perception between metro 1 and metro 2 household responses.
+There is no statistically significant difference in implementation perception between Metro 1 and Metro 2 households.
 
 ## Summary
 These patterns suggest that Metro 1 respondents tend to be more optimistic, better informed, and perceive greater benefits (efficiency, support) from the new line, while Metro 2 respondents—many of whom own their homes and live in larger households—exhibit higher cycling rates, greater concern for punctuality and security, and slightly less overall enthusiasm.
