@@ -331,7 +331,7 @@
 # Key Takeaway
 
 ### Demographics
-- **Housing type**: Metro two has more single apartment home than metro 2.
+- **Housing type**: Metro 2 has more single apartment homes than Metro 2.
 - **Homeownership**: Metro 2 users are far more likely to own their homes (70.04%) than Metro 1 users (48.79%)
 - **Household size**: Larger households (4+ members) are more common along Metro 2 (22.3% for four-person households) compared with Metro 1 (11.8%)
 
