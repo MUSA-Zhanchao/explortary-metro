@@ -55,19 +55,20 @@ Author: Zhanchao Yang, Chuwen Zhong
 
 
 ## P50. Monthly income
-1. $0 – $400,000
-2. $400,001 – $800,000
-3. $800,001 – $1,160,000
-4. $1,160,000 – $1,500,000
-5. $1,500,001 – $2,000,000
-6. $2,000,001 – $2,500,000
-7. $2,500,001 – $3,500,000
-8. $3,500,001 – $4,900,000
-9. $4,900,001 – $6,800,000
-10. $6,800,001 – $9,000,000
-11. Más de $9,000,000
 
-![image](https://github.com/user-attachments/assets/42de9915-78ea-42da-96ef-4a6592315df3)
+| Income   | Metro 1         | Metro 2         |
+| -------- | --------------- | --------------- |
+|$0 – $400,000| 5 (2.5%)    | 8 (3.6%)    |
+|$400,001 – $800,000| 23 (11.5%)    | 15 (6.7%)    |
+|$800,001 – $1,160,000| 26 (13%)    | 27 (12.1%)    |
+|$1,160,000 – $1,500,000| 31 (15.5%)  | 54 (24.2%)  |
+|$1,500,001 – $2,000,000| 24 (12%)    | 42 (18.8%)  |
+|$2,000,001 – $2,500,000| 25 (12.5%)  | 27 (12.1%)  |
+|$2,500,001 – $3,500,000| 33 (16.5%)  | 20 (9%)     |
+|$3,500,001 – $4,900,000| 18 (9%)     | 21 (9.4%)   |
+|$4,900,001 – $6,800,000| 10 (5%)     | 7 (3.1%)    |
+|$6,800,001 – $9,000,000| 4 (2%)      | 1 (0.4%)    |
+|Más de $9,000,000| 1 (0.5%)    | 1 (0.4%)    |
 
 
 ## P58. Metro Quick and Efficient
@@ -132,7 +133,11 @@ Author: Zhanchao Yang, Chuwen Zhong
 
 
 ## P66. Do you perceive that, in general, your usual journeys, due to the construction of the LMB (Bogotá Metro Line), take more, less or the same amount of time?
-![image](https://github.com/user-attachments/assets/26485636-3fd9-4b1c-aecf-b25432613f67)
+| Time change                | Metro 1         | Metro 2         |
+| -------------------------- | --------------- | --------------- |
+| take more time             | 191 (66.1%)     | 143 (57.9%)     |
+| same amount of time        | 70 (24.2%)      | 53 (21.5%)      |
+| less amount of time        | 28 (9.7%)       | 51 (20.6%)      |
 
 
 ## P67. On a scale of 1 to 6 where 1 means “Very pessimistic” and 6 “Very optimistic”, about the project and its implementation, do you feel:
