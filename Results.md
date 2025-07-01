@@ -18,7 +18,7 @@ This study employs a cross-sectional survey design to compare household percepti
 ## Data Processing and Analysis
 - **Data Cleaning**: Responses were exported to R, where invalid entries were removed and categorical variables were recoded (e.g., income brackets standardized).
 - **Descriptive Statistics**: Frequencies and percentages were calculated for all variables by corridor.
-- **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential outcome*)
+- **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential next steps*)
 - **Visualization**: Bar charts and cross-tabulations were generated to illustrate key contrasts.
 
 All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
