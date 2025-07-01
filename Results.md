@@ -347,7 +347,7 @@
 - **Optimism vs pessimism**: “Very optimistic” ratings were more common in Metro 1 (34.9%) than Metro 2 (23.5%), while Metro 2 had more “Very pessimistic” responses (13.8% vs. 5.9%)
 - **Overall support**: Support for the project was higher in Metro 1 (93.8%) than in Metro 2 (89.1%)
 - **Preference for other modes**: Metro 2 users were somewhat more inclined to choose other transport options (70.4%) compared to Metro 1 (66.1%)
-- **Most important factors in travel**: Metro 2 has pay more attention to **Punctuality of buses** than Metro2 (20% vs 10%) ; while metro 1 pay more attention on **time of trips, comfort during trips, and cost of the trips**
+- **Most important factors in travel**: Metro 2 pays more attention to **Punctuality of buses** (20% vs. 10%), while Metro 1 focuses more on **time of trips, comfort during trips, and cost of the trips**.
 - **optimistics**: Metro one perceived the metro system more optimistics compared to metro 2 household. And Metro 1 is more support the system construction.
 
 ### Information and Awareness
