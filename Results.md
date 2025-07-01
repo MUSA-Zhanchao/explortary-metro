@@ -331,24 +331,32 @@
 # Key Takeaway
 
 ### Demographics
+- **Housing type**: Metro 2 has more single apartment homes than Metro 2.
 - **Homeownership**: Metro 2 users are far more likely to own their homes (70.04%) than Metro 1 users (48.79%)
 - **Household size**: Larger households (4+ members) are more common along Metro 2 (22.3% for four-person households) compared with Metro 1 (11.8%)
 
 ### Pre- and During-Pandemic Travel Modes
 - **Bicycle use**: Before COVID-19, 13.8% of Metro 2 commuters biked versus 7.3% for Metro 1; during the pandemic, this rose to 15.8% (Metro 2) vs. 9.3% (Metro 1)
-- **Walking**: Metro 1 saw higher walking rates during the pandemic (19.7%) compared to Metro 2 (10.5%) 
+- **Walking**: Metro 1 saw higher walking rates during the pandemic (19.7%) compared to Metro 2 (10.5%)
 
 ### Socio-economic profiles
-- **Income distributions**: Metro 1 has a higher share of respondents in the top income bracket of 2.5 – 3.5 million (16.5% vs. 9.0%), whereas Metro 2 peaks in the mid-range bracket of 1.16 – 1.5 million (24.2% vs. 15.5%) 
- 
+- **Income distributions**: Metro 1 has a higher share of respondents in the top income bracket of 2.5 – 3.5 million (16.5% vs. 9.0%), whereas Metro 2 peaks in the mid-range bracket of 1.16 – 1.5 million (24.2% vs. 15.5%)
+
 ### Perceptions and Attitudes
 - **Quick and efficient**: A larger share of Metro 1 respondents felt the system would be quick and efficient (62.6%) versus Metro 2 (53.4%)
 - **Optimism vs pessimism**: “Very optimistic” ratings were more common in Metro 1 (34.9%) than Metro 2 (23.5%), while Metro 2 had more “Very pessimistic” responses (13.8% vs. 5.9%)
 - **Overall support**: Support for the project was higher in Metro 1 (93.8%) than in Metro 2 (89.1%)
 - **Preference for other modes**: Metro 2 users were somewhat more inclined to choose other transport options (70.4%) compared to Metro 1 (66.1%)
+- **Most important factors in travel**: Metro 2 pays more attention to **Punctuality of buses** (20% vs. 10%), while Metro 1 focuses more on **time of trips, comfort during trips, and cost of the trips**.
+- **Optimism and support**: Metro 1 users are more optimistic about the metro system than Metro 2 households, and Metro 1 shows stronger support for the system's construction.
 
 ### Information and Awareness
+In general, information availability is generally low for both metro one and metro two household. People are not sure the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay lower price to ride the system.
+
 - **Access to information**: Metro 1 respondents reported slightly better awareness of infrastructure details (13.2% “A lot of information” vs. 10.9%)
+
+### After implemented perception
+There is no statistically significant difference in implementation perception between Metro 1 and Metro 2 households.
 
 ## Summary
 These patterns suggest that Metro 1 respondents tend to be more optimistic, better informed, and perceive greater benefits (efficiency, support) from the new line, while Metro 2 respondents—many of whom own their homes and live in larger households—exhibit higher cycling rates, greater concern for punctuality and security, and slightly less overall enthusiasm.
