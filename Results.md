@@ -99,7 +99,7 @@ The Results section presents a comparative overview of demographic profiles, tra
 
 ## Information availability & General perception
 
-### P58. Metro Quick and Efficient
+### P58. Metro Quick and Efficient (public transportation not metro project
 | Response | Metro 1         | Metro 2         |
 | -------- | --------------- | --------------- |
 | Yes      | 181 (62.62%)    | 132 (53.44%)    |
