@@ -246,7 +246,7 @@ The Results section presents a comparative overview of demographic profiles, tra
 ### P81. If it were to go into operation tomorrow, what is the maximum amount you would be willing to pay for a ticket on the Bogotá Metro?
 | Pay level            | Metro 1         | Metro 2         |
 | -------------------- | --------------- | --------------- |
-| lower than $3200     | 209 (72.3%)     | 186 (75.3%)     |
+| lower or equal to $3200     | 209 (72.3%)     | 186 (75.3%)     |
 | $3200 - $3500        | 54 (18.7%)      | 41 (16.6%)      |
 | $3500 - $3800        | 18 (6.2%)       | 14 (5.7%)       |
 | $3800 - $4100        | 5 (1.7%)        | 3 (1.2%)        |
