@@ -68,9 +68,22 @@ The Results section presents a comparative overview of demographic profiles, tra
 | Walk             | 26 (9%)   | 18 (7.3%)    | 44    |
 
 
+
 ### P43. In 2020, during the COVID-19 pandemic, what was the primary means of transportation you used for your daily commute?
 
-
+| Mode             | Line 1       | Line 2        | Total |
+|------------------|--------------|---------------|-------|
+| BRT              | 70 (24.2%)  | 55 (15.8%)    | 125   |
+| Bicycle          | 27 (9.3%)   | 39 (15.8%)    | 66    |
+| Car              | 24 (8.3%)   | 23 (9.3%)    | 47    |
+| Intermunicipal   | 9 (3.1%)   | 3 (1.2%)     | 12    |
+| Motorcycle       | 14 (4.8%)   | 10 (4%)    | 24    |
+| Other            | 41 (14.2%)   | 41 (16.6%)    | 82    |
+| Other Private    | 2 (0.7%)     | 2 (0.8%)    | 4     |
+| Other Public     | 2 (0.7%)    | 5 (2%)     | 7     |
+| SITP             | 23 (8%)   | 32 (13%)  | 55    |
+| Taxi             | 20 (6.9%)   | 11 (4.5%)     | 31    |
+| Walk             | 57 (19.7%)   | 26 (10.5%)    | 83    |
 
 
 ### P50. Monthly income
