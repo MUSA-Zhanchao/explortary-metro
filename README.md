@@ -261,8 +261,8 @@ The Results section presents a comparative overview of demographic profiles, tra
 ### P82. Rent or own
 | Status    | Metro 1         | Metro 2         |
 | --------- | --------------- | --------------- |
-| Rent      | 148 (51.21%)    | 74 (29.96%)     |
-| Own       | 141 (48.79%)    | 173 (70.04%)    |
+| Rent      | 148 (51.21%)    | 173 (70.04%)    |
+| Own       | 141 (48.79%)    | 74 (29.96%)     |
 
 
 ### P83. Length of residence
