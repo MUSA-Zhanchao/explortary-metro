@@ -55,6 +55,7 @@ The Results section presents a comparative overview of demographic profiles, tra
 
 
 ### P42. In 2019, before the COVID-19 pandemic, what was the primary means of transportation you used for your daily commute?
+![image](https://github.com/user-attachments/assets/e136fa1f-86a8-40ee-b216-3e2a4e134cfa)
 
 | Mode             | Line 1       | Line 2        | Total |
 |------------------|--------------|---------------|-------|
