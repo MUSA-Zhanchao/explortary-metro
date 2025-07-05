@@ -81,7 +81,7 @@ The Results section presents a comparative overview of demographic profiles, tra
 | Other            | 41 (14.2%)   | 41 (16.6%)    | 82    |
 | Other Private    | 2 (0.7%)     | 2 (0.8%)    | 4     |
 | Other Public     | 2 (0.7%)    | 5 (2%)     | 7     |
-| SITP             | 23 (8%)   | 32 (13%)  | 55    |
+| SITP             | 23 (8.0%)   | 32 (13.0%)  | 55    |
 | Taxi             | 20 (6.9%)   | 11 (4.5%)     | 31    |
 | Walk             | 57 (19.7%)   | 26 (10.5%)    | 83    |
 
