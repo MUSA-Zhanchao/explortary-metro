@@ -96,7 +96,32 @@ The survey question involved `P67` vs `P82, P83, P86`
 | 6 (Very optimistic)| 23.1% (3)    | 11.1% (1)       | 26.5% (22)                | 14.9% (7)                   | 50.0% (6)                   | 0.0% (0)                    | 0.0% (0)                    | 39    |
 | **Total** | **13** | **9**           | **83**                    | **47**                      | **12**                      | **7**                       | **2**                       | **173** |
 
-### Summary
+### Takeaway
 
+#### General summary
+
+Relationship 1 examines how respondents’ overall perception of the Bogotá Metro (P67, an ordinal scale from 1 = “Very pessimistic” to 6 = “Very optimistics ”) varies by three housing characteristics:
+- **Ownership (P82)**: Both owners (n=148) and renters (n=141) show a majority of optimistics views (P67=6): 33.1% of owners and 36.9% of renters in Line 1, and 25.7% of owners vs. 22.5% of renters in Line 2 report “Very optimistic.” Pessimistic views (P67=1–2) are uniformly low across both groups 
+- **Length of Residence (P83)**: Longer-term residents tend to be more optimistics. In Line 1, those living in their home > 5 years account for over 68% of the “Very optimistics” category (P67=6), whereas shorter-term residents (≤ 1 year) make up only 32.4% of that group 
+- **Monthly Rent (P86)**: Lower-rent tenants report higher optimistic: among those paying ≤ 500 000 COP, 52.6% are “Very optimistics,” compared with 22.7% in the > 1 000 000–1 500 000 COP bracket
+
+#### Suitability for Regression Analysis
+
+- **Variable types & sample size**: As before, P67 is an ordinal outcome; P82 is binary; P83 and P86 are ordinal. Overall N≈289 is adequate, but some P83/P86 cells are small and may need category collapsing.
+
+
+#### Potential Regression Model
+
+- **Ordinal logistic regression (proportional-odds model)**, with P67 as the outcome and P82 (ownership), P83 (residence duration), and P86 (rent level) as predictors.
+- **Sample size and cell counts**: With ~289 respondents for Line 1, there is adequate overall sample size, but several P83 and P86 categories have small cell counts (e.g., only 4 respondents in the “> 1 500 000–2 000 000 COP” rent category).
+- **Assumptions**: An ordinal regression model (e.g., proportional odds) requires the proportional-odds assumption; small cells may need collapsing of adjacent categories to ensure stable estimates. After suitable recoding, the data are appropriate for regression.
+- **Covariant concerns**: A small sample size combined with limited variation in the predictors across categories reduces statistical power and often leads to non-significant results, making it difficult to detect true effects and increasing the likelihood of failing to reject the null hypothesis.
+
+
+**Alternative approaches**:
+
+- If the proportional-odds assumption is violated, a multinomial logistic regression on P67.
+- If P67 is dichotomized (e.g., optimistic vs. pessimistic), a binary logistic regression.
+- For a simpler approximation, treating P67 as continuous and using linear regression, noting the usual caveats about ordinal outcomes. (**Not ideal**)
 
 ## Relationship 2: Impacts of Metro Project on Housing Rents vs working trip modes
