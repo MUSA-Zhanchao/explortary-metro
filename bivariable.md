@@ -16,6 +16,8 @@ The survey question involved `P67` vs `P82, P83, P86`
 
 ### Bivariate table
 
+#### Perception vs household ownership
+
 **Line 1: Perception vs household ownership**
 
 | P67   | Own         | Rent        | Total       |
@@ -38,6 +40,8 @@ The survey question involved `P67` vs `P82, P83, P86`
 | 5       | 16.2% (12)     | 16.8% (29)     | 16.6% (41)     |
 | 6 (Very pessimistic)| 25.7% (19)     | 22.5% (39)     | 23.5% (58)     |
 | **Total** | **100.0% (74)** | **100.0% (173)** | **100.0% (247)** |
+
+#### Perception vs living time
 
 **Line 1: Perception vs living time**
 
@@ -62,8 +66,13 @@ The survey question involved `P67` vs `P82, P83, P86`
 | 6 (Very pessimistic)| 21.6% (8)      | 28.8% (21)        | 11.1% (5)          | 31.6% (6)           | 27.3% (3)          | 24.2% (15)      | 23.5% (58) |
 | **Total** | 37             | 73                | 45                 | 19                  | 11                 | 62              | 247       |
 
-**Line 1: perception vs monthly rent**
 
+
+
+
+#### Perception vs Monthly Rent
+
+**Line 1: perception vs monthly rent**
 
 | P67 | Prefer not to answer| Less than or equal to \$500,000 | More than \$500,000 and up to \$1,000,000 | More than \$1,000,000 and up to \$1,500,000 | More than \$1,500,000 and up to \$2,000,000 | More than \$2,000,000 and up to \$3,000,000 | Total |
 |-----|--------|---------------------|------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------|
@@ -86,3 +95,9 @@ The survey question involved `P67` vs `P82, P83, P86`
 | 5   | 23.1% (3)    | 55.6% (5)       | 16.9% (14)                | 10.6% (5)                   | 8.3% (1)                    | 14.3% (1)                   | 0.0% (0)                    | 41    |
 | 6 (Very pessimistic)| 23.1% (3)    | 11.1% (1)       | 26.5% (22)                | 14.9% (7)                   | 50.0% (6)                   | 0.0% (0)                    | 0.0% (0)                    | 58    |
 | **Total** | **13** | **9**           | **83**                    | **47**                      | **12**                      | **7**                       | **2**                       | **247** |
+
+### Summary
+
+
+## Relationship 2: Impacts of Metro Project on Housing Rents vs working trip modes
+
