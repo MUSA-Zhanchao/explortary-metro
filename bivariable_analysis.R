@@ -86,7 +86,7 @@ line1_select<- line1 %>%
 line2_select<- line2 %>%
   select(P82, P83, P86, P67)
 
-####### 
+#######
 # Relationship 1
 ## Line 1
 library(dplyr)
@@ -95,21 +95,21 @@ library(janitor)
 P67_P86_line1<-line1_select %>%
   tabyl(P86, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P67_P82_line1<-line1_select %>%
   tabyl(P82, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P67_P83_line1<-line1_select %>%
   tabyl(P83, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
@@ -117,19 +117,19 @@ P67_P83_line1<-line1_select %>%
 P67_P86_line2<-line2_select %>%
   tabyl(P86, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 P67_P82_line2<-line2_select %>%
   tabyl(P82, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 P67_P83_line2<-line2_select %>%
   tabyl(P83, P67) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
@@ -146,13 +146,13 @@ line2_3<- line2%>%
 P50_P81_line1 <- line1_3 %>%
   tabyl(P50, P81) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P50_P81_line2 <- line2_3 %>%
   tabyl(P50, P81) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
