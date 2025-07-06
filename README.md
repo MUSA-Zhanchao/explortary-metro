@@ -106,8 +106,8 @@ The Results section presents a comparative overview of demographic profiles, tra
 |$4,900,001 – $6,800,000| 10 (5%)     | 7 (3.1%)    |
 |$6,800,001 – $9,000,000| 4 (2%)      | 1 (0.4%)    |
 |Más de $9,000,000| 1 (0.5%)    | 1 (0.4%)    |
-
-## Information availability & General perception
+---
+## Information availability & General perception (not metro)
 
 ### P58. Metro Quick and Efficient
 | Response | Metro 1         | Metro 2         |
@@ -168,6 +168,8 @@ The Results section presents a comparative overview of demographic profiles, tra
 | Cost of travel             | 31 (10.72%)     | 13 (5.26%)      |
 | Environmental impacts      | 5 (1.73%)       | 2 (0.81%)       |
 | Punctuality of buses       | 29 (10.03%)     | 51 (20.64%)     |
+---
+## Preception regarding metro
 
 ### P66. Do you perceive that, in general, your usual journeys, due to the construction of the LMB (Bogotá Metro Line), take more, less or the same amount of time?
 | Time change                | Metro 1         | Metro 2         |
