@@ -11,7 +11,7 @@ hog <- hog %>%
       P42 %in% c(3, 5)                        ~ "SITP",           # SITP + Bus Dual
       P42 == 4                                ~ "Cable Car",      # TransMiCable
       P42 == 6                                ~ "Intermunicipal", # Intermunicipal
-      P42 %in% c(7, 10, 14, 15, 16, 17, 18, 
+      P42 %in% c(7, 10, 14, 15, 16, 17, 18,
                  19, 20, 21)                  ~ "Other Public",   # informal + school + empresa
       P42 %in% c(8, 9, 11, 12, 13)            ~ "Taxi",           # Taxis, Mototaxi, Bicitaxi
       P42 %in% c(22, 23)                      ~ "Car",            # Vehículo privado
@@ -56,4 +56,3 @@ P42_1 <- hog %>%
   ungroup() %>%
   select(linea_M = linea_M_factor, P42 = P42_group, label) %>%
   pivot_wider(names_from = P42, values_from = label, values_fill = "0 (0%)")
-
