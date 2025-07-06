@@ -363,8 +363,6 @@ The Results section presents a comparative overview of demographic profiles, tra
 | No change | 110 (38.06%)    | 72 (29.15%)     |
 | Decrease  | 26 (9.00%)      | 31 (12.55%)     |
 
----
-
 # Key Takeaway
 
 ### Demographics
