@@ -86,7 +86,7 @@ line1_select<- line1 %>%
 line2_select<- line2 %>%
   select(P82, P83, P86, P67)
 
-####### 
+#######
 # Relationship 1
 ## Line 1
 library(dplyr)
@@ -95,21 +95,21 @@ library(janitor)
 P67_P86_line1<-line1_select %>%
   tabyl(P67, P86) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P67_P82_line1<-line1_select %>%
   tabyl(P67, P82) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P67_P83_line1<-line1_select %>%
   tabyl(P67, P83) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
@@ -117,19 +117,19 @@ P67_P83_line1<-line1_select %>%
 P67_P86_line2<-line2_select %>%
   tabyl(P67, P86) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 P67_P82_line2<-line2_select %>%
   tabyl(P67, P82) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 P67_P83_line2<-line2_select %>%
   tabyl(P67, P83) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
@@ -146,14 +146,14 @@ line2_3<- line2%>%
 P50_P81_line1 <- line1_3 %>%
   tabyl(P50, P81) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P50_P81_line2 <- line2_3 %>%
   tabyl(P50, P81) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
@@ -173,7 +173,7 @@ line1_4<-line1_4%>%
       P52 %in% c(3, 5)                        ~ "SITP",           # SITP + Bus Dual
       P52 == 4                                ~ "Cable Car",      # TransMiCable
       P52 == 6                                ~ "Intermunicipal", # Intermunicipal
-      P52 %in% c(7, 10, 14, 15, 16, 17, 18, 
+      P52 %in% c(7, 10, 14, 15, 16, 17, 18,
                  19, 20, 21)                  ~ "Other Public",   # informal + school + empresa
       P52 %in% c(8, 9, 11, 12, 13)            ~ "Taxi",           # Taxis, Mototaxi, Bicitaxi
       P52 %in% c(22, 23)                      ~ "Car",            # Vehículo privado
@@ -191,7 +191,7 @@ line2_4<-line2_4%>%
       P52 %in% c(3, 5)                        ~ "SITP",           # SITP + Bus Dual
       P52 == 4                                ~ "Cable Car",      # TransMiCable
       P52 == 6                                ~ "Intermunicipal", # Intermunicipal
-      P52 %in% c(7, 10, 14, 15, 16, 17, 18, 
+      P52 %in% c(7, 10, 14, 15, 16, 17, 18,
                  19, 20, 21)                  ~ "Other Public",   # informal + school + empresa
       P52 %in% c(8, 9, 11, 12, 13)            ~ "Taxi",           # Taxis, Mototaxi, Bicitaxi
       P52 %in% c(22, 23)                      ~ "Car",            # Vehículo privado
@@ -206,13 +206,13 @@ line2_4<-line2_4%>%
 P78_P52_line1 <- line1_4 %>%
   tabyl(P52, P78) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
 
 P78_P52_line2 <- line2_4 %>%
   tabyl(P52, P78) %>%                    # cross‐tab counts
   adorn_totals(c("row", "col")) %>%      # add margins
-  adorn_percentages("col") %>%           # convert to row‐% 
+  adorn_percentages("col") %>%           # convert to row‐%
   adorn_pct_formatting(digits = 1) %>%   # format as “xx.x%”
   adorn_ns()
