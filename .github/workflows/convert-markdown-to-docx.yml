@@ -1,0 +1,113 @@
+# .github/workflows/convert-markdown-to-docx.yml
+name: Convert Markdown to Word
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  convert-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0     # fetch full history so we can create/check branches
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-docx
+
+      - name: Create conversion script
+        run: |
+          mkdir -p scripts
+          cat > scripts/convert_md_to_docx.py << 'EOF'
+        import sys
+        import os
+        import re
+        from docx import Document
+
+        def convert_md(md_path, docx_path):
+            doc = Document()
+            with open(md_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            i = 0
+            while i < len(lines):
+                line = lines[i].rstrip('\n')
+                if line.startswith('#### '):
+                    doc.add_heading(line[5:].strip(), level=4)
+                elif line.startswith('### '):
+                    doc.add_heading(line[4:].strip(), level=3)
+                elif line.startswith('## '):
+                    doc.add_heading(line[3:].strip(), level=2)
+                elif line.startswith('# '):
+                    doc.add_heading(line[2:].strip(), level=1)
+                elif '|' in line and i+1 < len(lines) and set(lines[i+1].strip()) <= set('-| '):
+                    # Table parsing
+                    tbl_lines = []
+                    while i < len(lines) and '|' in lines[i]:
+                        tbl_lines.append(lines[i].rstrip('\n'))
+                        i += 1
+                    headers = [h.strip() for h in tbl_lines[0].split('|')[1:-1]]
+                    rows = []
+                    for row in tbl_lines[2:]:
+                        rows.append([c.strip() for c in row.split('|')[1:-1]])
+                    table = doc.add_table(rows=1+len(rows), cols=len(headers))
+                    for idx, head in enumerate(headers):
+                        table.rows[0].cells[idx].text = head
+                    for r, data in enumerate(rows, start=1):
+                        for c, cell in enumerate(data):
+                            table.rows[r].cells[c].text = cell
+                    continue
+                else:
+                    para = doc.add_paragraph()
+                    parts = re.split(r'(\*\*.*?\*\*)', line)
+                    for part in parts:
+                        m = re.match(r'\*\*(.*?)\*\*', part)
+                        if m:
+                            run = para.add_run(m.group(1))
+                            run.bold = True
+                        else:
+                            para.add_run(part)
+                i += 1
+            doc.save(docx_path)
+
+        if __name__ == "__main__":
+            src_dir = "report"
+            out_dir = "report"
+            for fname in os.listdir(src_dir):
+                if fname.endswith(".md"):
+                    base = os.path.splitext(fname)[0]
+                    convert_md(
+                        os.path.join(src_dir, fname),
+                        os.path.join(out_dir, f"{base}.docx")
+                    )
+        EOF
+
+      - name: Switch to or create `doc` branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git show-ref --quiet refs/heads/doc; then
+            git checkout doc
+          else
+            git checkout -b doc
+          fi
+
+      - name: Run Markdown → DOCX conversion
+        run: |
+          python scripts/convert_md_to_docx.py
+
+      - name: Commit and push .docx files
+        run: |
+          git add report/*.docx
+          git commit -m "Auto-converted MD → DOCX on $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push --force --set-upstream origin doc
