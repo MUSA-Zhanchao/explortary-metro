@@ -26,14 +26,14 @@ This study employs a cross-sectional survey design to compare household percepti
 
 All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
 
-# Explortary Results
+# [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/Results.md)
 
 The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
 
 **See the detailed results at [results.md](https://github.com/zyang91/explortary-metro/blob/main/Results.md)**
 
 
-## Explortary Results Key Takeaway
+## Exploratory Results Key Takeaway
 
 ### Pre- and During-Pandemic Travel Modes
 - **Bicycle use**: Before COVID-19, 13.8% of Metro 2 commuters biked versus 7.3% for Metro 1; during the pandemic, this rose to 15.8% (Metro 2) vs. 9.3% (Metro 1)
