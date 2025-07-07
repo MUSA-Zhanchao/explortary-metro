@@ -188,7 +188,7 @@ The higher the income is, the higher the amount they are willing to pay for the 
 
 - **Outcome**: Willingness to pay (P81) is inherently ordinal (six ordered categories).
 - **Predictor**: Income group (P50) is also ordinal but includes a large “Not reported” category, which may need to filter out
-- **Sample size**: N≈289 for Line 1 and N≈247 for Line 2, adequate overall but with very small cell counts in some combinations (e.g., highest income × highest willingness). These sparse cells will need category collapsing or exclusion to avoid unstable estimates. These may lead to yeild bias regression results.
+- **Sample size**: N≈289 for Line 1 and N≈247 for Line 2, adequate overall but with very small cell counts in some combinations (e.g., highest income × highest willingness). These sparse cells will need category collapsing or exclusion to avoid unstable estimates. These may lead to yield bias regression results.
 
 #### Potential Regression Model
 
