@@ -101,8 +101,8 @@ The survey question involved `P67` vs `P82, P83, P86`
 #### General summary
 
 Relationship 1 examines how respondents’ overall perception of the Bogotá Metro (P67, an ordinal scale from 1 = “Very pessimistic” to 6 = “Very optimistics ”) varies by three housing characteristics:
-- **Ownership (P82)**: Both owners (n=148) and renters (n=141) show a majority of optimistics views (P67=6): 33.1% of owners and 36.9% of renters in Line 1, and 25.7% of owners vs. 22.5% of renters in Line 2 report “Very optimistic.” Pessimistic views (P67=1–2) are uniformly low across both groups 
-- **Length of Residence (P83)**: Longer-term residents tend to be more optimistics. In Line 1, those living in their home > 5 years account for over 68% of the “Very optimistics” category (P67=6), whereas shorter-term residents (≤ 1 year) make up only 32.4% of that group 
+- **Ownership (P82)**: Both owners (n=148) and renters (n=141) show a majority of optimistics views (P67=6): 33.1% of owners and 36.9% of renters in Line 1, and 25.7% of owners vs. 22.5% of renters in Line 2 report “Very optimistic.” Pessimistic views (P67=1–2) are uniformly low across both groups
+- **Length of Residence (P83)**: Longer-term residents tend to be more optimistics. In Line 1, those living in their home > 5 years account for over 68% of the “Very optimistics” category (P67=6), whereas shorter-term residents (≤ 1 year) make up only 32.4% of that group
 - **Monthly Rent (P86)**: Lower-rent tenants report higher optimistic: among those paying ≤ 500 000 COP, 52.6% are “Very optimistics,” compared with 22.7% in the > 1 000 000–1 500 000 COP bracket
 
 #### Suitability for Regression Analysis
