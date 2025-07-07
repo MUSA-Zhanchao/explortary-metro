@@ -26,7 +26,7 @@ This study employs a cross-sectional survey design to compare household percepti
 All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
 
 ## Bivariate Analysis
-We analyzed four specific targeted relationships for bivariate regression analysis. 
+We analyzed four specific targeted relationships for bivariate regression analysis.
 
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
