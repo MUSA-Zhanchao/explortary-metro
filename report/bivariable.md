@@ -120,14 +120,14 @@ Relationship 1 examines how respondents’ overall perception of the Bogotá Met
 
 **Alternative approaches**:
 
-- If the proportional-odds assumption is violated, a multinomial logistic regression on P67.
+- If the proportional-odd assumption is violated, a multinomial logistic regression on P67.
 - If P67 is dichotomized (e.g., optimistic vs. pessimistic), a binary logistic regression.
 - For a simpler approximation, treating P67 as continuous and using linear regression, noting the usual caveats about ordinal outcomes. (**Not ideal**)
 
 ## Relationship 2: Impacts of Metro Project on Housing Rents vs working trip modes
 
 
-## Relationship 3: Income vs Willingness to pay
+## Relationship 3: Income vs Willingness to Pay
 
 ### Research Question
 **Household income vs Willingness to pay**
@@ -194,9 +194,60 @@ The higher the income is, the higher the amount they are willing to pay for the 
 
 - **Ordinal logistic regression** (proportional-odds model): Use P81 (willingness) as the outcome and P50 (income bracket) as the predictor.
 - **Category consolidation**: Merge extreme income brackets (e.g., all > COP 2 million) into one or two top categories and combine the lowest willingness categories (e.g., ≤ COP 3 200 vs > COP 3 200) if needed to ensure minimal cell counts.
-- **Assumption checking**: Test the proportional-odds assumption (e.g., Brant test). If violated, consider a partial proportional-odds model or switch to multinomial logistic regression.
+- **Assumption checking**: Test the proportional-odds assumption (e.g., Brant test). If violated, consider a partial proportional odds model or switch to multinomial logistic regression.
 
 #### Alternative approaches
 
 - **Binary logistic regression**: Dichotomize willingness (e.g., low vs high) and model as a binary outcome.
-- **Linear regression proxy**: Assign mid-points to P81 and P50 and treat them as continuous in a linear model—acceptable as a rough check but note the ordinal nature.
+- **Linear regression proxy**: Assign mid-points to P81 and P50 and treat them as continuous in a linear model—acceptable as a rough check, but note the ordinal nature.
+
+## Relationship 4
+
+### Research Question 
+
+**Willingness to use vs transportation mode for work**
+
+The survey question involved `P52`, `P78`
+
+### Hypothesis
+
+The possibility of a mode shift based on the transportation modes 
+
+### Bivariate table
+
+**Line 1: Willingness to use vs transportation for work**
+
+| P52             | 1            | 2            | Total         |
+|-----------------|--------------|--------------|---------------|
+| Bicycle         | 6.7% (18)    | 4.8% (1)     | 6.6% (19)     |
+| BRT             | 29.1% (78)   | 23.8% (5)    | 28.7% (83)    |
+| Car             | 5.2% (14)    | 9.5% (2)     | 5.5% (16)     |
+| Intermunicipal  | 1.5% (4)     | 4.8% (1)     | 1.7% (5)      |
+| Motorcycle      | 6.3% (17)    | 14.3% (3)    | 6.9% (20)     |
+| Other           | 1.5% (4)     | 0.0% (0)     | 1.4% (4)      |
+| Other Private   | 0.4% (1)     | 4.8% (1)     | 0.7% (2)      |
+| Other Public    | 0.7% (2)     | 0.0% (0)     | 0.7% (2)      |
+| SITP            | 9.0% (24)    | 9.5% (2)     | 9.0% (26)     |
+| Taxi            | 3.0% (8)     | 4.8% (1)     | 3.1% (9)      |
+| Walk            | 16.0% (43)   | 4.8% (1)     | 15.2% (44)    |
+| Not reported or unemployed| 20.5% (55)   | 19.0% (4)    | 20.4% (59)    |
+| **Total**       | **100.0% (268)** | **100.0% (21)** | **100.0% (289)** |
+
+**Line 2: Willingness to use vs transportation for work**
+
+| P52            | 1             | 2             | Total          |
+|----------------|---------------|---------------|----------------|
+| Bicycle        | 8.0% (18)     | 13.6% (3)     | 8.5% (21)      |
+| BRT            | 27.1% (61)    | 9.1% (2)      | 25.5% (63)     |
+| Car            | 4.9% (11)     | 9.1% (2)      | 5.3% (13)      |
+| Motorcycle     | 5.8% (13)     | 13.6% (3)     | 6.5% (16)      |
+| Other          | 2.7% (6)      | 0.0% (0)      | 2.4% (6)       |
+| Other Private  | 0.0% (0)      | 4.5% (1)      | 0.4% (1)       |
+| Other Public   | 0.9% (2)      | 4.5% (1)      | 1.2% (3)       |
+| SITP           | 11.1% (25)    | 4.5% (1)      | 10.5% (26)     |
+| Taxi           | 1.3% (3)      | 0.0% (0)      | 1.2% (3)       |
+| Walk           | 20.0% (45)    | 13.6% (3)     | 19.4% (48)     |
+| Not Reported or unemployed| 18.2% (41)    | 27.3% (6)     | 19.0% (47)     |
+| **Total**      | **100.0% (225)** | **100.0% (22)** | **100.0% (247)** |
+
+### Key Takeaway
