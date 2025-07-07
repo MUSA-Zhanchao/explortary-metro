@@ -7,9 +7,9 @@ Summer 2025
 
 # Introduction & Research Questions
 
-Bogotá, long served by an extensive bus network yet plagued by chronic congestion and air pollution, is on the cusp of a major transit transformation. The city’s first metro lines—Line 1, which will link the northwest suburbs with the city center, and Line 2, running through the northern corridor—promise not only faster, more reliable journeys but also substantial environmental and socio-economic benefits. However, the success of this infrastructure depends as much on engineering and finance as on public buy-in: how citizens perceive its effectiveness, its impact on air quality and noise, and its broader effects on livelihoods and equity.
+Bogotá, long served by an extensive bus network yet plagued by chronic congestion and air pollution, is on the cusp of a major transit transformation. The city’s first metro lines—Line 1, which will link the northwest suburbs with the city center, and Line 2, running through the northern corridor—promise not only faster, more reliable journeys but also substantial environmental and socio-economic benefits. However, the success of this infrastructure depends as much on engineering and finance as on public buy-in, which encompasses how citizens perceive its effectiveness, its impact on air quality and noise, and its broader effects on livelihoods and equity.
 
-This study examines how near subway line household perception different between Line 1 and Line 2, and how socio-economic factors influences their perception
+This study examines how the near subway line household perception differs between Line 1 and Line 2, and how socio-economic factors influence their perception
 
 By illuminating the perceptions held by various communities, we aim to inform both policy adjustments and communication strategies that will maximize public support and ensure that Bogotá’s metro delivers on its promise of cleaner, more equitable urban mobility.
 
@@ -19,18 +19,21 @@ This study employs a cross-sectional survey design to compare household percepti
 
 
 ## Data Processing and Analysis
-- **Data Cleaning**: Responses were exported to R, where invalid entries were removed and categorical variables were recoded (e.g., income brackets standardized).
+- **Data Cleaning**: Responses were exported to R, where invalid entries were removed and categorical variables were standardized (e.g., income brackets).
 - **Descriptive Statistics**: Frequencies and percentages were calculated for all variables by corridor.
 - **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential next steps*)
 - **Visualization**: Bar charts and cross-tabulations were generated to illustrate key contrasts.
 
 All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
 
-# [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/Results.md)
+## Bivariate Analysis
+We analyzed four specific targeted relationships for bivariate regression analysis. 
+
+# [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
 The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
 
-**See the detailed results at [results.md](https://github.com/zyang91/explortary-metro/blob/main/Results.md)**
+**See the detailed results at [results.md](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)**
 
 
 ## Exploratory Results Key Takeaway
@@ -51,14 +54,14 @@ The Results section presents a comparative overview of demographic profiles, tra
 - **Optimism and support**: Metro 1 users are more optimistic about the metro system than Metro 2 households, and Metro 1 shows stronger support for the system's construction.
 
 ### Information and Awareness
-In general, information availability is generally low for both metro one and metro two household. People are not sure the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay lower price to ride the system.
+In general, information availability is low for both Metro One and Metro Two households. People are not sure of the infrastructure type, metro route, station location, and estimated year of operations. People are more willing to pay a lower price to ride the system.
 
 - **Access to information**: Metro 1 respondents reported slightly better awareness of infrastructure details (13.2% “A lot of information” vs. 10.9%)
 
-### After implemented perception
+### After implementing perception
 There is no statistically significant difference in implementation perception between Metro 1 and Metro 2 households.
 
 ### Summary
 These patterns suggest that Metro 1 respondents tend to be more optimistic, better informed, and perceive greater benefits (efficiency, support) from the new line, while Metro 2 respondents—many of whom own their homes and live in larger households—exhibit higher cycling rates, greater concern for punctuality and security, and slightly less overall enthusiasm.
 
-# Bivariable Analysis Results
+# [Bivariate Analysis Results](https://github.com/zyang91/explortary-metro/blob/main/report/bivariable.md)
