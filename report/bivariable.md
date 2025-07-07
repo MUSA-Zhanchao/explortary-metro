@@ -132,9 +132,9 @@ Relationship 1 examines how respondents’ overall perception of the Bogotá Met
 
 ### Bivariable table
 
-According to the distribution of housing tenure, approximately 70% of residents living along Bogotá’s Second Metro Line (L2) are renters, significantly higher than those along Line 1 (L1), where the proportion of owners and renters is nearly equal. This supports Hypothesis 1: most residents are renters, particularly in areas affected by the L2 project. 
+According to the distribution of housing tenure, approximately 70% of residents living along Bogotá’s Second Metro Line (L2) are renters, significantly higher than those along Line 1 (L1), where the proportion of owners and renters is nearly equal. This supports Hypothesis 1: most residents are renters, particularly in areas affected by the L2 project.
 
-To examine this relationship, we separately analyze the commuting modes of people living near Line 1 and Line 2. For Line 1, the bivariate table is as follows: 
+To examine this relationship, we separately analyze the commuting modes of people living near Line 1 and Line 2. For Line 1, the bivariate table is as follows:
 
 **Line 1: Commuting Modes by Tenure**
 
@@ -167,7 +167,7 @@ To examine this relationship, we separately analyze the commuting modes of peopl
 | Taxi          | 1 (1.9%)   | 2 (1.4%)   |
 | Walk          | 8 (15.1%)  | 40 (27.2%) |
 
-In terms of travel mode, renters along Line 1 use BRT (36.5%) and SITP (12.2%) at slightly higher rates than owners, indicating a relatively stronger reliance on mass transit. However, along Line 2, despite renters making up a larger share, they use BRT (27.9%) and SITP (12.2%) less than owners (41.5% and 15.1%, respectively), while the proportion of walking increases significantly (27.2%). This suggests that renters in the L2 area tend to live closer to their workplaces or metro stations, thereby reducing travel time, which supports the second hypothesis that they prefer to live near mass transit to shorten commute durations. 
+In terms of travel mode, renters along Line 1 use BRT (36.5%) and SITP (12.2%) at slightly higher rates than owners, indicating a relatively stronger reliance on mass transit. However, along Line 2, despite renters making up a larger share, they use BRT (27.9%) and SITP (12.2%) less than owners (41.5% and 15.1%, respectively), while the proportion of walking increases significantly (27.2%). This suggests that renters in the L2 area tend to live closer to their workplaces or metro stations, thereby reducing travel time, which supports the second hypothesis that they prefer to live near mass transit to shorten commute durations.
 
 ## Relationship 3: Income vs Willingness to Pay
 
@@ -245,7 +245,7 @@ The higher the income is, the higher the amount they are willing to pay for the 
 
 ## Relationship 4
 
-### Research Question 
+### Research Question
 
 **Willingness to use vs transportation mode for work**
 
@@ -253,7 +253,7 @@ The survey question involved `P52`, `P78`
 
 ### Hypothesis
 
-The possibility of a mode shift based on the transportation modes 
+The possibility of a mode shift based on the transportation modes
 
 ### Bivariate table
 
@@ -295,17 +295,17 @@ The possibility of a mode shift based on the transportation modes
 ### Key Takeaway
 Overall, since there are only a low share of the sample answers `no`(7% for line 1, and 9% for line 2), the percentage tend to bump up due to random effect.
 
-- **Strongest adoption potential among transit and pedestrian commuters**: BRT users (29.1% for Line 1; 27.1% for Line 2), walk commuters (16.0%; 20.0%) and SITP riders (9.0%; 11.1%) make up the largest shares of those willing to use the Metro.  
-- **Lower willingness among private and active-mode users**: Car commuters show modest willingness (5.2%; 4.9%) but higher unwillingness (9.5%; 9.1%), motorcycle users have moderate willingness (6.3%; 5.8%) yet substantial reluctance (14.3%; 13.6%), and bicycle users exhibit lower willingness (6.7%; 8.0%) alongside non-negligible unwillingness (4.8%; 13.6%).  
-- **Mixed attitudes in unemployed/non-reported group**: This segment accounts for 20.5% (Line 1) and 18.2% (Line 2) of the willing respondents, but rises to 19.0% and 27.3% among the unwilling, indicating heterogeneity in this cohort.  
-- **Consistent patterns across Lines 1 and 2**: The distribution of willingness by current work mode remains stable for both metro lines, underscoring mode-specific affinities toward adoption.  
+- **Strongest adoption potential among transit and pedestrian commuters**: BRT users (29.1% for Line 1; 27.1% for Line 2), walk commuters (16.0%; 20.0%) and SITP riders (9.0%; 11.1%) make up the largest shares of those willing to use the Metro.
+- **Lower willingness among private and active-mode users**: Car commuters show modest willingness (5.2%; 4.9%) but higher unwillingness (9.5%; 9.1%), motorcycle users have moderate willingness (6.3%; 5.8%) yet substantial reluctance (14.3%; 13.6%), and bicycle users exhibit lower willingness (6.7%; 8.0%) alongside non-negligible unwillingness (4.8%; 13.6%).
+- **Mixed attitudes in unemployed/non-reported group**: This segment accounts for 20.5% (Line 1) and 18.2% (Line 2) of the willing respondents, but rises to 19.0% and 27.3% among the unwilling, indicating heterogeneity in this cohort.
+- **Consistent patterns across Lines 1 and 2**: The distribution of willingness by current work mode remains stable for both metro lines, underscoring mode-specific affinities toward adoption.
 
 #### Suitability for Regression Analysis
 
-- **Outcome**: Willingness to use Metro (Binary: Yes or No).  
-- **Predictor**: Current commute mode (nominal: BRT, walk, SITP, car, motorcycle, bicycle, unemployed/non-reported).  
+- **Outcome**: Willingness to use Metro (Binary: Yes or No).
+- **Predictor**: Current commute mode (nominal: BRT, walk, SITP, car, motorcycle, bicycle, unemployed/non-reported).
 - **Sample size**: N≈289 for Line 1 and N≈247 for Line 2; overall adequate but some due to the lower sample size of the response `no`, the acutual covariant or useful sample size may not be adequate.
 
 #### Potential Regression Model
 
-- **logistic regression**: Model the three-level willingness outcome with commute mode as predictor.   
+- **logistic regression**: Model the three-level willingness outcome with commute mode as predictor.
