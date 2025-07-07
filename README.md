@@ -30,7 +30,7 @@ All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggpl
 
 The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
 
-**See the detail results at [results.md](https://github.com/zyang91/explortary-metro/blob/main/Results.md)**
+**See the detailed results at [results.md](https://github.com/zyang91/explortary-metro/blob/main/Results.md)**
 
 
 ## Explortary Results Key Takeaway
