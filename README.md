@@ -1,8 +1,7 @@
 # Metro Line comparison in Bogota
 [![Software License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**Author**：Zhanchao Yang, Chuwen Zhong
-
+**Author**：Zhanchao Yang, Chuwen Zhong </br>
 Summer 2025
 
 # Introduction & Research Questions
@@ -27,7 +26,7 @@ This study employs a cross-sectional survey design to compare household percepti
 All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
 
 ## Bivariate Analysis
-We analyzed four specific targeted relationships for bivariate regression analysis. 
+We analyzed four specific targeted relationships for bivariate regression analysis.
 
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
