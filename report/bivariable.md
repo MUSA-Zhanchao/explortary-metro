@@ -124,8 +124,50 @@ Relationship 1 examines how respondents’ overall perception of the Bogotá Met
 - If P67 is dichotomized (e.g., optimistic vs. pessimistic), a binary logistic regression.
 - For a simpler approximation, treating P67 as continuous and using linear regression, noting the usual caveats about ordinal outcomes. (**Not ideal**)
 
-## Relationship 2: Impacts of Metro Project on Housing Rents vs working trip modes
+## Relationship 2: Impact of Metro Project on Housing Rents
 
+### Hypothesis
+- Most residents are renters
+- They prefer to live close to mass transit to reduce travel times
+
+### Bivariable table
+
+According to the distribution of housing tenure, approximately 70% of residents living along Bogotá’s Second Metro Line (L2) are renters, significantly higher than those along Line 1 (L1), where the proportion of owners and renters is nearly equal. This supports Hypothesis 1: most residents are renters, particularly in areas affected by the L2 project. 
+
+To examine this relationship, we separately analyze the commuting modes of people living near Line 1 and Line 2. For Line 1, the bivariate table is as follows: 
+
+**Line 1: Commuting Modes by Tenure**
+
+| P52\_group     | Owner      | Renter     |
+| -------------- | ---------- | ---------- |
+| BRT            | 41 (35.7%) | 42 (36.5%) |
+| Bicycle        | 8 (7.0%)   | 11 (9.6%)  |
+| Car            | 9 (7.8%)   | 7 (6.1%)   |
+| Intermunicipal | 5 (4.3%)   | 0 (0.0%)   |
+| Motorcycle     | 11 (9.6%)  | 9 (7.8%)   |
+| Other          | 4 (3.5%)   | 0 (0.0%)   |
+| Other Private  | 0 (0.0%)   | 2 (1.7%)   |
+| Other Public   | 1 (0.9%)   | 1 (0.9%)   |
+| SITP           | 12 (10.4%) | 14 (12.2%) |
+| Taxi           | 6 (5.2%)   | 3 (2.6%)   |
+| Walk           | 18 (15.7%) | 26 (22.6%) |
+
+**Line 2: Commuting Modes by Tenure**
+
+| P52\_group    | Owner      | Renter     |
+| ------------- | ---------- | ---------- |
+| BRT           | 22 (41.5%) | 41 (27.9%) |
+| Bicycle       | 5 (9.4%)   | 16 (10.9%) |
+| Car           | 4 (7.5%)   | 9 (6.1%)   |
+| Motorcycle    | 3 (5.7%)   | 13 (8.8%)  |
+| Other         | 1 (1.9%)   | 5 (3.4%)   |
+| Other Private | 0 (0.0%)   | 1 (0.7%)   |
+| Other Public  | 1 (1.9%)   | 2 (1.4%)   |
+| SITP          | 8 (15.1%)  | 18 (12.2%) |
+| Taxi          | 1 (1.9%)   | 2 (1.4%)   |
+| Walk          | 8 (15.1%)  | 40 (27.2%) |
+
+In terms of travel mode, renters along Line 1 use BRT (36.5%) and SITP (12.2%) at slightly higher rates than owners, indicating a relatively stronger reliance on mass transit. However, along Line 2, despite renters making up a larger share, they use BRT (27.9%) and SITP (12.2%) less than owners (41.5% and 15.1%, respectively), while the proportion of walking increases significantly (27.2%). This suggests that renters in the L2 area tend to live closer to their workplaces or metro stations, thereby reducing travel time, which supports the second hypothesis that they prefer to live near mass transit to shorten commute durations. 
 
 ## Relationship 3: Income vs Willingness to Pay
 
