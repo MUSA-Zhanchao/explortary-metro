@@ -217,7 +217,7 @@ The possibility of a mode shift based on the transportation modes
 
 **Line 1: Willingness to use vs transportation for work**
 
-| P52             | 1            | 2            | Total         |
+| P52             | Yes          | No           | Total         |
 |-----------------|--------------|--------------|---------------|
 | Bicycle         | 6.7% (18)    | 4.8% (1)     | 6.6% (19)     |
 | BRT             | 29.1% (78)   | 23.8% (5)    | 28.7% (83)    |
@@ -235,7 +235,7 @@ The possibility of a mode shift based on the transportation modes
 
 **Line 2: Willingness to use vs transportation for work**
 
-| P52            | 1             | 2             | Total          |
+| P52            | Yes           | no             | Total          |
 |----------------|---------------|---------------|----------------|
 | Bicycle        | 8.0% (18)     | 13.6% (3)     | 8.5% (21)      |
 | BRT            | 27.1% (61)    | 9.1% (2)      | 25.5% (63)     |
@@ -251,3 +251,19 @@ The possibility of a mode shift based on the transportation modes
 | **Total**      | **100.0% (225)** | **100.0% (22)** | **100.0% (247)** |
 
 ### Key Takeaway
+Overall, since there are only a low share of the sample answers `no`(7% for line 1, and 9% for line 2), the percentage tend to bump up due to random effect.
+
+- **Strongest adoption potential among transit and pedestrian commuters**: BRT users (29.1% for Line 1; 27.1% for Line 2), walk commuters (16.0%; 20.0%) and SITP riders (9.0%; 11.1%) make up the largest shares of those willing to use the Metro.  
+- **Lower willingness among private and active-mode users**: Car commuters show modest willingness (5.2%; 4.9%) but higher unwillingness (9.5%; 9.1%), motorcycle users have moderate willingness (6.3%; 5.8%) yet substantial reluctance (14.3%; 13.6%), and bicycle users exhibit lower willingness (6.7%; 8.0%) alongside non-negligible unwillingness (4.8%; 13.6%).  
+- **Mixed attitudes in unemployed/non-reported group**: This segment accounts for 20.5% (Line 1) and 18.2% (Line 2) of the willing respondents, but rises to 19.0% and 27.3% among the unwilling, indicating heterogeneity in this cohort.  
+- **Consistent patterns across Lines 1 and 2**: The distribution of willingness by current work mode remains stable for both metro lines, underscoring mode-specific affinities toward adoption.  
+
+#### Suitability for Regression Analysis
+
+- **Outcome**: Willingness to use Metro (Binary: Yes or No).  
+- **Predictor**: Current commute mode (nominal: BRT, walk, SITP, car, motorcycle, bicycle, unemployed/non-reported).  
+- **Sample size**: N≈289 for Line 1 and N≈247 for Line 2; overall adequate but some due to the lower sample size of the response `no`, the acutual covariant or useful sample size may not be adequate.
+
+#### Potential Regression Model
+
+- **logistic regression**: Model the three-level willingness outcome with commute mode as predictor.   
