@@ -1,7 +1,7 @@
 # Metro Line comparison in Bogota
 [![Software License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-Zhanchao Yang, Chuwen Zhong
+**Author**：Zhanchao Yang, Chuwen Zhong
 
 Summer 2025
 
