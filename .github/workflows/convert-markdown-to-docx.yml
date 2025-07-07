@@ -30,18 +30,13 @@ jobs:
         run: |
           python scripts/convert_md_to_docx.py
 
-      - name: Commit and push DOCX files to `doc` branch
+      - name: Commit and push DOCX files back to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # switch to (or create) the doc branch
-          if git rev-parse --verify doc; then
-            git checkout doc
-          else
-            git checkout -b doc
-          fi
-          # stage and commit
+          # stage new/updated DOCX
           git add report/*.docx
-          git commit -m "Auto-convert MD→DOCX on $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          # push back to origin/doc
-          git push --force --set-upstream origin doc
+          # commit with skip-ci to avoid infinite loop
+          git commit -m "Auto-convert MD→DOCX on $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
+          # push back to main
+          git push origin HEAD:main
