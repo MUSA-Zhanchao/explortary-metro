@@ -45,4 +45,3 @@ jobs:
           git commit -m "Auto-convert MD→DOCX on $(date +'%Y-%m-%d')" || echo "No changes to commit"
           # push back to origin/doc
           git push --force --set-upstream origin doc
-
