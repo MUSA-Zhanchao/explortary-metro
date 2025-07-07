@@ -181,22 +181,22 @@ The higher the income is, the higher the amount they are willing to pay for the 
 
 **In summary, a signifcant majority portion of the residents only willingness to pay price lower than $3,200. (75% for Line 2 and 72% for Line 1)**
 
-- **Positive association**: Both for Line 1 and Line 2, mid- to upper-middle income households (especially those earning between COP 1.16 million and COP 2 million) make up progressively larger shares of respondents in the higher willingness-to-pay categories (≥ COP 3 800), while lower-income groups and non-reporters dominate the lowest category (≤ COP 3 200). For example, in Line 1 households earning COP 1.16–1.5 million account for 22.2% of those willing to pay COP 3 500–3 800, compared with just 9.6% of the lowest-income group; meanwhile, 36.8% of the lowest-willingness group did not report income :contentReference[oaicite:0]{index=0}.  
+- **Positive association**: Both for Line 1 and Line 2, mid- to upper-middle income households (especially those earning between COP 1.16 million and COP 2 million) make up progressively larger shares of respondents in the higher willingness-to-pay categories (≥ COP 3 800), while lower-income groups and non-reporters dominate the lowest category (≤ COP 3 200). For example, in Line 1 households earning COP 1.16–1.5 million account for 22.2% of those willing to pay COP 3 500–3 800, compared with just 9.6% of the lowest-income group; meanwhile, 36.8% of the lowest-willingness group did not report income :contentReference[oaicite:0]{index=0}.
 - **Non-response and sparse extremes**: Income non-response is substantial in Line 1 (30.8% in the lowest willingness category) and present in Line 2 (9.7%), and the highest income brackets (above COP 4.9 million) and highest willingness categories each contain very few observations (often fewer than 5), which reduces reliability at the tails :contentReference[oaicite:1]{index=1}.
 
 #### Suitability for Regression Analysis
 
-- **Outcome**: Willingness to pay (P81) is inherently ordinal (six ordered categories).  
-- **Predictor**: Income group (P50) is also ordinal but includes a large “Not reported” category, which may need to filter out 
+- **Outcome**: Willingness to pay (P81) is inherently ordinal (six ordered categories).
+- **Predictor**: Income group (P50) is also ordinal but includes a large “Not reported” category, which may need to filter out
 - **Sample size**: N≈289 for Line 1 and N≈247 for Line 2, adequate overall but with very small cell counts in some combinations (e.g., highest income × highest willingness). These sparse cells will need category collapsing or exclusion to avoid unstable estimates. These may lead to yeild bias regression results.
 
 #### Potential Regression Model
 
-- **Ordinal logistic regression** (proportional-odds model): Use P81 (willingness) as the outcome and P50 (income bracket) as the predictor.  
-- **Category consolidation**: Merge extreme income brackets (e.g., all > COP 2 million) into one or two top categories and combine the lowest willingness categories (e.g., ≤ COP 3 200 vs > COP 3 200) if needed to ensure minimal cell counts.  
+- **Ordinal logistic regression** (proportional-odds model): Use P81 (willingness) as the outcome and P50 (income bracket) as the predictor.
+- **Category consolidation**: Merge extreme income brackets (e.g., all > COP 2 million) into one or two top categories and combine the lowest willingness categories (e.g., ≤ COP 3 200 vs > COP 3 200) if needed to ensure minimal cell counts.
 - **Assumption checking**: Test the proportional-odds assumption (e.g., Brant test). If violated, consider a partial proportional-odds model or switch to multinomial logistic regression.
 
 #### Alternative approaches
 
-- **Binary logistic regression**: Dichotomize willingness (e.g., low vs high) and model as a binary outcome.  
-- **Linear regression proxy**: Assign mid-points to P81 and P50 and treat them as continuous in a linear model—acceptable as a rough check but note the ordinal nature.  
+- **Binary logistic regression**: Dichotomize willingness (e.g., low vs high) and model as a binary outcome.
+- **Linear regression proxy**: Assign mid-points to P81 and P50 and treat them as continuous in a linear model—acceptable as a rough check but note the ordinal nature.
