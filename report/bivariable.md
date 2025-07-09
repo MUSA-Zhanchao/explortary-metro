@@ -124,7 +124,7 @@ Relationship 1 examines how respondents’ overall perception of the Bogotá Met
 - If P67 is dichotomized (e.g., optimistic vs. pessimistic), a binary logistic regression.
 - For a simpler approximation, treating P67 as continuous and using linear regression, noting the usual caveats about ordinal outcomes. (**Not ideal**)
 
-## Relationship 2: Impact of Metro Project on Housing Rents
+## Relationship 2: Impact of Metro Project on Housing Rents (increase the sample size by including all household members)
 
 ### Hypothesis
 - Most residents are renters
