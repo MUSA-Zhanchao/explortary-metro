@@ -162,6 +162,16 @@ important_factor <- no_support %>%
     Percentage = count / sum(count) * 100
   )
 
+prefer_other_mode<- no_support %>%
+  group_by(P64)%>%
+  summarise(
+    count = n(),
+    .groups = "drop"
+  )%>%
+  mutate(
+    Percentage = count / sum(count) * 100
+  )
+
 consturction_impact<- no_support %>%
   group_by(P66)%>%
   summarise(
