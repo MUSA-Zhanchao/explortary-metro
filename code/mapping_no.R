@@ -222,7 +222,7 @@ private_vehicle<- no_support %>%
     Percentage = count / sum(count) * 100
   )
 
-#### potential not support reason 
+#### potential not support reason
 renting_cost_property <- no_support %>%
   group_by(P87)%>%
   summarise(
@@ -312,5 +312,3 @@ new_housing_project <- no_support %>%
   mutate(
     Percentage = count / sum(count) * 100
   )
-
-
