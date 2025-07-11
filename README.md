@@ -66,7 +66,11 @@ These patterns suggest that Metro 1 respondents tend to be more optimistic, bett
 
 # [Bivariate Analysis Results](https://github.com/zyang91/explortary-metro/blob/main/report/bivariable.md)
 
+We explore four bivariable relationships, summarize them in a table, and recommend whether each should proceed to regression analysis along with the most appropriate model type.
 
 
 # Non-support portrait
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
+
+
+# Unsupervised Cluster for Non-supporters
