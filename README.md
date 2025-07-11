@@ -1,7 +1,8 @@
 # Metro Line comparison in Bogota
 [![Software License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**Author**: Zhanchao Yang, Chuwen Zhong </br>
+**Author**: Zhanchao Yang, Chuwen Zhong
+
 Summer 2025
 
 # Introduction & Research Questions
@@ -69,4 +70,3 @@ These patterns suggest that Metro 1 respondents tend to be more optimistic, bett
 
 # Non-support portrait
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
-

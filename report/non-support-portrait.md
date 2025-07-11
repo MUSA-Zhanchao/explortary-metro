@@ -2,7 +2,7 @@
 
 **Sample size:** n = 45
 
-## General Location  
+## General Location
 (by percentage)
 
 ![](output/Layout.jpg)
@@ -91,7 +91,7 @@
 | Taxi     | 1     |
 | Other    | 3     |
 
-**Fare Willing to Pay:**  
+**Fare Willing to Pay:**
 38 (84%) are willing to pay **$0 to $3,200**
 
 
