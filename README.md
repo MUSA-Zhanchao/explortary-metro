@@ -64,3 +64,9 @@ There is no statistically significant difference in implementation perception be
 These patterns suggest that Metro 1 respondents tend to be more optimistic, better informed, and perceive greater benefits (efficiency, support) from the new line, while Metro 2 respondents—many of whom own their homes and live in larger households—exhibit higher cycling rates, greater concern for punctuality and security, and slightly less overall enthusiasm.
 
 # [Bivariate Analysis Results](https://github.com/zyang91/explortary-metro/blob/main/report/bivariable.md)
+
+
+
+# Non-support portrait
+![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
+
