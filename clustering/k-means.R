@@ -41,9 +41,9 @@ for (k in results$Classes) {
 }
 print(results)
 
-# --- choose a “best” K (e.g. 3) and fit final model ---
+# --- choose a “best” K (e.g. 3, based on diagnostics) and fit final model ---
 set.seed(123)
-final_k <- 10
+final_k <- 3  # Chosen based on earlier diagnostics (e.g., elbow plot or silhouette widths)
 km_final <- kmeans(km_matrix, centers = final_k, nstart = 25)
 
 # --- merge cluster labels back into the factor data frame ---
