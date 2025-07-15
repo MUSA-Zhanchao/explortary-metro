@@ -68,6 +68,10 @@ These patterns suggest that Metro 1 respondents tend to be more optimistic, bett
 
 We explore four bivariable relationships, summarize them in a table, and recommend whether each should proceed to regression analysis along with the most appropriate model type.
 
+- Relationship 1: public perception vs housing characteristics
+- Relationship 2: Impact of Metro Project on Housing Rents
+- Relationship 3: Income vs Willingness to Pay
+- Relationship 4: Willingness to use vs transportation for work
 
 # Non-support portrait
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
