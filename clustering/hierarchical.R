@@ -1,7 +1,3 @@
-library(dplyr)
-library(readr)
-library(ggplot2)
-library(tidyr)
 library(haven)
 library(cluster)
 library(tidyverse)
