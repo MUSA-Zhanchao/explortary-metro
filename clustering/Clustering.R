@@ -10,7 +10,7 @@ hog<-readRDS("data/008-24 BBDD Procesamiento Hogares.rds")
 
 # --- 模型数据清洗 ---
 nonsupporter <- hog %>%
-  filter(P68==2) 
+  filter(P68==2)
 
 lca_data <- nonsupporter %>%
   select(ID_Hogar, P1,P82, P50, P87:P101)
@@ -35,7 +35,7 @@ set.seed(123)
 for (k in 2:5) {
   cat("Estimating", k, "classes...\n")
   model <- poLCA(f, data = lca_data, nclass = k, maxiter = 1000, graphs = TRUE)
-  
+
   results <- rbind(results,
                    data.frame(
                      Classes = k,
@@ -55,7 +55,7 @@ best_model <- poLCA(f, data = lca_data, nclass = 2, maxiter = 1000, graphs = TRU
 
 lca_data$cluster <- best_model$predclass
 
-table(lca_data$cluster) 
+table(lca_data$cluster)
 
 summary_table <- lca_data %>%
   group_by(cluster) %>%

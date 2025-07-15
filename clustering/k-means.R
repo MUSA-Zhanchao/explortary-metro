@@ -24,7 +24,7 @@ km_data_f <- km_data %>%
 km_matrix <- km_data_f %>%
   select(-ID_Hogar) %>%
   mutate(across(everything(), as.integer)) %>%
-  scale() 
+  scale()
 
 # --- choose number of clusters (optional diagnostics) ---
 set.seed(123)
@@ -55,14 +55,14 @@ print(table(km_data_f$cluster))
 # --- summary of response‐patterns by cluster ---
 k_means_summary_table <- km_data_f %>%
   group_by(cluster) %>%
-  summarise(across(-ID_Hogar, 
+  summarise(across(-ID_Hogar,
                    ~ paste0(round(100 * prop.table(table(.)), 1), collapse = "; ")),
             .groups = "drop")
 k_means_summary_table$count<-table(km_data_f$cluster)
 print(k_means_summary_table)
 
 # --- optional: view centroids on the original Likert‐scale for interpretation ---
-centroids <- km_final$centers %>% 
+centroids <- km_final$centers %>%
   as.data.frame() %>%
   # if you want to back‐transform to original 1–5 scale roughly:
   sweep(., 2, attr(km_matrix, "scaled:scale"), `*`) %>%
