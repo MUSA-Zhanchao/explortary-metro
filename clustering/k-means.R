@@ -31,19 +31,9 @@ set.seed(123)
 fviz_nbclust(km_matrix, kmeans, method = "wss")         # Elbow plot
 fviz_nbclust(km_matrix, kmeans, method = "silhouette")  # Silhouette widths
 
-# --- run k-means for K = 2:5 and collect total within‐cluster SS ---
-results <- tibble(Classes = 2:5, TotWithinSS = NA_real_)
-for (k in results$Classes) {
-  set.seed(123)
-  km <- kmeans(km_matrix, centers = k, nstart = 25)
-  results <- results %>%
-    mutate(TotWithinSS = replace(TotWithinSS, Classes == k, km$tot.withinss))
-}
-print(results)
-
-# --- choose a “best” K (e.g. 3, based on diagnostics) and fit final model ---
+# --- choose a “best” K (e.g. 10, based on diagnostics) and fit final model ---
 set.seed(123)
-final_k <- 3  # Chosen based on earlier diagnostics (e.g., elbow plot or silhouette widths)
+final_k <- 10  # Chosen based on earlier diagnostics (e.g., elbow plot or silhouette widths)
 km_final <- kmeans(km_matrix, centers = final_k, nstart = 25)
 
 # --- merge cluster labels back into the factor data frame ---
