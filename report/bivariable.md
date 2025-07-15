@@ -243,7 +243,7 @@ The higher the income is, the higher the amount they are willing to pay for the 
 - **Binary logistic regression**: Dichotomize willingness (e.g., low vs high) and model as a binary outcome.
 - **Linear regression proxy**: Assign mid-points to P81 and P50 and treat them as continuous in a linear model—acceptable as a rough check, but note the ordinal nature.
 
-## Relationship 4: Willingness to use vs transportation for work*
+## Relationship 4: Willingness to use vs transportation for work
 
 ### Research Question
 
