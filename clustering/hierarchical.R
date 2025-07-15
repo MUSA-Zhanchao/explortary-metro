@@ -45,15 +45,15 @@ print(sil_results)
 
 
 # --- k = 2 时的簇标记 & 摘要 ---
-hc_data$cluster3 <- cutree(hc, k = 2)
+hc_data$cluster2 <- cutree(hc, k = 2)
 cat("Cluster sizes (k=2):\n")
-print(table(hc_data$cluster3))
+print(table(hc_data$cluster2))
 
-summary_table3 <- hc_data %>%
-  group_by(cluster3) %>%
+summary_table2 <- hc_data %>%
+  group_by(cluster2) %>%
   summarise(across(-ID_Hogar,
                    ~ paste0(round(prop.table(table(.)) * 100, 1), collapse = ", ")
   ))
-summary_table3$count<- table(hc_data$cluster3)
-cat("\nCluster summaries (k=3):\n")
-print(summary_table3)
+summary_table2$count<- table(hc_data$cluster2)
+cat("\nCluster summaries (k=2):\n")
+print(summary_table2)
