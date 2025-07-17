@@ -110,6 +110,9 @@ We explore four bivariable relationships, summarize them in a table, and recomme
 - Relationship 3: Income vs Willingness to Pay
 - Relationship 4: Willingness to use vs transportation for work
 
+## Key takeaway
+The bivariate analysis of the Bogotá Metro survey reveals meaningful relationships between residents' perceptions, socioeconomic characteristics, and transportation behaviors. Optimism toward the Metro project is more common among renters, shorter-term residents, and lower-rent households, suggesting that more mobile and transit-reliant populations are more supportive. Renters, especially along Line 2, are more likely to live closer to mass transit and walk to work, indicating location preferences that reduce commute times. Income is positively associated with willingness to pay for Metro fares, though nonresponse and sparse high-income cells limit precision. Finally, current transit and pedestrian commuters show the strongest willingness to adopt the Metro, while private and active-mode users are more hesitant. These insights inform the design of suitable regression models and informed policy recommendations.
+
 # [Non-support portrait](https://github.com/zyang91/explortary-metro/blob/main/report/non-support-portrait.md)
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
 
