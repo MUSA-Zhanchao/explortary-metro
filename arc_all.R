@@ -4,6 +4,14 @@ library(tidyverse)
 
 # --- 数据载入 & 清洗 ---
 hog <- readRDS("data/008-24 BBDD Procesamiento Hogares.rds")
+personas<- readRDS("data/008-24 BBDD Procesamiento personas.rds")
+
+check<- personas%>%
+  group_by(posicionActual)%>%
+  summarise(count= n())
+
+household_head<- personas%>%
+  filter(posicionActual == "primer")
 
 hc_data <- hog %>%
   select(ID_Hogar,P68, P87:P101) %>%
