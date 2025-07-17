@@ -29,6 +29,8 @@ All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggpl
 ## Bivariate Analysis
 We analyzed four specific targeted relationships for bivariate regression analysis.
 
+## Unsupervised clustering for sample 
+
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
 The Results section presents a comparative overview of demographic profiles, travel behaviors, perception metrics, and implementation expectations among households adjacent to Metro Line 1 and Line 2. We begin by summarizing general socio‑demographic characteristics before exploring shifts in travel modes pre‑ and during the pandemic. Next, we examine attitudes toward the upcoming metro service—covering efficiency, safety, and environmental perceptions—followed by anticipated community impacts post‑implementation.
@@ -78,3 +80,12 @@ We explore four bivariable relationships, summarize them in a table, and recomme
 
 
 # Unsupervised Cluster for Non-supporters
+- Primary targeted question (Metro Perception): P87-P101
+- Demographic integrated perception question
+
+## clustering method
+- Latent Classic analysis and clustering
+- K-means clustering
+- Hierarchical clustering
+
+# Unsupervised Cluster for all samples
