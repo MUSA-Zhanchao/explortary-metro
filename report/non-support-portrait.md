@@ -5,7 +5,7 @@
 ## General Location
 (by percentage)
 
-![](output/Layout.jpg)
+![](../output/Layout.jpg)
 
 
 ## Demographics
