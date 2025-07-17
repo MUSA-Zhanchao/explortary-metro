@@ -29,7 +29,7 @@ All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggpl
 ## Bivariate Analysis
 We analyzed four specific targeted relationships for bivariate regression analysis.
 
-## Unsupervised clustering for sample 
+## Unsupervised clustering for sample
 
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
