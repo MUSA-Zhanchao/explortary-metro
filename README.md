@@ -75,9 +75,10 @@ We explore four bivariable relationships, summarize them in a table, and recomme
 - Relationship 3: Income vs Willingness to Pay
 - Relationship 4: Willingness to use vs transportation for work
 
-# Non-support portrait
+# [Non-support portrait](https://github.com/zyang91/explortary-metro/blob/main/report/non-support-portrait.md)
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
 
+## Key takeaway
 
 # Unsupervised Cluster for Non-supporters
 - Primary targeted question (Metro Perception): P87-P101
