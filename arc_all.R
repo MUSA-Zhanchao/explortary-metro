@@ -13,6 +13,11 @@ check<- personas%>%
 household_head<- personas%>%
   filter(posicionActual == "primer")
 
+## double check
+distinct<- household_head%>%
+  distinct(ID_Hogar, .keep_all = TRUE)
+
+
 hc_data <- hog %>%
   select(ID_Hogar,P68, P87:P101) %>%
   mutate(across(-ID_Hogar, as.factor))
