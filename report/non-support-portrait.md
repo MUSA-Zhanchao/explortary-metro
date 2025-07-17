@@ -2,6 +2,10 @@
 
 **Sample size:** n = 45
 
+## Purpose of the Analysis
+
+Only around 10% of the overall survey sample expressed opposition or hesitation toward the Bogotá Metro project. This analysis focuses on understanding why this small yet important group holds such views. By examining their socio-economic characteristics, household conditions, transportation behaviors, and perceptions of public services, the goal is to uncover the underlying factors contributing to their lack of support. Insights from this profile can help policymakers and planners address concerns, tailor engagement strategies, and ensure that the Metro system meets the needs and expectations of all residents, including its skeptics.
+
 ## General Location
 (by percentage)
 
@@ -136,3 +140,7 @@
 - Increase: 21
 - No change: 14
 - Decrease: 10
+
+## Key Takeaway
+
+Non-supporters of the Bogotá Metro project are predominantly renters (69%), long-term residents, and solo householders, with a strong reliance on BRT and SITP systems. Despite being public transport users, they express widespread dissatisfaction with current services, citing concerns over punctuality, safety, and comfort. Their top priorities in transportation are safety and travel time, yet most expect the Metro to increase housing costs, living expenses, and construction-related commute times. A large majority (84%) are only willing to pay the lowest fare tier, and over half plan to walk to future Metro stations. Overall, the profile suggests that non-supporters are cost-conscious, safety-oriented, and skeptical of public infrastructure improvements, highlighting the need for targeted communication and design strategies that address affordability, accessibility, and trust in service reliability.
