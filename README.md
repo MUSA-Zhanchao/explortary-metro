@@ -24,10 +24,45 @@ This study employs a cross-sectional survey design to compare household percepti
 - **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential next steps*)
 - **Visualization**: Bar charts and cross-tabulations were generated to illustrate key contrasts.
 
-All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
+All analyses were performed in R version 4.3.3, using packages `dplyr`, `ggplot2`.
 
 ## Bivariate Analysis
-We analyzed four specific targeted relationships for bivariate regression analysis.
+
+### Purpose
+
+The purpose of the bivariate analysis in this study is to:
+
+- **Explore associations** between pairs of variables from the Bogotá Metro survey, such as:
+  - Public perception of the Metro vs housing characteristics
+  - Housing tenure vs commuting behavior
+  - Income vs willingness to pay for Metro fare
+  - Current transportation mode vs willingness to adopt Metro
+
+- **Test hypotheses** such as:
+  - Renters are more optimistic about the Metro than owners.
+  - Renters prefer living near mass transit to reduce commute time.
+  - Higher-income households are more willing to pay higher fares.
+  - Current transit users are more likely to use the Metro.
+
+- **Inform regression modeling** by:
+  - Revealing trends and potential predictor-outcome relationships
+  - Identifying sparse or small cell sizes that may require category collapsing
+  - Assessing whether data meet assumptions for regression models
+
+### Specific Method
+
+The analysis uses **cross-tabulation (contingency tables)** to show how the values of one variable are distributed across another. Specifically, the methods include:
+
+- **Frequency and percentage tables** for each relationship
+- **Stratification by Metro Line** (Line 1 and Line 2) to compare geographic differences
+- **Descriptive summaries** of associations and patterns in the tables
+
+These methods are **non-parametric and exploratory**, serving as a foundation for the proposed regression models, such as:
+
+- Ordinal logistic regression (e.g., perception or willingness as outcomes)
+- Binary logistic regression (e.g., willingness to use the Metro: yes/no)
+- Multinomial logistic regression (if the proportional-odds assumption is violated)
+
 
 ## Unsupervised clustering for sample
 
