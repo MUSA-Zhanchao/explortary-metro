@@ -64,7 +64,15 @@ These methods are **non-parametric and exploratory**, serving as a foundation fo
 - Multinomial logistic regression (if the proportional-odds assumption is violated)
 
 
-## Unsupervised clustering for sample
+## Unsupervised clustering for Sample and Metro non-supporters
+
+- Primary targeted question (Metro Perception): P87-P101
+- Demographic integrated perception question
+
+## clustering method
+- Latent Classic analysis and clustering
+- K-means clustering
+- Hierarchical clustering
 
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
@@ -120,12 +128,6 @@ The bivariate analysis of the Bogotá Metro survey reveals meaningful relationsh
 Non-supporters of the Bogotá Metro project are predominantly renters (69%), long-term residents, and solo householders, with a strong reliance on BRT and SITP systems. Despite being public transport users, they express widespread dissatisfaction with current services, citing concerns over punctuality, safety, and comfort. Their top priorities in transportation are safety and travel time, yet most expect the Metro to increase housing costs, living expenses, and construction-related commute times. A large majority (84%) are only willing to pay the lowest fare tier, and over half plan to walk to future Metro stations. Overall, the profile suggests that non-supporters are cost-conscious, safety-oriented, and skeptical of public infrastructure improvements, highlighting the need for targeted communication and design strategies that address affordability, accessibility, and trust in service reliability.
 
 # Unsupervised Cluster for Non-supporters
-- Primary targeted question (Metro Perception): P87-P101
-- Demographic integrated perception question
 
-## clustering method
-- Latent Classic analysis and clustering
-- K-means clustering
-- Hierarchical clustering
 
 # Unsupervised Cluster for all samples
