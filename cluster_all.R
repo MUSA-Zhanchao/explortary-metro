@@ -32,7 +32,7 @@ set.seed(123)
 for (k in 2:5) {
   cat("Estimating", k, "classes...\n")
   model <- poLCA(f, data = lca_data, nclass = k, maxiter = 1000)
-  
+
   results <- rbind(results,
                    data.frame(
                      Classes = k,

@@ -24,12 +24,55 @@ This study employs a cross-sectional survey design to compare household percepti
 - **Comparative Analysis**: Chi-square tests assessed significant differences in categorical responses between Line 1 and Line 2 households. （*potential next steps*)
 - **Visualization**: Bar charts and cross-tabulations were generated to illustrate key contrasts.
 
-All analyses were performed in R version 4.2.2, using packages ·dplyr·, ·ggplot2·.
+All analyses were performed in R version 4.3.3, using packages `dplyr`, `ggplot2`.
 
 ## Bivariate Analysis
-We analyzed four specific targeted relationships for bivariate regression analysis.
 
-## Unsupervised clustering for sample 
+### Purpose
+
+The purpose of the bivariate analysis in this study is to:
+
+- **Explore associations** between pairs of variables from the Bogotá Metro survey, such as:
+  - Public perception of the Metro vs housing characteristics
+  - Housing tenure vs commuting behavior
+  - Income vs willingness to pay for Metro fare
+  - Current transportation mode vs willingness to adopt Metro
+
+- **Test hypotheses** such as:
+  - Renters are more optimistic about the Metro than owners.
+  - Renters prefer living near mass transit to reduce commute time.
+  - Higher-income households are more willing to pay higher fares.
+  - Current transit users are more likely to use the Metro.
+
+- **Inform regression modeling** by:
+  - Revealing trends and potential predictor-outcome relationships
+  - Identifying sparse or small cell sizes that may require category collapsing
+  - Assessing whether data meet assumptions for regression models
+
+### Specific Method
+
+The analysis uses **cross-tabulation (contingency tables)** to show how the values of one variable are distributed across another. Specifically, the methods include:
+
+- **Frequency and percentage tables** for each relationship
+- **Stratification by Metro Line** (Line 1 and Line 2) to compare geographic differences
+- **Descriptive summaries** of associations and patterns in the tables
+
+These methods are **non-parametric and exploratory**, serving as a foundation for the proposed regression models, such as:
+
+- Ordinal logistic regression (e.g., perception or willingness as outcomes)
+- Binary logistic regression (e.g., willingness to use the Metro: yes/no)
+- Multinomial logistic regression (if the proportional-odds assumption is violated)
+
+
+## Unsupervised clustering for Sample and Metro non-supporters
+
+- Primary targeted question (Metro Perception): P87-P101
+- Demographic integrated perception question
+
+## clustering method
+- Latent Classic analysis and clustering
+- K-means clustering
+- Hierarchical clustering
 
 # [Exploratory Results](https://github.com/zyang91/explortary-metro/blob/main/report/Results.md)
 
@@ -75,17 +118,16 @@ We explore four bivariable relationships, summarize them in a table, and recomme
 - Relationship 3: Income vs Willingness to Pay
 - Relationship 4: Willingness to use vs transportation for work
 
-# Non-support portrait
+## Key takeaway
+The bivariate analysis of the Bogotá Metro survey reveals meaningful relationships between residents' perceptions, socioeconomic characteristics, and transportation behaviors. Optimism toward the Metro project is more common among renters, shorter-term residents, and lower-rent households, suggesting that more mobile and transit-reliant populations are more supportive. Renters, especially along Line 2, are more likely to live closer to mass transit and walk to work, indicating location preferences that reduce commute times. Income is positively associated with willingness to pay for Metro fares, though nonresponse and sparse high-income cells limit precision. Finally, current transit and pedestrian commuters show the strongest willingness to adopt the Metro, while private and active-mode users are more hesitant. These insights inform the design of suitable regression models and informed policy recommendations.
+
+# [Non-support portrait](https://github.com/zyang91/explortary-metro/blob/main/report/non-support-portrait.md)
 ![Layout](https://github.com/user-attachments/assets/4f755e08-97f7-4762-88ea-05405bc70f8b)
 
+## Key takeaway
+Non-supporters of the Bogotá Metro project are predominantly renters (69%), long-term residents, and solo householders, with a strong reliance on BRT and SITP systems. Despite being public transport users, they express widespread dissatisfaction with current services, citing concerns over punctuality, safety, and comfort. Their top priorities in transportation are safety and travel time, yet most expect the Metro to increase housing costs, living expenses, and construction-related commute times. A large majority (84%) are only willing to pay the lowest fare tier, and over half plan to walk to future Metro stations. Overall, the profile suggests that non-supporters are cost-conscious, safety-oriented, and skeptical of public infrastructure improvements, highlighting the need for targeted communication and design strategies that address affordability, accessibility, and trust in service reliability.
 
 # Unsupervised Cluster for Non-supporters
-- Primary targeted question (Metro Perception): P87-P101
-- Demographic integrated perception question
 
-## clustering method
-- Latent Classic analysis and clustering
-- K-means clustering
-- Hierarchical clustering
 
 # Unsupervised Cluster for all samples
