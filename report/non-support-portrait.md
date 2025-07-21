@@ -1,9 +1,8 @@
 # Portrait of the Non-Supporter of the Bogotá Metro Project
 **Author: Zhanchao Yang**
 
-**Sample size:** n = 45
-
 ## Purpose of the Analysis
+**Sample size:** n = 45
 
 Only around 10% of the overall survey sample expressed opposition or hesitation toward the Bogotá Metro project. This analysis focuses on understanding why this small yet important group holds such views. By examining their socio-economic characteristics, household conditions, transportation behaviors, and perceptions of public services, the goal is to uncover the underlying factors contributing to their lack of support. Insights from this profile can help policymakers and planners address concerns, tailor engagement strategies, and ensure that the Metro system meets the needs and expectations of all residents, including its skeptics.
 
