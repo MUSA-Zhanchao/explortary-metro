@@ -1,4 +1,5 @@
 # Portrait of the Non-Supporter of the Bogotá Metro Project
+**Author: Zhanchao Yang**
 
 **Sample size:** n = 45
 
