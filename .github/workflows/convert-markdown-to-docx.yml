@@ -1,9 +1,11 @@
-# .github/workflows/convert-markdown-to-docx.yml
 name: Convert Markdown to DOCX
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - report/**     # Trigger only if files in 'report/' change
+      - scripts/**    # Optional: Include this if script changes should also trigger it
   workflow_dispatch:
 
 jobs:
@@ -34,9 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # stage new/updated DOCX
           git add report/*.docx
-          # commit with skip-ci to avoid infinite loop
           git commit -m "Auto-convert MD→DOCX on $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
-          # push back to main
           git push origin HEAD:main
