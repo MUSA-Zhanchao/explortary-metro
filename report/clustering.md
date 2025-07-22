@@ -311,7 +311,7 @@ The Hierarchical clustering method didn't separate the non-support group from ot
 - **Perceptions:**  
   - Overwhelming worry about expense (91.7% agree it’s too costly).  
   - Strong optimism about business growth (76.7% agree).  
-  - Mixed or neutral on safety and public transit improvements. :contentReference[oaicite:1]{index=1}  
+  - Mixed or neutral on safety and public transit improvements.  
 
 #### Cluster 3: Ambivalent Renters  
 - **Demographics:** Mixed gender (56% male) and renters (58.7%), with a tilt toward younger adults.  
