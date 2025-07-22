@@ -376,14 +376,17 @@ code {
 <li>P14 (occupation): according to original sequence</li>
 <li>P1 (housing type)</li>
 <li>P50 (income): low to high (cat 12: NA)</li>
-<li>P82 (rent or own)</li>
-<li>Edad (age): low to high (no head of the household lower tha 18)</li>
+<li>P82 (own or rent): Own / Rent</li>
+<li>Edad (age): low to high (no head of the household lower than 18)
+<ul>
 <li>18-24</li>
 <li>25-34</li>
 <li>35-44</li>
 <li>45-54</li>
 <li>55-64</li>
 <li>Over 64</li>
+</ul>
+</li>
 </ul>
 <h3 id="perception-variable">Perception Variable</h3>
 <ul>
@@ -582,11 +585,11 @@ $$</p>
 <img src="../output/final/lca_full/Rplot05.png" alt=""></p>
 <h3 id="takeaway">Takeaway</h3>
 <p>The Latent Classic Analytics cluster method hasn't distinguished between people who support or do not support the metro project.</p>
-<h4 id="cluster-1-value-driven-homeowners">Cluster 1: “Value-Driven Homeowners”</h4>
+<h4 id="cluster-1-value-driven-renters">Cluster 1: “Value-Driven Renters”</h4>
 <ul>
 <li><strong>Profile &amp; Support</strong>
 <ul>
-<li>Predominantly homeowners (62 % own vs. 38 % rent)</li>
+<li>Predominantly homeowners (62 % rent vs. 38 % own)</li>
 <li>Mixed ages, slightly skewed male</li>
 <li>Strong majority support (88 %) for the Metro project</li>
 </ul>
@@ -607,11 +610,11 @@ $$</p>
 </ul>
 </li>
 </ul>
-<h4 id="cluster-2-senior-renters-enthusiasts">Cluster 2: “Senior Renters Enthusiasts”</h4>
+<h4 id="cluster-2-senior-owners-enthusiasts">Cluster 2: “Senior Owners Enthusiasts”</h4>
 <ul>
 <li><strong>Profile &amp; Support</strong>
 <ul>
-<li>Older renters (81 % rent; 64 % in the oldest age bracket)</li>
+<li>Older renters (81 % own; 64 % in the oldest age bracket)</li>
 <li>Very high support (93 %)</li>
 <li>Balanced income and education levels</li>
 </ul>
@@ -631,11 +634,11 @@ $$</p>
 </ul>
 </li>
 </ul>
-<h4 id="cluster-3-homeowner-fence-sitters">Cluster 3: “Homeowner Fence-Sitters”</h4>
+<h4 id="cluster-3-renters-fence-sitters">Cluster 3: “Renters Fence-Sitters”</h4>
 <ul>
 <li><strong>Profile &amp; Support</strong>
 <ul>
-<li>Almost entirely homeowners (88 % own)</li>
+<li>Almost entirely renters (88 % rent)</li>
 <li>100 % support, but mostly neutral on benefits</li>
 </ul>
 </li>
@@ -887,9 +890,9 @@ $$</p>
 <img src="../output/final/k-means_full/Rplot6_6.png" alt=""></p>
 <h3 id="takeaway">Takeaway</h3>
 <p>The k-means clustering successfully separates the non-support groups from other clusters.</p>
-<h4 id="cluster-1-homeowner-traditionalists">Cluster 1: Homeowner Traditionalists</h4>
+<h4 id="cluster-1-renters-traditionalists">Cluster 1: Renters Traditionalists</h4>
 <ul>
-<li><strong>Demographics</strong>: Predominantly male; majority homeowners; mid-to-high education and moderate incomes.</li>
+<li><strong>Demographics</strong>: Predominantly male; majority renters; mid-to-high education and moderate incomes.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>Expense concern: 87.5%</li>
@@ -900,9 +903,9 @@ $$</p>
 </li>
 <li><strong>Label</strong>: supportive overall but especially attentive to cost and housing-value improvements.</li>
 </ul>
-<h4 id="cluster-2-prosperous-skeptical-owners">Cluster 2: Prosperous Skeptical Owners</h4>
+<h4 id="cluster-2-prosperous-skeptical-renters">Cluster 2: Prosperous Skeptical Renters</h4>
 <ul>
-<li><strong>Demographics</strong>: Balanced gender; overwhelmingly homeowners; skew toward higher education and income deciles.</li>
+<li><strong>Demographics</strong>: Balanced gender; overwhelmingly renters; skew toward higher education and income deciles.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>Expense concern: 91.4% (highest)</li>
@@ -916,7 +919,7 @@ $$</p>
 </ul>
 <h4 id="cluster-3-neutral-lean-supporters">Cluster 3: Neutral-Lean Supporters</h4>
 <ul>
-<li><strong>Demographics</strong>: Mostly homeowners; moderate gender balance; education/income clustered around mid-levels.</li>
+<li><strong>Demographics</strong>: Mostly renters; moderate gender balance; education/income clustered around mid-levels.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>“Neither agree nor disagree” majority on housing values (60.4%), safety (72.1%), expense (73.9%) and business (65.8%)</li>
@@ -925,9 +928,9 @@ $$</p>
 </li>
 <li><strong>Label</strong>: generally in favor but largely indifferent on most project impacts.</li>
 </ul>
-<h4 id="cluster-4-older-renters-with-low-transit-expectations">Cluster 4: Older Renters with Low Transit Expectations</h4>
+<h4 id="cluster-4-older-owners-with-low-transit-expectations">Cluster 4: Older Owners with Low Transit Expectations</h4>
 <ul>
-<li><strong>Demographics</strong>: Slight female tilt; predominantly renters; older age profile; many with missing income data.</li>
+<li><strong>Demographics</strong>: Slight female tilt; predominantly owners; older age profile; many with missing income data.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>Housing-value support: 59.5%</li>
@@ -941,7 +944,7 @@ $$</p>
 </ul>
 <h4 id="cluster-5-non-supporters--noise-worriers">Cluster 5: Non-Supporters &amp; Noise Worriers</h4>
 <ul>
-<li><strong>Demographics</strong>: Majority homeowners; balanced gender; mid-to-high education and income.</li>
+<li><strong>Demographics</strong>: Majority renters; balanced gender; mid-to-high education and income.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>100% non-support for the project</li>
@@ -955,7 +958,7 @@ $$</p>
 </ul>
 <h4 id="cluster-6-young-transit-enthusiasts">Cluster 6: Young Transit Enthusiasts</h4>
 <ul>
-<li><strong>Demographics</strong>: Heavily male; overwhelmingly renters; younger-to-mid age; moderate education/income.</li>
+<li><strong>Demographics</strong>: Heavily male; overwhelmingly owner; younger-to-mid age; moderate education/income.</li>
 <li><strong>Perceptions</strong>:
 <ul>
 <li>Housing-value support: 80.2%</li>
@@ -1133,9 +1136,9 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 <img src="../output/final/hierarchical_full/Rplot07.png" alt=""></p>
 <h3 id="takeaway">Takeaway</h3>
 <p>The Hierarchical clustering method did not separate the non-support group from others.</p>
-<h4 id="cluster-1-optimistic-renters">Cluster 1: Optimistic Renters</h4>
+<h4 id="cluster-1-optimistic-homeowners">Cluster 1: Optimistic Homeowners</h4>
 <ul>
-<li><strong>Demographics:</strong> Predominantly male (76.6%) and renters (73.7%), with a wide income spread and a skew toward younger adults.</li>
+<li><strong>Demographics:</strong> Predominantly male (76.6%) and owners (73.7%), with a wide income spread and a skew toward younger adults.</li>
 <li><strong>Support:</strong> Nearly unanimous backing (97.1%).</li>
 <li><strong>Perceptions:</strong>
 <ul>
@@ -1145,9 +1148,9 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 </ul>
 </li>
 </ul>
-<h4 id="cluster-2-cost-sensitive-homeowners">Cluster 2: Cost-Sensitive Homeowners</h4>
+<h4 id="cluster-2-cost-sensitive-renters">Cluster 2: Cost-Sensitive Renters</h4>
 <ul>
-<li><strong>Demographics:</strong> Largely female (75%) and homeowners (78.3%), spanning middle to older age groups.</li>
+<li><strong>Demographics:</strong> Largely female (75%) and renters (78.3%), spanning middle to older age groups.</li>
 <li><strong>Support:</strong> High overall (95%).</li>
 <li><strong>Perceptions:</strong>
 <ul>
@@ -1157,9 +1160,9 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 </ul>
 </li>
 </ul>
-<h4 id="cluster-3-ambivalent-renters">Cluster 3: Ambivalent Renters</h4>
+<h4 id="cluster-3-ambivalent-homeowners">Cluster 3: Ambivalent Homeowners</h4>
 <ul>
-<li><strong>Demographics:</strong> Mixed gender (56% male) and renters (58.7%), with a tilt toward younger adults.</li>
+<li><strong>Demographics:</strong> Mixed gender (56% male) and owners (58.7%), with a tilt toward younger adults.</li>
 <li><strong>Support:</strong> Solid backing (93.3%), but the smallest margin among clusters.</li>
 <li><strong>Perceptions:</strong>
 <ul>
@@ -1169,9 +1172,9 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 </ul>
 </li>
 </ul>
-<h4 id="cluster-4-skeptical-homeowners">Cluster 4: Skeptical Homeowners</h4>
+<h4 id="cluster-4-skeptical-renters">Cluster 4: Skeptical Renters</h4>
 <ul>
-<li><strong>Demographics:</strong> Mostly male (75%) homeowners (69.4%), skewing middle-aged.</li>
+<li><strong>Demographics:</strong> Mostly male (75%) renters (69.4%), skewing middle-aged.</li>
 <li><strong>Support:</strong> Lowest net support (83.9%), with the highest non-support share (16.1%).</li>
 <li><strong>Perceptions:</strong>
 <ul>
@@ -1181,9 +1184,9 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 </ul>
 </li>
 </ul>
-<h4 id="cluster-5-neutral-homeowners-with-time-doubts">Cluster 5: Neutral Homeowners with Time Doubts</h4>
+<h4 id="cluster-5-neutral-renters-with-time-doubts">Cluster 5: Neutral Renters with Time Doubts</h4>
 <ul>
-<li><strong>Demographics:</strong> Predominantly homeowners (89.3%), fairly balanced gender.</li>
+<li><strong>Demographics:</strong> Predominantly renters (89.3%), fairly balanced gender.</li>
 <li><strong>Support:</strong> Strong overall (95.2%).</li>
 <li><strong>Perceptions:</strong>
 <ul>
@@ -1192,6 +1195,11 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 </ul>
 </li>
 </ul>
+<h2 id="key-takeaway">Key takeaway</h2>
+<p>Across latent class, k-means, and hierarchical clustering, housing tenure and demographic factors consistently shape both support for and perceptions of the Metro project, particularly renter versus owner status, age, and income.  Renters, especially younger cohorts, overwhelmingly support the project and anticipate gains in housing values and expense reductions, yet remain skeptical about travel-time savings. Conversely, older homeowners and high-income groups exhibit more ambivalence: while they acknowledge potential economic and safety benefits, they express concerns about noise, cost, and personal convenience, resulting in a lower net support or neutral stance.</p>
+<p>From a technical standpoint, k-means clustering identified almost 99% (44 out of 45) of the metro skeptical sample as belonging to one particular cluster (k-means cluster 5). Those non-support groups are predominantly majority dominated by renters, with mid- to higher-income levels and educational backgrounds. They worried about potential noise concerns, increased living expenses, and were not satisfied with the current public transportation in Bogotá (mainly due to cost of living and noise concerns).  The Hierarchical and Latent Classic Choice method yields mixed results, but with relatively straightforward labels for each clustering specified in the main results documentation.</p>
+<p><em>Footnote</em>:</p>
+<p><em>The results table shows the possibility of a random choice among each categorical group, or the proportion of each category in the clustering sample. For example, in k-means, the cluster 1 line variable shows 36.5 and 63.5, indicating that in cluster 1, 36.5% of the cluster is located close to line 1, while 63.5% of the cluster is located close to line 2. In other words, if you randomly pick one sample from cluster 1, the possibility of this sample living close to line 1 is 36.5% and living close to line 2 is 63.5%.</em></p>
 
 </body>
 </html>
