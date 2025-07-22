@@ -54,7 +54,7 @@ $$
           {\sum_{c'} \pi_{c'} \prod_j \theta_{j,c'}(y_{i,j})}
    $$
 
-2. **M‐step**: update parameters using these posteriors:
+2. **M‐step**: Update parameters using these posteriors:
 
    $$
    \pi_c \leftarrow \frac{1}{N} \sum_{i=1}^N \gamma_{i,c},
