@@ -319,7 +319,7 @@ The Hierarchical clustering method didn't separate the non-support group from ot
 - **Perceptions:**  
   - Over 80% neither agree nor disagree on expense, safety, and time savings.  
   - Only modest agreement on public transit (14.7%) and business (6.7%).  
-  - This group is largely neutral—open to persuasion but not strongly sold. :contentReference[oaicite:2]{index=2}  
+  - This group is largely neutral—open to persuasion but not strongly sold.  
 
 #### Cluster 4: Skeptical Homeowners  
 - **Demographics:** Mostly male (75%) homeowners (69.4%), skewing middle-aged.  
