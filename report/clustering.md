@@ -178,62 +178,61 @@ Since the k-means algorithm is only suitable for dealing with ordinal data (base
 The k-means clustering successfully separates the non-support groups from other clusters.
 
 #### Cluster 1: Homeowner Traditionalists
-- **Demographics**: Predominantly male; majority homeowners; mid-to-high education and moderate incomes.  
-- **Perceptions**:  
-  - Expense concern: 87.5%  
-  - Housing-value optimism: 84.4%  
-  - Business benefits optimism: 78.1%  
-  - Public-transit support: 52.1%  
+- **Demographics**: Predominantly male; majority homeowners; mid-to-high education and moderate incomes.
+- **Perceptions**:
+  - Expense concern: 87.5%
+  - Housing-value optimism: 84.4%
+  - Business benefits optimism: 78.1%
+  - Public-transit support: 52.1%
 - **Label**: supportive overall but especially attentive to cost and housing-value improvements.
 
 #### Cluster 2: Prosperous Skeptical Owners
-- **Demographics**: Balanced gender; overwhelmingly homeowners; skew toward higher education and income deciles.  
-- **Perceptions**:  
-  - Expense concern: 91.4% (highest)  
-  - Business-benefits optimism: 85.7%  
-  - Noise worry: 69.5% (very high)  
-  - Travel-time gains doubt: 56.2% disagree  
-  - Public-space benefits doubt: 50.5% disagree  
+- **Demographics**: Balanced gender; overwhelmingly homeowners; skew toward higher education and income deciles.
+- **Perceptions**:
+  - Expense concern: 91.4% (highest)
+  - Business-benefits optimism: 85.7%
+  - Noise worry: 69.5% (very high)
+  - Travel-time gains doubt: 56.2% disagree
+  - Public-space benefits doubt: 50.5% disagree
 - **Label**: affluent supporters of investment but doubtful of time- and space-related gains.
 
 
 #### Cluster 3: Neutral-Lean Supporters
-- **Demographics**: Mostly homeowners; moderate gender balance; education/income clustered around mid-levels.  
-- **Perceptions**:  
-  - “Neither agree nor disagree” majority on housing values (60.4%), safety (72.1%), expense (73.9%) and business (65.8%)  
-  - Moderate transit support: 50.5%  
+- **Demographics**: Mostly homeowners; moderate gender balance; education/income clustered around mid-levels.
+- **Perceptions**:
+  - “Neither agree nor disagree” majority on housing values (60.4%), safety (72.1%), expense (73.9%) and business (65.8%)
+  - Moderate transit support: 50.5%
 - **Label**: generally in favor but largely indifferent on most project impacts.
 
 #### Cluster 4: Older Renters with Low Transit Expectations
-- **Demographics**: Slight female tilt; predominantly renters; older age profile; many with missing income data.  
-- **Perceptions**:  
-  - Housing-value support: 59.5%  
-  - Expense concern: 42.9%  
-  - Business-benefits optimism: 10.7%  
-  - Transit-benefits optimism: 7.1%  
-  - Mixed noise/public-space views  
+- **Demographics**: Slight female tilt; predominantly renters; older age profile; many with missing income data.
+- **Perceptions**:
+  - Housing-value support: 59.5%
+  - Expense concern: 42.9%
+  - Business-benefits optimism: 10.7%
+  - Transit-benefits optimism: 7.1%
+  - Mixed noise/public-space views
 - **Label**:  supportive on housing values but skeptical about business and transit improvements.
 
 
 #### Cluster 5: Non-Supporters & Noise Worriers
-- **Demographics**: Majority homeowners; balanced gender; mid-to-high education and income.  
-- **Perceptions**:  
-  - 100% non-support for the project  
-  - Noise concern: 79.5%  
-  - Expense worry: 59.1%  
-  - Public-transit support: 29.5%  
-  - Public-space support: 27.3%  
+- **Demographics**: Majority homeowners; balanced gender; mid-to-high education and income.
+- **Perceptions**:
+  - 100% non-support for the project
+  - Noise concern: 79.5%
+  - Expense worry: 59.1%
+  - Public-transit support: 29.5%
+  - Public-space support: 27.3%
 - **Label**: firmly opposed, driven by noise and cost concerns.
 
 
 
 #### Cluster 6: Young Transit Enthusiasts
-- **Demographics**: Heavily male; overwhelmingly renters; younger-to-mid age; moderate education/income.  
-- **Perceptions**:  
-  - Housing-value support: 80.2%  
-  - Business-benefits optimism: 75%  
-  - Transit-benefits optimism: 72.9%  
-  - Overall project support: 76%  
-  - Travel-time gains doubt: 77.1% disagree  
+- **Demographics**: Heavily male; overwhelmingly renters; younger-to-mid age; moderate education/income.
+- **Perceptions**:
+  - Housing-value support: 80.2%
+  - Business-benefits optimism: 75%
+  - Transit-benefits optimism: 72.9%
+  - Overall project support: 76%
+  - Travel-time gains doubt: 77.1% disagree
 - **Label**: enthusiastic about broad benefits but skeptical it will save travel time.
-
