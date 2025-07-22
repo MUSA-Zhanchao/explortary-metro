@@ -12,7 +12,7 @@ data <- data %>%
     P14 = ifelse(is.na(P14), 99, P14)
   )%>%
   select(-Estacion,-P9)
-  
+
 data<- data %>%
   mutate(across(-ID_Hogar, as_factor))
 
@@ -28,7 +28,7 @@ set.seed(123)
 for (k in 2:5) {
   cat("Estimating", k, "classes...\n")
   model <- poLCA(f, data = data, nclass = k, maxiter = 1000, graphs = TRUE)
-  
+
   results <- rbind(results,
                    data.frame(
                      Classes = k,
@@ -56,4 +56,3 @@ summary_table <- data %>%
     )
   )
 print(summary_table)
-
