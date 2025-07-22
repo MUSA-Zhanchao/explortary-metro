@@ -2,7 +2,7 @@ library(haven)
 library(cluster)
 library(tidyverse)
 
-data<- read.csv("data/cluster_data_prep.csv")
+data <- read.csv("data/cluster_data_prep.csv")
 
 hc_data <- data %>%
   select(-P14,-P1,-Estacion, -P9)
