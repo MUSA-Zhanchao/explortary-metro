@@ -134,7 +134,7 @@ The Latent Classic Analytics cluster method hasn't distinguished between people 
 ## K-means
 
 ### Context
-Since the k-means algorithm is only suitable for dealing with ordinal data (based on scales) or numeric data, categorical data were excluded from this analysis. Excluding variables include occupation and housing type. Binary variable was treated as 1 or 2 scale. Ordinal variables, including age, education level, and income level, were treated as continuous numeric variables. For example, people who only received a middle school degree are two scales level lower than people who received a technical college degree. To better suit the context of the survey table, the final results were yielded back as similar as the previous Latent classic analytics table, which indicates the probabilities in each clustering rather than the centroid or means.
+Since the k-means algorithm is only suitable for dealing with ordinal data (based on scales) or numeric data, categorical data were excluded from this analysis. Excluding variables include occupation and housing type. Binary variable was treated as 1 or 2 scale. Ordinal variables, including age, education level, and income level, were treated as continuous numeric variables. For example, people who only received a middle school degree are two scales level lower than people who received a technical college degree. To better suit the context of the survey table, the final results were yielded back as similar to the previous Latent Classic Analytics table, which indicates the probabilities in each clustering rather than the centroid or means.
 
 ### Results
 **Results table (k = 6)**
@@ -159,4 +159,5 @@ Since the k-means algorithm is only suitable for dealing with ordinal data (base
 | Age | 1, 0, 9.4, 21.9, 36.5, 31.2 | 9.5, 34.3, 31.4, 20, 4.8, 0 | 12.6, 17.1, 28.8, 17.1, 14.4, 9.9 | 1.2, 8.3, 13.1, 19, 22.6, 35.7 | 0, 15.9, 22.7, 20.5, 25, 15.9 | 0, 5.2, 19.8, 27.1, 20.8, 27.1 |
 | count | 96       | 105      | 111      | 84       | 44       | 96       |
 
+### Takeaway
 The k-means clustering successfully separates the non-support groups from other clusters.
