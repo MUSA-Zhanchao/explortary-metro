@@ -29,6 +29,43 @@
 
 ## Latent Classic Analytics (LCA) Clustering
 
+Latent Class Analysis is a model‐based clustering method for finding unobserved (“latent”) subgroups in multivariate categorical data. Unlike distance‐based clustering (e.g., k-means), LCA assumes that an underlying categorical variable (the latent class) drives the joint distribution of observed indicators.
+
+**Model Formulation**
+
+Given $J$ categorical variables $Y_1,\dots,Y_J$ and $C$ latent classes:
+
+$$
+P(Y_1=y_1,\dots,Y_J=y_J)
+=\sum_{c=1}^K P(C=c)\prod_{j=1}^J P(Y_j=y_j \mid C=c)
+$$
+
+- **Class prevalences** $\pi_c = P(C=c)$, $\sum_c \pi_c = 1$.
+- **Item probabilities** $\theta_{jc}(k) = P(Y_j = k \mid C=c)$.
+
+**Estimation via EM**
+
+1. **E‐step**: Compute posterior class membership probabilities for each case.
+
+   $$
+   \gamma_{i,c}
+   = P(C=c \mid \mathbf{Y}_i)
+   = \frac{\pi_c \prod_j \theta_{j,c}(y_{i,j})}
+          {\sum_{c'} \pi_{c'} \prod_j \theta_{j,c'}(y_{i,j})}
+   $$
+
+2. **M‐step**: update parameters using these posteriors:
+
+   $$
+   \pi_c \leftarrow \frac{1}{N} \sum_{i=1}^N \gamma_{i,c}, 
+   \quad
+   \theta_{j,c}(k) \leftarrow
+   \frac{\sum_{i: y_{i,j}=k} \gamma_{i,c}}{\sum_i \gamma_{i,c}}
+   $$
+
+Iterate until convergence of the log‐likelihood.
+
+
 **Results table (k = 5)**
 | Variable | Cluster 1                         | Cluster 2                         | Cluster 3                         | Cluster 4                         | Cluster 5                         |
 |----------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
@@ -236,3 +273,28 @@ The k-means clustering successfully separates the non-support groups from other 
   - Overall project support: 76%
   - Travel-time gains doubt: 77.1% disagree
 - **Label**: enthusiastic about broad benefits but skeptical it will save travel time.
+
+## Hierarchical Clustering
+
+### Results
+
+**Summary tables (k=5)**
+| Variable | Cluster 1               | Cluster 2               | Cluster 3               | Cluster 4               | Cluster 5               |
+|----------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|
+| line     | 83.2, 16.8              | 16.7, 83.3              | 84, 16                  | 43.9, 56.1              | 27.4, 72.6              |
+| P10      | 76.6, 23.4              | 25, 75                  | 56, 44                  | 75, 25                  | 58.3, 41.7              |
+| P12      | 2.2, 16.1, 5.1, 17.5, 3.6, 14.6, 8, 6.6, 2.9, 16.8, 5.1, 1.5 | 8.3, 6.7, 10, 13.3, 5, 16.7, 1.7, 15, 0, 18.3, 3.3, 1.7 | 2.7, 9.3, 5.3, 28, 0, 25.3, 8, 5.3, 1.3, 6.7, 2.7, 5.3 | 2.8, 7.8, 10, 20.6, 1.7, 15.6, 4.4, 17.8, 3.3, 13.9, 2.2, 0 | 8.3, 8.3, 7.1, 19, 0, 19, 2.4, 6, 8.3, 17.9, 3.6, 0 |
+| P50      | 2.9, 5.8, 8.8, 12.4, 5.8, 10.9, 7.3, 10.9, 6.6, 0, 0.7, 27.7 | 5, 11.7, 13.3, 13.3, 25, 6.7, 6.7, 5, 3.3, 1.7, 1.7, 6.7 | 1.3, 8, 6.7, 8, 13.3, 5.3, 13.3, 1.3, 1.3, 0, 0, 41.3 | 2.8, 7.2, 9.4, 18.9, 10.6, 12.2, 12.2, 7.8, 2.2, 1.7, 0, 15 | 0, 4.8, 13.1, 23.8, 16.7, 8.3, 8.3, 7.1, 1.2, 1.2, 0, 15.5 |
+| P68      | 97.1, 2.9              | 95, 5                   | 93.3, 6.7               | 83.9, 16.1              | 95.2, 4.8               |
+| P82      | 73.7, 26.3              | 21.7, 78.3              | 58.7, 41.3              | 30.6, 69.4              | 10.7, 89.3              |
+| P87      | 78.1, 20.4, 1.5         | 63.3, 31.7, 5           | 58.7, 40, 1.3           | 85, 10, 5               | 16.7, 79.8, 3.6         |
+| P90      | 38, 43.1, 19            | 26.7, 35, 38.3          | 25.3, 68, 6.7           | 40.6, 27.2, 32.2        | 3.6, 92.9, 3.6          |
+| P91      | 65, 30.7, 4.4           | 91.7, 5, 3.3            | 10.7, 88, 1.3           | 82.8, 14.4, 2.8         | 23.8, 75, 1.2           |
+| P92      | 62.8, 29.9, 7.3         | 76.7, 18.3, 5           | 6.7, 89.3, 4            | 65.6, 21.7, 12.8        | 41.7, 46.4, 11.9        |
+| P95      | 56.2, 28.5, 15.3        | 28.3, 68.3, 3.3         | 14.7, 78.7, 6.7         | 57.8, 17.2, 25          | 53.6, 27.4, 19          |
+| P96      | 19.7, 19, 61.3          | 18.3, 53.3, 28.3        | 6.7, 80, 13.3           | 27.8, 25, 47.2          | 11.9, 23.8, 64.3        |
+| P98      | 37.2, 33.6, 29.2        | 43.3, 46.7, 10          | 24, 69.3, 6.7           | 66.7, 8.3, 25           | 40.5, 35.7, 23.8        |
+| P100     | 26.3, 56.2, 17.5        | 20, 50, 30              | 16, 72, 12              | 38.9, 16.7, 44.4        | 21.4, 56, 22.6          |
+| P101     | 62.8, 24.8, 12.4        | 50, 36.7, 13.3          | 10.7, 89.3, 0           | 73.3, 14.4, 12.2        | 48.8, 39.3, 11.9        |
+| Edad     | 0.7, 8, 21.9, 24.1, 14.6, 30.7 | 0, 21.7, 15, 21.7, 26.7, 15 | 6.7, 8, 26.7, 21.3, 17.3, 20 | 5.6, 15, 20.6, 17.8, 26.7, 14.4 | 11.9, 20.2, 21.4, 21.4, 10.7, 14.3 |
+| count    | 137                     | 60                      | 75                      | 180                     | 84                      |
