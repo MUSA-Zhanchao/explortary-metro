@@ -295,7 +295,7 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 
 ### Takeaway
 
-The Hierarchical clustering method didn't separate the non-support group from others.
+The Hierarchical clustering method did not separate the non-support group from others.
 
 #### Cluster 1: Optimistic Renters
 - **Demographics:** Predominantly male (76.6%) and renters (73.7%), with a wide income spread and a skew toward younger adults.
