@@ -7,11 +7,17 @@
 - Line: 1 or 2
 - P10 (gender): male or female
 - P12 (Education): low-high (cat 12: NA)
-- P14 (occupation)
+- P14 (occupation): according to original sequence
 - P1 (housing type)
 - P50 (income): low to high (cat 12: NA)
 - P82 (rent or own)
-- Edad (age): low to high
+- Edad (age): low to high (no head of the household lower tha 18)
+ - 18-24
+ - 25-34
+ - 35-44
+ - 45-54
+ - 55-64
+ - Over 64
 
 ### Perception Variable
 - P68: Whether to support (binary)
