@@ -295,4 +295,4 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 
 ### Takeaway
 
-The Hierarchical clustering method didn't separate the non-support group from others. 
+The Hierarchical clustering method didn't separate the non-support group from others.
