@@ -48,8 +48,8 @@ print(k_means_summary_table)
 
 write.csv(k_means_summary_table, "output/k_means_summary.csv", row.names = FALSE)
 
-df <- read.csv("output/k_means_summary.csv", 
-               stringsAsFactors = FALSE, 
+df <- read.csv("output/k_means_summary.csv",
+               stringsAsFactors = FALSE,
                check.names = FALSE)%>%
   filter(cluster== 6) %>%  # Exclude cluster 6 if needed
   select(-count)
@@ -74,7 +74,7 @@ plot_custom_group_probs <- function(probs, group_probs, var_labels = names(probs
   J <- length(probs)
   old_par <- par(no.readonly = TRUE)
   on.exit(par(old_par))
-  
+
   par(mfrow = c(R, J), mar = c(4, 4, 2, 1))
   for (r in seq_len(R)) {
     for (j in seq_len(J)) {
@@ -99,32 +99,32 @@ fifth_idx <- 13:15
 sixth_idx <- 16
 
 plot_custom_group_probs(
-  probs[first_idx], 
-  group_probs, 
+  probs[first_idx],
+  group_probs,
   var_labels = names(probs)[first_idx]
 )
 plot_custom_group_probs(
-  probs[second_idex], 
-  group_probs, 
+  probs[second_idex],
+  group_probs,
   var_labels = names(probs)[second_idex]
 )
 plot_custom_group_probs(
-  probs[third_idx], 
-  group_probs, 
+  probs[third_idx],
+  group_probs,
   var_labels = names(probs)[third_idx]
 )
 plot_custom_group_probs(
-  probs[forth_idx], 
-  group_probs, 
+  probs[forth_idx],
+  group_probs,
   var_labels = names(probs)[forth_idx]
 )
 plot_custom_group_probs(
-  probs[fifth_idx], 
-  group_probs, 
+  probs[fifth_idx],
+  group_probs,
   var_labels = names(probs)[fifth_idx]
 )
 plot_custom_group_probs(
-  probs[sixth_idx], 
-  group_probs, 
+  probs[sixth_idx],
+  group_probs,
   var_labels = names(probs)[sixth_idx]
 )
