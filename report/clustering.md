@@ -43,23 +43,6 @@ $$
 - **Class prevalences** $\pi_c = P(C=c)$, $\sum_c \pi_c = 1$.
 - **Item probabilities** $\theta_{jc}(k) = P(Y_j = k \mid C=c)$.
 
-**Estimation via EM**
-
-1. **E‐step**: Compute posterior class membership probabilities for each case.
-
-![LCA Posterior Class Probability](https://latex.codecogs.com/svg.latex?\gamma_{i,c}%20=%20P\bigl(C%20=%20c%20\mid%20\mathbf{Y}_i\bigr)%20=%20\frac{\displaystyle%20\pi_c%20\prod_{j=1}^{J}\theta_{j,c}\bigl(y_{i,j}\bigr)}{\displaystyle%20\sum_{c'=1}^{K}\pi_{c'}%20\prod_{j=1}^{J}\theta_{j,c'}\bigl(y_{i,j}\bigr)})
-
-
-
-
-
-3. **M‐step**: Update parameters using these posteriors:
-
-![Posterior class probability formula](https://latex.codecogs.com/svg.latex?%5Cdpi%7B120%7D%20%5Cgamma_%7Bi%2Cc%7D%20%3D%20P%28C%3Dc%7C%5Cmathbf%7BY%7D_i%29%20%3D%20%5Cfrac%7B%5Cpi_c%20%5Cprod_%7Bj%3D1%7D%5E%7BJ%7D%20%5Ctheta_%7Bj%2Cc%7D%28y_%7Bi%2Cj%7D%29%7D%7B%5Csum_%7Bc'%3D1%7D%5E%7BK%7D%20%5Cpi_%7Bc'%7D%20%5Cprod_%7Bj%3D1%7D%5E%7BJ%7D%20%5Ctheta_%7Bj%2Cc'%7D%28y_%7Bi%2Cj%7D%29%7D)
-
-
-
-Iterate until convergence of the log‐likelihood.
 
 ### Results
 **Results table (k = 5)**
@@ -309,3 +292,7 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 ![](../output/final/hierarchical_full/Rplot05.png)
 ![](../output/final/hierarchical_full/Rplot06.png)
 ![](../output/final/hierarchical_full/Rplot07.png)
+
+### Takeaway
+
+The Hierarchical clustering method didn't separate the non-support group from others. 
