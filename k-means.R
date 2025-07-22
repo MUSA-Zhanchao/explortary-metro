@@ -85,7 +85,7 @@ ggplot(plot_data, aes(x = PC1, y = PC2, color = cluster)) +
   stat_ellipse(type = "norm", linetype = 2, level = 0.68) +  # 1-sd contour
   geom_point(data = centroids_pc, aes(x = PC1, y = PC2),
              shape = 17, size = 5, stroke = 1.5, show.legend = FALSE) +
-  labs(title = "K-means Clusters (k = 10) in PCA Space",
+  labs(title = paste("K-means Clusters (k =", final_k, ") in PCA Space"),
        x = "Principal Component 1",
        y = "Principal Component 2",
        color = "Cluster") +
