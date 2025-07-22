@@ -159,5 +159,81 @@ Since the k-means algorithm is only suitable for dealing with ordinal data (base
 | Age | 1, 0, 9.4, 21.9, 36.5, 31.2 | 9.5, 34.3, 31.4, 20, 4.8, 0 | 12.6, 17.1, 28.8, 17.1, 14.4, 9.9 | 1.2, 8.3, 13.1, 19, 22.6, 35.7 | 0, 15.9, 22.7, 20.5, 25, 15.9 | 0, 5.2, 19.8, 27.1, 20.8, 27.1 |
 | count | 96       | 105      | 111      | 84       | 44       | 96       |
 
+### Chart
+
+![](../output/final/k-means_full/Rplot.png)
+![](../output/final/k-means_full/group6_1.png)
+![](../output/final/k-means_full/Rplot01.png)
+![](../output/final/k-means_full/Rplot6_2.png)
+![](../output/final/k-means_full/Rplot03.png)
+![](../output/final/k-means_full/Rplot6_3.png)
+![](../output/final/k-means_full/Rplot04.png)
+![](../output/final/k-means_full/Rplot6_4.png)
+![](../output/final/k-means_full/Rplot05.png)
+![](../output/final/k-means_full/Rplot6_5.png)
+![](../output/final/k-means_full/Rplot06.png)
+![](../output/final/k-means_full/Rplot6_6.png)
+
 ### Takeaway
 The k-means clustering successfully separates the non-support groups from other clusters.
+
+#### Cluster 1: Homeowner Traditionalists
+- **Demographics**: Predominantly male; majority homeowners; mid-to-high education and moderate incomes.  
+- **Perceptions**:  
+  - Expense concern: 87.5%  
+  - Housing-value optimism: 84.4%  
+  - Business benefits optimism: 78.1%  
+  - Public-transit support: 52.1%  
+- **Label**: supportive overall but especially attentive to cost and housing-value improvements.
+
+#### Cluster 2: Prosperous Skeptical Owners
+- **Demographics**: Balanced gender; overwhelmingly homeowners; skew toward higher education and income deciles.  
+- **Perceptions**:  
+  - Expense concern: 91.4% (highest)  
+  - Business-benefits optimism: 85.7%  
+  - Noise worry: 69.5% (very high)  
+  - Travel-time gains doubt: 56.2% disagree  
+  - Public-space benefits doubt: 50.5% disagree  
+- **Label**: affluent supporters of investment but doubtful of time- and space-related gains.
+
+
+#### Cluster 3: Neutral-Lean Supporters
+- **Demographics**: Mostly homeowners; moderate gender balance; education/income clustered around mid-levels.  
+- **Perceptions**:  
+  - “Neither agree nor disagree” majority on housing values (60.4%), safety (72.1%), expense (73.9%) and business (65.8%)  
+  - Moderate transit support: 50.5%  
+- **Label**: generally in favor but largely indifferent on most project impacts.
+
+#### Cluster 4: Older Renters with Low Transit Expectations
+- **Demographics**: Slight female tilt; predominantly renters; older age profile; many with missing income data.  
+- **Perceptions**:  
+  - Housing-value support: 59.5%  
+  - Expense concern: 42.9%  
+  - Business-benefits optimism: 10.7%  
+  - Transit-benefits optimism: 7.1%  
+  - Mixed noise/public-space views  
+- **Label**:  supportive on housing values but skeptical about business and transit improvements.
+
+
+#### Cluster 5: Non-Supporters & Noise Worriers
+- **Demographics**: Majority homeowners; balanced gender; mid-to-high education and income.  
+- **Perceptions**:  
+  - 100% non-support for the project  
+  - Noise concern: 79.5%  
+  - Expense worry: 59.1%  
+  - Public-transit support: 29.5%  
+  - Public-space support: 27.3%  
+- **Label**: firmly opposed, driven by noise and cost concerns.
+
+
+
+#### Cluster 6: Young Transit Enthusiasts
+- **Demographics**: Heavily male; overwhelmingly renters; younger-to-mid age; moderate education/income.  
+- **Perceptions**:  
+  - Housing-value support: 80.2%  
+  - Business-benefits optimism: 75%  
+  - Transit-benefits optimism: 72.9%  
+  - Overall project support: 76%  
+  - Travel-time gains doubt: 77.1% disagree  
+- **Label**: enthusiastic about broad benefits but skeptical it will save travel time.
+
