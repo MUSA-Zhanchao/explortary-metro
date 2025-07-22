@@ -19,7 +19,7 @@ hc <- hclust(diss, method = "ward.D2")
 
 # Visualize dendrogram
 plot(hc, labels = FALSE, hang = -1, main = "Dendrogram (Ward D2)")
-# 在 k=3 处切分并标出
+# Cut and highlight at k=3
 rect.hclust(hc, k = 3, border = 2:4)
 
 
