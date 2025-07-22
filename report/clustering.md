@@ -342,3 +342,13 @@ The Hierarchical clustering method did not separate the non-support group from o
 - **Perceptions:**
   - Overwhelming neutrality on housing values (79.8%), safety (92.9%), expense (75%), business (46.4%), and public space (56%).
   - Yet most (64.3%) **disagree** that it will save them time—suggesting they see little personal convenience gain.
+
+## Key takeaway
+
+Across latent class, k-means, and hierarchical clustering, housing tenure and demographic factors consistently shape both support for and perceptions of the Metro project, particularly renter versus owner status, age, and income.  Renters, especially younger cohorts, overwhelmingly support the project and anticipate gains in housing values and expense reductions, yet remain skeptical about travel-time savings. Conversely, older homeowners and high-income groups exhibit more ambivalence: while they acknowledge potential economic and safety benefits, they express concerns about noise, cost, and personal convenience, resulting in a lower net support or neutral stance. 
+
+From a technical standpoint, k-means clustering identified almost 99% (44 out of 45) of the metro skeptical sample as belonging to one particular cluster (k-means cluster 5). Those non-support groups are predominantly majority dominated by renters, with mid- to higher-income levels and educational backgrounds. They worried about potential noise concerns, increased living expenses, and were not satisfied with the current public transportation in Bogotá (mainly due to cost of living and noise concerns).  The Hierarchical and Latent Classic Choice method yields mixed results, but with relatively straightforward labels for each clustering specified in the main results documentation.
+
+*Footnote*:
+
+*The results table shows the possibility of a random choice among each categorical group, or the proportion of each category in the clustering sample. For example, in k-means, the cluster 1 line variable shows 36.5 and 63.5, indicating that in cluster 1, 36.5% of the cluster is located close to line 1, while 63.5% of the cluster is located close to line 2. In other words, if you randomly pick one sample from cluster 1, the possibility of this sample living close to line 1 is 36.5% and living close to line 2 is 63.5%.*
