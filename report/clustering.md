@@ -1,5 +1,5 @@
 # Clustering with whole datasets
-**Author: Chuwen Zhong, Zhanchao Yang
+**Author: Chuwen Zhong, Zhanchao Yang**
 
 ## Variable use
 
@@ -52,3 +52,14 @@
 | Age    | 2, 23.4, 32.5, 28.4, 13.7, 0      | 1.1, 0, 0, 10.2, 25, 63.6        | 14.5, 13, 18.1, 20.3, 21, 13     | 0, 12.9, 9.7, 6.5, 25.8, 45.2      | 1.2, 7.3, 26.8, 20.7, 24.4, 19.5 |
 
 ### Chart
+
+![](../output/final/lca_full/Rplot01.png)
+![](../output/final/lca_full/Rplot.png)
+![](../output/final/lca_full/Rplot02.png)
+![](../output/final/lca_full/Rplot03.png)
+![](../output/final/lca_full/Rplot04.png)
+![](../output/final/lca_full/Rplot05.png)
+
+### Takeaway
+
+The Latent Classic Analytics cluster method hasn't distinguished between people who support or do not support the metro project.
