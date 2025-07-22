@@ -14,7 +14,7 @@ hc_data <- hc_data %>%
 diss <- daisy(hc_data %>% select(-ID_Hogar), metric = "gower")
 
 
-# --- 构建层次聚类树 ---
+# --- Build hierarchical clustering tree ---
 hc <- hclust(diss, method = "ward.D2")
 
 # 可视化树状图
