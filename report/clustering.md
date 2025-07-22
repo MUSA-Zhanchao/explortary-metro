@@ -57,7 +57,7 @@ $$
 2. **M‐step**: update parameters using these posteriors:
 
    $$
-   \pi_c \leftarrow \frac{1}{N} \sum_{i=1}^N \gamma_{i,c}, 
+   \pi_c \leftarrow \frac{1}{N} \sum_{i=1}^N \gamma_{i,c},
    \quad
    \theta_{j,c}(k) \leftarrow
    \frac{\sum_{i: y_{i,j}=k} \gamma_{i,c}}{\sum_i \gamma_{i,c}}
