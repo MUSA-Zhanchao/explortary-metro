@@ -46,7 +46,7 @@ $$
 **Estimation via EM**
 
 1. **E‐step**: Compute posterior class membership probabilities for each case.
-   
+
 <img
   src="https://latex.codecogs.com/svg.latex?
     \gamma_{i,c}
