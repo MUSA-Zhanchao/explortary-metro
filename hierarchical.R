@@ -46,6 +46,6 @@ summary_table2 <- hc_data %>%
   summarise(across(-ID_Hogar,
                    ~ paste0(round(prop.table(table(.)) * 100, 1), collapse = ", ")
   ))
-summary_table2$count<- table(hc_data$cluster2)
+summary_table2$count <- table(hc_data$cluster2)
 cat("\nCluster summaries (k=2):\n")
 print(summary_table2)
