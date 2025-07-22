@@ -38,7 +38,7 @@ print(sil_results)
 
 # --- k = 5 时的簇标记 & 摘要 ---
 hc_data$cluster2 <- cutree(hc, k = 5)
-cat("Cluster sizes (k=2):\n")
+cat("Cluster sizes (k=5):\n")
 print(table(hc_data$cluster2))
 
 summary_table2 <- hc_data %>%
