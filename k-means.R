@@ -5,7 +5,7 @@ library(tidyr)
 library(haven)
 library(factoextra)
 
-data<- read.csv("data/cluster_data_prep.csv")
+data <- read.csv("data/cluster_data_prep.csv")
 
 # --- select your survey items and keep ID for later ---
 km_data <- data %>%
