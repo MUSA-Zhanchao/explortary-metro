@@ -65,71 +65,71 @@
 The Latent Classic Analytics cluster method hasn't distinguished between people who support or do not support the metro project.
 
 #### Cluster 1: “Value-Driven Homeowners”
-- **Profile & Support**  
-  - Predominantly homeowners (62 % own vs. 38 % rent)  
-  - Mixed ages, slightly skewed male  
-  - Strong majority support (88 %) for the Metro project  
-- **Perceptions**  
-  - 82 % agree it will boost housing values  
-  - 84 % agree it will reduce living expenses  
-  - 74 % agree it will spur local business  
-  - Only 50 % agree on transit improvements  
+- **Profile & Support**
+  - Predominantly homeowners (62 % own vs. 38 % rent)
+  - Mixed ages, slightly skewed male
+  - Strong majority support (88 %) for the Metro project
+- **Perceptions**
+  - 82 % agree it will boost housing values
+  - 84 % agree it will reduce living expenses
+  - 74 % agree it will spur local business
+  - Only 50 % agree on transit improvements
   - 49 % doubt it will save travel time
-- **Implication**  
-  - Emphasize property-value gains and cost-saving benefits in homeowner outreach  
-  - Provide concrete data on travel-time savings to address efficiency concerns  
+- **Implication**
+  - Emphasize property-value gains and cost-saving benefits in homeowner outreach
+  - Provide concrete data on travel-time savings to address efficiency concerns
 
 #### Cluster 2: “Senior Renters Enthusiasts”
-- **Profile & Support**  
-  - Older renters (81 % rent; 64 % in the oldest age bracket)  
-  - Very high support (93 %)  
-  - Balanced income and education levels  
-- **Perceptions**  
-  - 83 % believe in housing value gains  
-  - 67 % see transit benefits  
-  - 44 % worry it won’t cut travel time  
-  - 44 % expect safety improvements  
-- **Implication**  
-  - Highlight mobility and safety features tailored to seniors  
-  - Showcase real-world examples of reduced door-to-destination times  
+- **Profile & Support**
+  - Older renters (81 % rent; 64 % in the oldest age bracket)
+  - Very high support (93 %)
+  - Balanced income and education levels
+- **Perceptions**
+  - 83 % believe in housing value gains
+  - 67 % see transit benefits
+  - 44 % worry it won’t cut travel time
+  - 44 % expect safety improvements
+- **Implication**
+  - Highlight mobility and safety features tailored to seniors
+  - Showcase real-world examples of reduced door-to-destination times
 
 
 #### Cluster 3: “Homeowner Fence-Sitters”
-- **Profile & Support**  
-  - Almost entirely homeowners (88 % own)  
-  - 100 % support, but mostly neutral on benefits  
-- **Perceptions**  
-  - 40–70 % “neither agree nor disagree” across benefit items  
-- **Implication**  
-  - Provide clear, detailed case studies  
-  - Use before-and-after metrics from comparable neighborhoods  
+- **Profile & Support**
+  - Almost entirely homeowners (88 % own)
+  - 100 % support, but mostly neutral on benefits
+- **Perceptions**
+  - 40–70 % “neither agree nor disagree” across benefit items
+- **Implication**
+  - Provide clear, detailed case studies
+  - Use before-and-after metrics from comparable neighborhoods
 
 
 #### Cluster 4: “Skeptical Elders”
-- **Profile & Support**  
-  - Older cohort (45 % in the oldest age bracket)  
-  - Balanced rent/own  
-  - Lowest support (77 %)  
-- **Perceptions**  
-  - Less than 50 % disagree that it will be safe or reduce noise  
-  - 61 % doubt transit benefits  
-  - 71 % doubt travel-time savings  
-- **Implication**  
-  - Organize community forums on safety and noise mitigation  
-  - Bring in peer testimonials about actual time savings  
+- **Profile & Support**
+  - Older cohort (45 % in the oldest age bracket)
+  - Balanced rent/own
+  - Lowest support (77 %)
+- **Perceptions**
+  - Less than 50 % disagree that it will be safe or reduce noise
+  - 61 % doubt transit benefits
+  - 71 % doubt travel-time savings
+- **Implication**
+  - Organize community forums on safety and noise mitigation
+  - Bring in peer testimonials about actual time savings
 
 
 #### Cluster 5: “Affluent Pragmatists”
-- **Profile & Support**  
-  - Highest-income group (50 % in top bracket)  
-  - Even split homeowners/renters  
-  - 89 % in favor, but largely indifferent  
-- **Perceptions**  
-  - 75–92 % “neither agree nor disagree” on most items  
-- **Implication**  
-  - Deliver concise, data-driven briefs on ROI  
-    - Societal: congestion reduction, environmental impact  
-    - Personal: commute times, property appreciation  
+- **Profile & Support**
+  - Highest-income group (50 % in top bracket)
+  - Even split homeowners/renters
+  - 89 % in favor, but largely indifferent
+- **Perceptions**
+  - 75–92 % “neither agree nor disagree” on most items
+- **Implication**
+  - Deliver concise, data-driven briefs on ROI
+    - Societal: congestion reduction, environmental impact
+    - Personal: commute times, property appreciation
 
 ## K-means
 
@@ -159,4 +159,4 @@ Since the k-means algorithm is only suitable for dealing with ordinal data (base
 | Age | 1, 0, 9.4, 21.9, 36.5, 31.2 | 9.5, 34.3, 31.4, 20, 4.8, 0 | 12.6, 17.1, 28.8, 17.1, 14.4, 9.9 | 1.2, 8.3, 13.1, 19, 22.6, 35.7 | 0, 15.9, 22.7, 20.5, 25, 15.9 | 0, 5.2, 19.8, 27.1, 20.8, 27.1 |
 | count | 96       | 105      | 111      | 84       | 44       | 96       |
 
-The k-means clustering successfully separates the non-support groups from other clusters. 
+The k-means clustering successfully separates the non-support groups from other clusters.
