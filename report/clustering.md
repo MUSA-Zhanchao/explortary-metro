@@ -37,7 +37,7 @@ Given $J$ categorical variables $Y_1,\dots,Y_J$ and $C$ latent classes:
 
 $$
 P(Y_1=y_1,\dots,Y_J=y_J)
-=\sum_{c=1}^K P(C=c)\prod_{j=1}^J P(Y_j=y_j \mid C=c)
+=\sum_{c=1}^C P(C=c)\prod_{j=1}^J P(Y_j=y_j \mid C=c)
 $$
 
 - **Class prevalences** $\pi_c = P(C=c)$, $\sum_c \pi_c = 1$.
