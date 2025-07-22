@@ -12,7 +12,7 @@ household_head<- personas%>%
 complete<- left_join(household_head,hog, by= "ID_Hogar")
 
 cluster<- complete%>%
-  select(ID_Hogar, P9, linea_M.x, P10, P12, P14, P1, P50, P68, P82, P87:P101,Estacion)
+  select(ID_Hogar, P9, linea_M.x, P10, P12, P14, P1, P50, P68, P82, P87:P101,Estacion, Edad)
 
 
 cluster<- cluster%>%
