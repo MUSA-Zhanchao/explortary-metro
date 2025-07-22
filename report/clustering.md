@@ -297,42 +297,41 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 
 The Hierarchical clustering method didn't separate the non-support group from others.
 
-#### Cluster 1: Optimistic Renters  
-- **Demographics:** Predominantly male (76.6%) and renters (73.7%), with a wide income spread and a skew toward younger adults.  
-- **Support:** Nearly unanimous backing (97.1%).  
-- **Perceptions:**  
-  - Strongly believe in increased housing values (78.1%) and business opportunities (62.8%).  
-  - Majority see public transit benefits (56.2%).  
-  - However, 61.3% **disagree** that it will save them time, and nearly 30% express moderate noise concerns.  
+#### Cluster 1: Optimistic Renters
+- **Demographics:** Predominantly male (76.6%) and renters (73.7%), with a wide income spread and a skew toward younger adults.
+- **Support:** Nearly unanimous backing (97.1%).
+- **Perceptions:**
+  - Strongly believe in increased housing values (78.1%) and business opportunities (62.8%).
+  - Majority see public transit benefits (56.2%).
+  - However, 61.3% **disagree** that it will save them time, and nearly 30% express moderate noise concerns.
 
-#### Cluster 2: Cost-Sensitive Homeowners  
-- **Demographics:** Largely female (75%) and homeowners (78.3%), spanning middle to older age groups.  
-- **Support:** High overall (95%).  
-- **Perceptions:**  
-  - Overwhelming worry about expense (91.7% agree it’s too costly).  
-  - Strong optimism about business growth (76.7% agree).  
-  - Mixed or neutral on safety and public transit improvements.  
+#### Cluster 2: Cost-Sensitive Homeowners
+- **Demographics:** Largely female (75%) and homeowners (78.3%), spanning middle to older age groups.
+- **Support:** High overall (95%).
+- **Perceptions:**
+  - Overwhelming worry about expense (91.7% agree it’s too costly).
+  - Strong optimism about business growth (76.7% agree).
+  - Mixed or neutral on safety and public transit improvements.
 
-#### Cluster 3: Ambivalent Renters  
-- **Demographics:** Mixed gender (56% male) and renters (58.7%), with a tilt toward younger adults.  
-- **Support:** Solid backing (93.3%), but the smallest margin among clusters.  
-- **Perceptions:**  
-  - Over 80% neither agree nor disagree on expense, safety, and time savings.  
-  - Only modest agreement on public transit (14.7%) and business (6.7%).  
-  - This group is largely neutral—open to persuasion but not strongly sold.  
+#### Cluster 3: Ambivalent Renters
+- **Demographics:** Mixed gender (56% male) and renters (58.7%), with a tilt toward younger adults.
+- **Support:** Solid backing (93.3%), but the smallest margin among clusters.
+- **Perceptions:**
+  - Over 80% neither agree nor disagree on expense, safety, and time savings.
+  - Only modest agreement on public transit (14.7%) and business (6.7%).
+  - This group is largely neutral—open to persuasion but not strongly sold.
 
-#### Cluster 4: Skeptical Homeowners  
-- **Demographics:** Mostly male (75%) homeowners (69.4%), skewing middle-aged.  
-- **Support:** Lowest net support (83.9%), with the highest non-support share (16.1%).  
-- **Perceptions:**  
-  - High concern about expense (82.8% agree) and noise (66.7%).  
-  - Significant safety worries (40.6% agree) coupled with doubt about time savings (47.2% disagree).  
-  - Also skeptical of public space benefits (44.4% disagree).  
+#### Cluster 4: Skeptical Homeowners
+- **Demographics:** Mostly male (75%) homeowners (69.4%), skewing middle-aged.
+- **Support:** Lowest net support (83.9%), with the highest non-support share (16.1%).
+- **Perceptions:**
+  - High concern about expense (82.8% agree) and noise (66.7%).
+  - Significant safety worries (40.6% agree) coupled with doubt about time savings (47.2% disagree).
+  - Also skeptical of public space benefits (44.4% disagree).
 
-#### Cluster 5: Neutral Homeowners with Time Doubts  
-- **Demographics:** Predominantly homeowners (89.3%), fairly balanced gender.  
-- **Support:** Strong overall (95.2%).  
-- **Perceptions:**  
-  - Overwhelming neutrality on housing values (79.8%), safety (92.9%), expense (75%), business (46.4%), and public space (56%).  
-  - Yet most (64.3%) **disagree** that it will save them time—suggesting they see little personal convenience gain.  
-
+#### Cluster 5: Neutral Homeowners with Time Doubts
+- **Demographics:** Predominantly homeowners (89.3%), fairly balanced gender.
+- **Support:** Strong overall (95.2%).
+- **Perceptions:**
+  - Overwhelming neutrality on housing values (79.8%), safety (92.9%), expense (75%), business (46.4%), and public space (56%).
+  - Yet most (64.3%) **disagree** that it will save them time—suggesting they see little personal convenience gain.
