@@ -47,7 +47,7 @@ $$
 
 1. **E‐step**: Compute posterior class membership probabilities for each case.
 
-![LCA Posterior Class Probability](https://latex.codecogs.com/svg.latex?\gamma_{i,c}%20=%20P\bigl(C%20=%20c%20\mid%20\mathbf{Y}_i\bigr)%20=%20\frac{\displaystyle%20\pi_c%20\prod_{j=1}^{J}\theta_{j,c}\bigl(y_{i,j}\bigr)}{\displaystyle%20\sum_{c'=1}^{K}\pi_{c'}%20\prod_{j=1}^{J}\theta_{j,c'}\bigl(y_{i,j}\bigr)})  
+![LCA Posterior Class Probability](https://latex.codecogs.com/svg.latex?\gamma_{i,c}%20=%20P\bigl(C%20=%20c%20\mid%20\mathbf{Y}_i\bigr)%20=%20\frac{\displaystyle%20\pi_c%20\prod_{j=1}^{J}\theta_{j,c}\bigl(y_{i,j}\bigr)}{\displaystyle%20\sum_{c'=1}^{K}\pi_{c'}%20\prod_{j=1}^{J}\theta_{j,c'}\bigl(y_{i,j}\bigr)})
 
 
 
