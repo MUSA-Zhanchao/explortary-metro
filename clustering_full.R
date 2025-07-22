@@ -5,7 +5,7 @@ library(ggplot2)
 library(tidyr)
 library(haven)
 
-data<- read.csv("data/cluster_data_prep.csv")
+data <- read.csv("data/cluster_data_prep.csv")
 
 data <- data %>%
   mutate(
