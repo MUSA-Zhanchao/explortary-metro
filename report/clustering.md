@@ -63,3 +63,100 @@
 ### Takeaway
 
 The Latent Classic Analytics cluster method hasn't distinguished between people who support or do not support the metro project.
+
+#### Cluster 1: “Value-Driven Homeowners”
+- **Profile & Support**  
+  - Predominantly homeowners (62 % own vs. 38 % rent)  
+  - Mixed ages, slightly skewed male  
+  - Strong majority support (88 %) for the Metro project  
+- **Perceptions**  
+  - 82 % agree it will boost housing values  
+  - 84 % agree it will reduce living expenses  
+  - 74 % agree it will spur local business  
+  - Only 50 % agree on transit improvements  
+  - 49 % doubt it will save travel time
+- **Implication**  
+  - Emphasize property-value gains and cost-saving benefits in homeowner outreach  
+  - Provide concrete data on travel-time savings to address efficiency concerns  
+
+#### Cluster 2: “Senior Renters Enthusiasts”
+- **Profile & Support**  
+  - Older renters (81 % rent; 64 % in the oldest age bracket)  
+  - Very high support (93 %)  
+  - Balanced income and education levels  
+- **Perceptions**  
+  - 83 % believe in housing value gains  
+  - 67 % see transit benefits  
+  - 44 % worry it won’t cut travel time  
+  - 44 % expect safety improvements  
+- **Implication**  
+  - Highlight mobility and safety features tailored to seniors  
+  - Showcase real-world examples of reduced door-to-destination times  
+
+
+#### Cluster 3: “Homeowner Fence-Sitters”
+- **Profile & Support**  
+  - Almost entirely homeowners (88 % own)  
+  - 100 % support, but mostly neutral on benefits  
+- **Perceptions**  
+  - 40–70 % “neither agree nor disagree” across benefit items  
+- **Implication**  
+  - Provide clear, detailed case studies  
+  - Use before-and-after metrics from comparable neighborhoods  
+
+
+#### Cluster 4: “Skeptical Elders”
+- **Profile & Support**  
+  - Older cohort (45 % in the oldest age bracket)  
+  - Balanced rent/own  
+  - Lowest support (77 %)  
+- **Perceptions**  
+  - Less than 50 % disagree that it will be safe or reduce noise  
+  - 61 % doubt transit benefits  
+  - 71 % doubt travel-time savings  
+- **Implication**  
+  - Organize community forums on safety and noise mitigation  
+  - Bring in peer testimonials about actual time savings  
+
+
+#### Cluster 5: “Affluent Pragmatists”
+- **Profile & Support**  
+  - Highest-income group (50 % in top bracket)  
+  - Even split homeowners/renters  
+  - 89 % in favor, but largely indifferent  
+- **Perceptions**  
+  - 75–92 % “neither agree nor disagree” on most items  
+- **Implication**  
+  - Deliver concise, data-driven briefs on ROI  
+    - Societal: congestion reduction, environmental impact  
+    - Personal: commute times, property appreciation  
+
+## K-means
+
+### Context
+Since the k-means algorithm is only suitable for dealing with ordinal data (based on scales) or numeric data, categorical data were excluded from this analysis. Excluding variables include occupation and housing type. Binary variable was treated as 1 or 2 scale. Ordinal variables, including age, education level, and income level, were treated as continuous numeric variables. For example, people who only received a middle school degree are two scales level lower than people who received a technical college degree. To better suit the context of the survey table, the final results were yielded back as similar as the previous Latent classic analytics table, which indicates the probabilities in each clustering rather than the centroid or means.
+
+### Results
+**Results table (k = 6)**
+
+| Variable | Cluster 1                                    | Cluster 2                                    | Cluster 3                                    | Cluster 4                                    | Cluster 5                                    | Cluster 6                                    |
+|---|---|---|---|---|---|---|
+| line | 36.5, 63.5 | 51.4, 48.6 | 41.4, 58.6 | 72.6, 27.4 | 38.6, 61.4 | 79.2, 20.8 |
+| Gender  | 66.7, 33.3 | 63.8, 36.2 | 65.8, 34.2 | 56, 44     | 59.1, 40.9 | 71.9, 28.1 |
+| Education | 8.3, 19.8, 21.9, 18.8, 2.1, 18.8, 2.1, 3.1, 3.1, 1, 0, 1 | 0, 0, 3.8, 16.2, 0, 16.2, 4.8, 19, 5.7, 29.5, 3.8, 1 | 9.9, 8.1, 4.5, 26.1, 3.6, 19.8, 4.5, 9.9, 3.6, 7.2, 0.9, 1.8 | 0, 16.7, 3.6, 20.2, 1.2, 26.2, 4.8, 6, 3.6, 13.1, 2.4, 2.4 | 2.3, 6.8, 9.1, 15.9, 4.5, 2.3, 11.4, 13.6, 2.3, 25, 6.8, 0 | 2.1, 9.4, 4.2, 18.8, 2.1, 13.5, 7.3, 14.6, 1, 17.7, 8.3, 1 |
+| Income  | 9.4, 15.6, 11.5, 24, 14.6, 7.3, 5.2, 4.2, 2.1, 0, 0, 6.2 | 1, 5.7, 8.6, 15.2, 11.4, 12.4, 12.4, 11.4, 4.8, 1.9, 0, 15.2 | 1.8, 10.8, 16.2, 21.6, 20.7, 6.3, 9, 3.6, 0, 0, 0, 9.9 | 1.2, 0, 4.8, 8.3, 4.8, 10.7, 9.5, 4.8, 3.6, 0, 0, 52.4 | 0, 9.1, 11.4, 15.9, 11.4, 11.4, 11.4, 9.1, 4.5, 4.5, 2.3, 9.1 | 0, 1, 6.2, 8.3, 8.3, 11.5, 12.5, 11.5, 5.2, 1, 1, 33.3 |
+| Support or not  | 100, 0     | 100, 0     | 100, 0     | 100, 0     | 0, 100     | 99, 1      |
+| Rent or Own  | 37.5, 62.5 | 8.6, 91.4  | 4.5, 95.5  | 84.5, 15.5 | 29.5, 70.5 | 91.7, 8.3  |
+| P87  | 84.4, 15.6, 0 | 79, 19, 1.9 | 32.4, 60.4, 7.2 | 59.5, 36.9, 3.6 | 65.9, 22.7, 11.4 | 80.2, 19.8, 0 |
+| P90  | 43.8, 38.5, 17.7 | 30.5, 44.8, 24.8 | 18.9, 72.1, 9   | 27.4, 45.2, 27.4 | 36.4, 34.1, 29.5 | 30.2, 42.7, 27.1 |
+| P91  | 87.5, 11.5, 1 | 91.4, 8.6, 0 | 23.4, 73.9, 2.7 | 42.9, 50, 7.1 | 59.1, 31.8, 9.1 | 55.2, 43.8, 1 |
+| P92  | 78.1, 19.8, 2.1 | 85.7, 12.4, 1.9 | 22.5, 65.8, 11.7 | 10.7, 63.1, 26.2 | 43.2, 36.4, 20.5 | 75, 24, 1  |
+| P95  | 52.1, 32.3, 15.6 | 56.2, 31.4, 12.4 | 50.5, 36, 13.5  | 7.1, 65.5, 27.4 | 29.5, 31.8, 38.6 | 72.9, 20.8, 6.2 |
+| P96  | 45.8, 37.5, 16.7 | 19, 24.8, 56.2  | 7.2, 36.9, 55.9  | 20.2, 54.8, 25  | 18.2, 40.9, 40.9 | 6.2, 16.7, 77.1 |
+| P98  | 45.8, 29.2, 25  | 69.5, 19, 11.4  | 25.2, 45, 29.7   | 40.5, 48.8, 10.7 | 79.5, 18.2, 2.3  | 36.5, 25, 38.5 |
+| P100 | 51, 43.8, 5.2 | 18.1, 31.4, 50.5 | 16.2, 61.3, 22.5 | 13.1, 47.6, 39.3 | 27.3, 22.7, 50  | 40.6, 46.9, 12.5 |
+| P101 | 65.6, 27.1, 7.3 | 75.2, 22.9, 1.9  | 41.4, 45.9, 12.6 | 19, 57.1, 23.8  | 45.5, 31.8, 22.7 | 76, 19.8, 4.2  |
+| Age | 1, 0, 9.4, 21.9, 36.5, 31.2 | 9.5, 34.3, 31.4, 20, 4.8, 0 | 12.6, 17.1, 28.8, 17.1, 14.4, 9.9 | 1.2, 8.3, 13.1, 19, 22.6, 35.7 | 0, 15.9, 22.7, 20.5, 25, 15.9 | 0, 5.2, 19.8, 27.1, 20.8, 27.1 |
+| count | 96       | 105      | 111      | 84       | 44       | 96       |
+
+The k-means clustering successfully separates the non-support groups from other clusters. 
