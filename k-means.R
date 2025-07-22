@@ -28,7 +28,7 @@ fviz_nbclust(km_matrix, kmeans, method = "silhouette")  # Silhouette widths
 
 # --- choose a “best” K (e.g. 6, based on diagnostics) and fit final model ---
 set.seed(123)
-final_k <-6  # Chosen based on earlier diagnostics (e.g., elbow plot or silhouette widths)
+final_k <- 6  # Chosen based on earlier diagnostics (e.g., elbow plot or silhouette widths)
 km_final <- kmeans(km_matrix, centers = final_k, nstart = 25)
 
 # --- merge cluster labels back into the factor data frame ---
