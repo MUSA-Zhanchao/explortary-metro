@@ -33,7 +33,7 @@ for(k in sil_results$Clusters) {
 }
 
 print(sil_results)
-# 通过 Avg_Silhouette 辅助选择最优 k
+# Use Avg_Silhouette to help select the optimal k
 
 
 # --- k = 5 时的簇标记 & 摘要 ---
