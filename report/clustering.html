@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>clustering.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="clustering-with-whole-datasets">Clustering with whole datasets</h1>
+<p><strong>Author: Chuwen Zhong, Zhanchao Yang</strong></p>
+<h2 id="variable-use">Variable use</h2>
+<h3 id="demographic-variable">Demographic Variable</h3>
+<ul>
+<li>Line: 1 or 2</li>
+<li>P10 (gender): male or female</li>
+<li>P12 (Education): low-high (cat 12: NA)</li>
+<li>P14 (occupation): according to original sequence</li>
+<li>P1 (housing type)</li>
+<li>P50 (income): low to high (cat 12: NA)</li>
+<li>P82 (rent or own)</li>
+<li>Edad (age): low to high (no head of the household lower tha 18)</li>
+<li>18-24</li>
+<li>25-34</li>
+<li>35-44</li>
+<li>45-54</li>
+<li>55-64</li>
+<li>Over 64</li>
+</ul>
+<h3 id="perception-variable">Perception Variable</h3>
+<ul>
+<li>P68: Whether to support (binary)</li>
+</ul>
+<p><strong>Three-choice Variable: Agree, Neither agree nor disagree, Disagree</strong></p>
+<ul>
+<li>P87: housing values</li>
+<li>P90: safety</li>
+<li>P91: expense</li>
+<li>P92: business</li>
+<li>P95: Public transit</li>
+<li>P96: time</li>
+<li>P98: noise</li>
+<li>P100: Public space</li>
+<li>P101: Housing project</li>
+</ul>
+<h2 id="latent-classic-analytics-lca-clustering">Latent Classic Analytics (LCA) Clustering</h2>
+<p>Latent Class Analysis is a model-based clustering method for finding unobserved (“latent”) subgroups in multivariate categorical data. Unlike distance-based clustering (e.g., k-means), LCA assumes that an underlying categorical variable (the latent class) drives the joint distribution of observed indicators.</p>
+<p><strong>Model Formulation</strong></p>
+<p>Given $J$ categorical variables $Y_1,\dots,Y_J$ and $C$ latent classes:</p>
+<p>$$
+P(Y_1=y_1,\dots,Y_J=y_J)
+=\sum_{c=1}^C P(C=c)\prod_{j=1}^J P(Y_j=y_j \mid C=c)
+$$</p>
+<ul>
+<li><strong>Class prevalences</strong> $\pi_c = P(C=c)$, $\sum_c \pi_c = 1$.</li>
+<li><strong>Item probabilities</strong> $\theta_{jc}(k) = P(Y_j = k \mid C=c)$.</li>
+</ul>
+<h3 id="results">Results</h3>
+<p><strong>Results table (k = 5)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Cluster 1</th>
+<th>Cluster 2</th>
+<th>Cluster 3</th>
+<th>Cluster 4</th>
+<th>Cluster 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>line</td>
+<td>58.9, 41.1</td>
+<td>54.5, 45.5</td>
+<td>39.1, 60.9</td>
+<td>35.5, 64.5</td>
+<td>73.2, 26.8</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>68, 32</td>
+<td>59.1, 40.9</td>
+<td>72.5, 27.5</td>
+<td>48.4, 51.6</td>
+<td>54.9, 45.1</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>0, 1.5, 2.5, 18.8, 3, 13.7, 7.6, 17.8, 1.5, 26.9, 6.6, 0</td>
+<td>6.8, 21.6, 22.7, 10.2, 1.1, 8, 2.3, 11.4, 3.4, 6.8, 2.3, 3.4</td>
+<td>8.7, 8, 10.1, 21.7, 1.4, 26.8, 3.6, 4.3, 5.8, 8.7, 0, 0.7</td>
+<td>9.7, 35.5, 0, 16.1, 0, 6.5, 6.5, 19.4, 6.5, 0, 0, 0</td>
+<td>1.2, 12.2, 2.4, 30.5, 2.4, 24.4, 4.9, 2.4, 2.4, 9.8, 3.7, 3.7</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>3, 0.5, 0, 5.1, 0.5, 36.5, 4.6, 11.2, 4.6, 30.5, 0, 0, 3.6</td>
+<td>0, 0, 1.1, 0, 0, 1.1, 0, 3.4, 4.5, 18.2, 0, 1.1, 70.5</td>
+<td>3.6, 0.7, 0, 3.6, 0, 31.9, 0, 1.4, 18.8, 25.4, 2.9, 4.3, 7.2</td>
+<td>0, 0, 12.9, 0, 0, 0, 0, 0, 16.1, 25.8, 0, 3.2, 41.9</td>
+<td>1.2, 0, 4.9, 0, 1.2, 26.8, 2.4, 4.9, 8.5, 35.4, 0, 0, 14.6</td>
+</tr>
+<tr>
+<td>Housing type</td>
+<td>60.9, 36, 0, 3, 0</td>
+<td>79.5, 17, 1.1, 0, 2.3</td>
+<td>54.3, 37, 8.7, 0, 0</td>
+<td>80.6, 9.7, 9.7, 0, 0</td>
+<td>56.1, 40.2, 3.7, 0, 0</td>
+</tr>
+<tr>
+<td>Income</td>
+<td>0.5, 7.6, 8.1, 11.2, 12.2, 13.2, 13.2, 11.2, 4.1, 2, 0.5, 16.2</td>
+<td>10.2, 8, 6.8, 17, 12.5, 6.8, 12.5, 6.8, 9.1, 0, 1.1, 9.1</td>
+<td>0.7, 6.5, 15.9, 27.5, 13.8, 6.5, 2.2, 7.2, 0, 0.7, 0, 18.8</td>
+<td>3.2, 0, 16.1, 16.1, 9.7, 29, 3.2, 0, 3.2, 0, 0, 19.4</td>
+<td>1.2, 8.5, 4.9, 6.1, 11, 2.4, 14.6, 1.2, 0, 0, 0, 50</td>
+</tr>
+<tr>
+<td>Support or not</td>
+<td>88.3, 11.7</td>
+<td>93.2, 6.8</td>
+<td>100, 0</td>
+<td>77.4, 22.6</td>
+<td>89, 11</td>
+</tr>
+<tr>
+<td>Rent or own</td>
+<td>37.6, 62.4</td>
+<td>80.7, 19.3</td>
+<td>11.6, 88.4</td>
+<td>45.2, 54.8</td>
+<td>57.3, 42.7</td>
+</tr>
+<tr>
+<td>P87</td>
+<td>82.2, 15.2, 2.5</td>
+<td>83, 17, 0</td>
+<td>44.2, 50.7, 5.1</td>
+<td>54.8, 32.3, 12.9</td>
+<td>52.4, 45.1, 2.4</td>
+</tr>
+<tr>
+<td>P90</td>
+<td>37.6, 35, 27.4</td>
+<td>44.3, 27.3, 28.4</td>
+<td>24.6, 69.6, 5.8</td>
+<td>12.9, 35.5, 51.6</td>
+<td>14.6, 70.7, 14.6</td>
+</tr>
+<tr>
+<td>P91</td>
+<td>84.3, 15.7, 0</td>
+<td>68.2, 30.7, 1.1</td>
+<td>44.2, 55.8, 0</td>
+<td>58.1, 9.7, 32.3</td>
+<td>19.5, 75.6, 4.9</td>
+</tr>
+<tr>
+<td>P92</td>
+<td>73.6, 18.8, 7.6</td>
+<td>72.7, 27.3, 0</td>
+<td>47.1, 50, 2.9</td>
+<td>22.6, 6.5, 71</td>
+<td>11, 79.3, 9.8</td>
+</tr>
+<tr>
+<td>P95</td>
+<td>49.7, 33.5, 16.8</td>
+<td>67, 23.9, 9.1</td>
+<td>59.4, 23.2, 17.4</td>
+<td>12.9, 25.8, 61.3</td>
+<td>13.4, 80.5, 6.1</td>
+</tr>
+<tr>
+<td>P96</td>
+<td>24.9, 25.9, 49.2</td>
+<td>25, 30.7, 44.3</td>
+<td>21, 26.8, 52.2</td>
+<td>9.7, 19.4, 71</td>
+<td>0, 75.6, 24.4</td>
+</tr>
+<tr>
+<td>P98</td>
+<td>72.6, 11.7, 15.7</td>
+<td>44.3, 25, 30.7</td>
+<td>23.9, 39.1, 37</td>
+<td>67.7, 16.1, 16.1</td>
+<td>15.9, 81.7, 2.4</td>
+</tr>
+<tr>
+<td>P100</td>
+<td>28.4, 23.9, 47.7</td>
+<td>51.1, 43.2, 5.7</td>
+<td>26.8, 57.2, 15.9</td>
+<td>9.7, 29, 61.3</td>
+<td>8.5, 79.3, 12.2</td>
+</tr>
+<tr>
+<td>P101</td>
+<td>69.5, 15.7, 14.7</td>
+<td>72.7, 22.7, 4.5</td>
+<td>55.1, 39.1, 5.8</td>
+<td>48.4, 3.2, 48.4</td>
+<td>6.1, 92.7, 1.2</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>2, 23.4, 32.5, 28.4, 13.7, 0</td>
+<td>1.1, 0, 0, 10.2, 25, 63.6</td>
+<td>14.5, 13, 18.1, 20.3, 21, 13</td>
+<td>0, 12.9, 9.7, 6.5, 25.8, 45.2</td>
+<td>1.2, 7.3, 26.8, 20.7, 24.4, 19.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chart">Chart</h3>
+<p><img src="../output/final/lca_full/Rplot01.png" alt="">
+<img src="../output/final/lca_full/Rplot.png" alt="">
+<img src="../output/final/lca_full/Rplot02.png" alt="">
+<img src="../output/final/lca_full/Rplot03.png" alt="">
+<img src="../output/final/lca_full/Rplot04.png" alt="">
+<img src="../output/final/lca_full/Rplot05.png" alt=""></p>
+<h3 id="takeaway">Takeaway</h3>
+<p>The Latent Classic Analytics cluster method hasn't distinguished between people who support or do not support the metro project.</p>
+<h4 id="cluster-1-value-driven-homeowners">Cluster 1: “Value-Driven Homeowners”</h4>
+<ul>
+<li><strong>Profile &amp; Support</strong>
+<ul>
+<li>Predominantly homeowners (62 % own vs. 38 % rent)</li>
+<li>Mixed ages, slightly skewed male</li>
+<li>Strong majority support (88 %) for the Metro project</li>
+</ul>
+</li>
+<li><strong>Perceptions</strong>
+<ul>
+<li>82 % agree it will boost housing values</li>
+<li>84 % agree it will reduce living expenses</li>
+<li>74 % agree it will spur local business</li>
+<li>Only 50 % agree on transit improvements</li>
+<li>49 % doubt it will save travel time</li>
+</ul>
+</li>
+<li><strong>Implication</strong>
+<ul>
+<li>Emphasize property-value gains and cost-saving benefits in homeowner outreach</li>
+<li>Provide concrete data on travel-time savings to address efficiency concerns</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-2-senior-renters-enthusiasts">Cluster 2: “Senior Renters Enthusiasts”</h4>
+<ul>
+<li><strong>Profile &amp; Support</strong>
+<ul>
+<li>Older renters (81 % rent; 64 % in the oldest age bracket)</li>
+<li>Very high support (93 %)</li>
+<li>Balanced income and education levels</li>
+</ul>
+</li>
+<li><strong>Perceptions</strong>
+<ul>
+<li>83 % believe in housing value gains</li>
+<li>67 % see transit benefits</li>
+<li>44 % worry it won’t cut travel time</li>
+<li>44 % expect safety improvements</li>
+</ul>
+</li>
+<li><strong>Implication</strong>
+<ul>
+<li>Highlight mobility and safety features tailored to seniors</li>
+<li>Showcase real-world examples of reduced door-to-destination times</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-3-homeowner-fence-sitters">Cluster 3: “Homeowner Fence-Sitters”</h4>
+<ul>
+<li><strong>Profile &amp; Support</strong>
+<ul>
+<li>Almost entirely homeowners (88 % own)</li>
+<li>100 % support, but mostly neutral on benefits</li>
+</ul>
+</li>
+<li><strong>Perceptions</strong>
+<ul>
+<li>40–70 % “neither agree nor disagree” across benefit items</li>
+</ul>
+</li>
+<li><strong>Implication</strong>
+<ul>
+<li>Provide clear, detailed case studies</li>
+<li>Use before-and-after metrics from comparable neighborhoods</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-4-skeptical-elders">Cluster 4: “Skeptical Elders”</h4>
+<ul>
+<li><strong>Profile &amp; Support</strong>
+<ul>
+<li>Older cohort (45 % in the oldest age bracket)</li>
+<li>Balanced rent/own</li>
+<li>Lowest support (77 %)</li>
+</ul>
+</li>
+<li><strong>Perceptions</strong>
+<ul>
+<li>Less than 50 % disagree that it will be safe or reduce noise</li>
+<li>61 % doubt transit benefits</li>
+<li>71 % doubt travel-time savings</li>
+</ul>
+</li>
+<li><strong>Implication</strong>
+<ul>
+<li>Organize community forums on safety and noise mitigation</li>
+<li>Bring in peer testimonials about actual time savings</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-5-affluent-pragmatists">Cluster 5: “Affluent Pragmatists”</h4>
+<ul>
+<li><strong>Profile &amp; Support</strong>
+<ul>
+<li>Highest-income group (50 % in top bracket)</li>
+<li>Even split homeowners/renters</li>
+<li>89 % in favor, but largely indifferent</li>
+</ul>
+</li>
+<li><strong>Perceptions</strong>
+<ul>
+<li>75–92 % “neither agree nor disagree” on most items</li>
+</ul>
+</li>
+<li><strong>Implication</strong>
+<ul>
+<li>Deliver concise, data-driven briefs on ROI
+<ul>
+<li>Societal: congestion reduction, environmental impact</li>
+<li>Personal: commute times, property appreciation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="k-means">K-means</h2>
+<h3 id="context">Context</h3>
+<p>Since the k-means algorithm is only suitable for dealing with ordinal data (based on scales) or numeric data, categorical data were excluded from this analysis. Excluding variables include occupation and housing type. Binary variable was treated as 1 or 2 scale. Ordinal variables, including age, education level, and income level, were treated as continuous numeric variables. For example, people who only received a middle school degree are two scales level lower than people who received a technical college degree. To better suit the context of the survey table, the final results were yielded back as similar to the previous Latent Classic Analytics table, which indicates the probabilities in each clustering rather than the centroid or means.</p>
+<h3 id="results">Results</h3>
+<p><strong>Results table (k = 6)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Cluster 1</th>
+<th>Cluster 2</th>
+<th>Cluster 3</th>
+<th>Cluster 4</th>
+<th>Cluster 5</th>
+<th>Cluster 6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>line</td>
+<td>36.5, 63.5</td>
+<td>51.4, 48.6</td>
+<td>41.4, 58.6</td>
+<td>72.6, 27.4</td>
+<td>38.6, 61.4</td>
+<td>79.2, 20.8</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>66.7, 33.3</td>
+<td>63.8, 36.2</td>
+<td>65.8, 34.2</td>
+<td>56, 44</td>
+<td>59.1, 40.9</td>
+<td>71.9, 28.1</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>8.3, 19.8, 21.9, 18.8, 2.1, 18.8, 2.1, 3.1, 3.1, 1, 0, 1</td>
+<td>0, 0, 3.8, 16.2, 0, 16.2, 4.8, 19, 5.7, 29.5, 3.8, 1</td>
+<td>9.9, 8.1, 4.5, 26.1, 3.6, 19.8, 4.5, 9.9, 3.6, 7.2, 0.9, 1.8</td>
+<td>0, 16.7, 3.6, 20.2, 1.2, 26.2, 4.8, 6, 3.6, 13.1, 2.4, 2.4</td>
+<td>2.3, 6.8, 9.1, 15.9, 4.5, 2.3, 11.4, 13.6, 2.3, 25, 6.8, 0</td>
+<td>2.1, 9.4, 4.2, 18.8, 2.1, 13.5, 7.3, 14.6, 1, 17.7, 8.3, 1</td>
+</tr>
+<tr>
+<td>Income</td>
+<td>9.4, 15.6, 11.5, 24, 14.6, 7.3, 5.2, 4.2, 2.1, 0, 0, 6.2</td>
+<td>1, 5.7, 8.6, 15.2, 11.4, 12.4, 12.4, 11.4, 4.8, 1.9, 0, 15.2</td>
+<td>1.8, 10.8, 16.2, 21.6, 20.7, 6.3, 9, 3.6, 0, 0, 0, 9.9</td>
+<td>1.2, 0, 4.8, 8.3, 4.8, 10.7, 9.5, 4.8, 3.6, 0, 0, 52.4</td>
+<td>0, 9.1, 11.4, 15.9, 11.4, 11.4, 11.4, 9.1, 4.5, 4.5, 2.3, 9.1</td>
+<td>0, 1, 6.2, 8.3, 8.3, 11.5, 12.5, 11.5, 5.2, 1, 1, 33.3</td>
+</tr>
+<tr>
+<td>Support or not</td>
+<td>100, 0</td>
+<td>100, 0</td>
+<td>100, 0</td>
+<td>100, 0</td>
+<td>0, 100</td>
+<td>99, 1</td>
+</tr>
+<tr>
+<td>Rent or Own</td>
+<td>37.5, 62.5</td>
+<td>8.6, 91.4</td>
+<td>4.5, 95.5</td>
+<td>84.5, 15.5</td>
+<td>29.5, 70.5</td>
+<td>91.7, 8.3</td>
+</tr>
+<tr>
+<td>P87</td>
+<td>84.4, 15.6, 0</td>
+<td>79, 19, 1.9</td>
+<td>32.4, 60.4, 7.2</td>
+<td>59.5, 36.9, 3.6</td>
+<td>65.9, 22.7, 11.4</td>
+<td>80.2, 19.8, 0</td>
+</tr>
+<tr>
+<td>P90</td>
+<td>43.8, 38.5, 17.7</td>
+<td>30.5, 44.8, 24.8</td>
+<td>18.9, 72.1, 9</td>
+<td>27.4, 45.2, 27.4</td>
+<td>36.4, 34.1, 29.5</td>
+<td>30.2, 42.7, 27.1</td>
+</tr>
+<tr>
+<td>P91</td>
+<td>87.5, 11.5, 1</td>
+<td>91.4, 8.6, 0</td>
+<td>23.4, 73.9, 2.7</td>
+<td>42.9, 50, 7.1</td>
+<td>59.1, 31.8, 9.1</td>
+<td>55.2, 43.8, 1</td>
+</tr>
+<tr>
+<td>P92</td>
+<td>78.1, 19.8, 2.1</td>
+<td>85.7, 12.4, 1.9</td>
+<td>22.5, 65.8, 11.7</td>
+<td>10.7, 63.1, 26.2</td>
+<td>43.2, 36.4, 20.5</td>
+<td>75, 24, 1</td>
+</tr>
+<tr>
+<td>P95</td>
+<td>52.1, 32.3, 15.6</td>
+<td>56.2, 31.4, 12.4</td>
+<td>50.5, 36, 13.5</td>
+<td>7.1, 65.5, 27.4</td>
+<td>29.5, 31.8, 38.6</td>
+<td>72.9, 20.8, 6.2</td>
+</tr>
+<tr>
+<td>P96</td>
+<td>45.8, 37.5, 16.7</td>
+<td>19, 24.8, 56.2</td>
+<td>7.2, 36.9, 55.9</td>
+<td>20.2, 54.8, 25</td>
+<td>18.2, 40.9, 40.9</td>
+<td>6.2, 16.7, 77.1</td>
+</tr>
+<tr>
+<td>P98</td>
+<td>45.8, 29.2, 25</td>
+<td>69.5, 19, 11.4</td>
+<td>25.2, 45, 29.7</td>
+<td>40.5, 48.8, 10.7</td>
+<td>79.5, 18.2, 2.3</td>
+<td>36.5, 25, 38.5</td>
+</tr>
+<tr>
+<td>P100</td>
+<td>51, 43.8, 5.2</td>
+<td>18.1, 31.4, 50.5</td>
+<td>16.2, 61.3, 22.5</td>
+<td>13.1, 47.6, 39.3</td>
+<td>27.3, 22.7, 50</td>
+<td>40.6, 46.9, 12.5</td>
+</tr>
+<tr>
+<td>P101</td>
+<td>65.6, 27.1, 7.3</td>
+<td>75.2, 22.9, 1.9</td>
+<td>41.4, 45.9, 12.6</td>
+<td>19, 57.1, 23.8</td>
+<td>45.5, 31.8, 22.7</td>
+<td>76, 19.8, 4.2</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>1, 0, 9.4, 21.9, 36.5, 31.2</td>
+<td>9.5, 34.3, 31.4, 20, 4.8, 0</td>
+<td>12.6, 17.1, 28.8, 17.1, 14.4, 9.9</td>
+<td>1.2, 8.3, 13.1, 19, 22.6, 35.7</td>
+<td>0, 15.9, 22.7, 20.5, 25, 15.9</td>
+<td>0, 5.2, 19.8, 27.1, 20.8, 27.1</td>
+</tr>
+<tr>
+<td>count</td>
+<td>96</td>
+<td>105</td>
+<td>111</td>
+<td>84</td>
+<td>44</td>
+<td>96</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chart">Chart</h3>
+<p><img src="../output/final/k-means_full/Rplot.png" alt="">
+<img src="../output/final/k-means_full/group6_1.png" alt="">
+<img src="../output/final/k-means_full/Rplot01.png" alt="">
+<img src="../output/final/k-means_full/Rplot6_2.png" alt="">
+<img src="../output/final/k-means_full/Rplot03.png" alt="">
+<img src="../output/final/k-means_full/Rplot6_3.png" alt="">
+<img src="../output/final/k-means_full/Rplot04.png" alt="">
+<img src="../output/final/k-means_full/Rplot6_4.png" alt="">
+<img src="../output/final/k-means_full/Rplot05.png" alt="">
+<img src="../output/final/k-means_full/Rplot6_5.png" alt="">
+<img src="../output/final/k-means_full/Rplot06.png" alt="">
+<img src="../output/final/k-means_full/Rplot6_6.png" alt=""></p>
+<h3 id="takeaway">Takeaway</h3>
+<p>The k-means clustering successfully separates the non-support groups from other clusters.</p>
+<h4 id="cluster-1-homeowner-traditionalists">Cluster 1: Homeowner Traditionalists</h4>
+<ul>
+<li><strong>Demographics</strong>: Predominantly male; majority homeowners; mid-to-high education and moderate incomes.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>Expense concern: 87.5%</li>
+<li>Housing-value optimism: 84.4%</li>
+<li>Business benefits optimism: 78.1%</li>
+<li>Public-transit support: 52.1%</li>
+</ul>
+</li>
+<li><strong>Label</strong>: supportive overall but especially attentive to cost and housing-value improvements.</li>
+</ul>
+<h4 id="cluster-2-prosperous-skeptical-owners">Cluster 2: Prosperous Skeptical Owners</h4>
+<ul>
+<li><strong>Demographics</strong>: Balanced gender; overwhelmingly homeowners; skew toward higher education and income deciles.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>Expense concern: 91.4% (highest)</li>
+<li>Business-benefits optimism: 85.7%</li>
+<li>Noise worry: 69.5% (very high)</li>
+<li>Travel-time gains doubt: 56.2% disagree</li>
+<li>Public-space benefits doubt: 50.5% disagree</li>
+</ul>
+</li>
+<li><strong>Label</strong>: affluent supporters of investment but doubtful of time- and space-related gains.</li>
+</ul>
+<h4 id="cluster-3-neutral-lean-supporters">Cluster 3: Neutral-Lean Supporters</h4>
+<ul>
+<li><strong>Demographics</strong>: Mostly homeowners; moderate gender balance; education/income clustered around mid-levels.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>“Neither agree nor disagree” majority on housing values (60.4%), safety (72.1%), expense (73.9%) and business (65.8%)</li>
+<li>Moderate transit support: 50.5%</li>
+</ul>
+</li>
+<li><strong>Label</strong>: generally in favor but largely indifferent on most project impacts.</li>
+</ul>
+<h4 id="cluster-4-older-renters-with-low-transit-expectations">Cluster 4: Older Renters with Low Transit Expectations</h4>
+<ul>
+<li><strong>Demographics</strong>: Slight female tilt; predominantly renters; older age profile; many with missing income data.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>Housing-value support: 59.5%</li>
+<li>Expense concern: 42.9%</li>
+<li>Business-benefits optimism: 10.7%</li>
+<li>Transit-benefits optimism: 7.1%</li>
+<li>Mixed noise/public-space views</li>
+</ul>
+</li>
+<li><strong>Label</strong>:  supportive on housing values but skeptical about business and transit improvements.</li>
+</ul>
+<h4 id="cluster-5-non-supporters--noise-worriers">Cluster 5: Non-Supporters &amp; Noise Worriers</h4>
+<ul>
+<li><strong>Demographics</strong>: Majority homeowners; balanced gender; mid-to-high education and income.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>100% non-support for the project</li>
+<li>Noise concern: 79.5%</li>
+<li>Expense worry: 59.1%</li>
+<li>Public-transit support: 29.5%</li>
+<li>Public-space support: 27.3%</li>
+</ul>
+</li>
+<li><strong>Label</strong>: firmly opposed, driven by noise and cost concerns.</li>
+</ul>
+<h4 id="cluster-6-young-transit-enthusiasts">Cluster 6: Young Transit Enthusiasts</h4>
+<ul>
+<li><strong>Demographics</strong>: Heavily male; overwhelmingly renters; younger-to-mid age; moderate education/income.</li>
+<li><strong>Perceptions</strong>:
+<ul>
+<li>Housing-value support: 80.2%</li>
+<li>Business-benefits optimism: 75%</li>
+<li>Transit-benefits optimism: 72.9%</li>
+<li>Overall project support: 76%</li>
+<li>Travel-time gains doubt: 77.1% disagree</li>
+</ul>
+</li>
+<li><strong>Label</strong>: enthusiastic about broad benefits but skeptical it will save travel time.</li>
+</ul>
+<h2 id="hierarchical-clustering">Hierarchical Clustering</h2>
+<p>Hierarchical clustering is a family of methods for grouping objects into a tree-like structure (a dendrogram) based on their pairwise dissimilarities. Unlike k-means, you don’t need to pre-specify the number of clusters (though you can “cut” the tree at any level to obtain a chosen number).</p>
+<h3 id="results">Results</h3>
+<p><strong>Summary tables (k=5)</strong>
+The table below summarizes clustering results for k=5 clusters. Each row represents a variable, and the values in the cells indicate the proportions or percentages for each cluster. For variables with multiple categories, the values are grouped and separated for clarity.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Cluster 1</th>
+<th>Cluster 2</th>
+<th>Cluster 3</th>
+<th>Cluster 4</th>
+<th>Cluster 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>line</td>
+<td>83.2, 16.8</td>
+<td>16.7, 83.3</td>
+<td>84, 16</td>
+<td>43.9, 56.1</td>
+<td>27.4, 72.6</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>76.6, 23.4</td>
+<td>25, 75</td>
+<td>56, 44</td>
+<td>75, 25</td>
+<td>58.3, 41.7</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>2.2, 16.1, 5.1, 17.5, 3.6,<br>14.6, 8, 6.6, 2.9, 16.8,<br>5.1, 1.5</td>
+<td>8.3, 6.7, 10, 13.3, 5,<br>16.7, 1.7, 15, 0, 18.3,<br>3.3, 1.7</td>
+<td>2.7, 9.3, 5.3, 28, 0,<br>25.3, 8, 5.3, 1.3, 6.7,<br>2.7, 5.3</td>
+<td>2.8, 7.8, 10, 20.6, 1.7,<br>15.6, 4.4, 17.8, 3.3, 13.9,<br>2.2, 0</td>
+<td>8.3, 8.3, 7.1, 19, 0,<br>19, 2.4, 6, 8.3, 17.9,<br>3.6, 0</td>
+</tr>
+<tr>
+<td>Income</td>
+<td>2.9, 5.8, 8.8, 12.4, 5.8,<br>10.9, 7.3, 10.9, 6.6, 0,<br>0.7, 27.7</td>
+<td>5, 11.7, 13.3, 13.3, 25,<br>6.7, 6.7, 5, 3.3, 1.7,<br>1.7, 6.7</td>
+<td>1.3, 8, 6.7, 8, 13.3,<br>5.3, 13.3, 1.3, 1.3, 0,<br>0, 41.3</td>
+<td>2.8, 7.2, 9.4, 18.9, 10.6,<br>12.2, 12.2, 7.8, 2.2, 1.7,<br>0, 15</td>
+<td>0, 4.8, 13.1, 23.8, 16.7,<br>8.3, 8.3, 7.1, 1.2, 1.2,<br>0, 15.5</td>
+</tr>
+<tr>
+<td>Support or not</td>
+<td>97.1, 2.9</td>
+<td>95, 5</td>
+<td>93.3, 6.7</td>
+<td>83.9, 16.1</td>
+<td>95.2, 4.8</td>
+</tr>
+<tr>
+<td>Rent or own</td>
+<td>73.7, 26.3</td>
+<td>21.7, 78.3</td>
+<td>58.7, 41.3</td>
+<td>30.6, 69.4</td>
+<td>10.7, 89.3</td>
+</tr>
+<tr>
+<td>P87</td>
+<td>78.1, 20.4, 1.5</td>
+<td>63.3, 31.7, 5</td>
+<td>58.7, 40, 1.3</td>
+<td>85, 10, 5</td>
+<td>16.7, 79.8, 3.6</td>
+</tr>
+<tr>
+<td>P90</td>
+<td>38, 43.1, 19</td>
+<td>26.7, 35, 38.3</td>
+<td>25.3, 68, 6.7</td>
+<td>40.6, 27.2, 32.2</td>
+<td>3.6, 92.9, 3.6</td>
+</tr>
+<tr>
+<td>P91</td>
+<td>65, 30.7, 4.4</td>
+<td>91.7, 5, 3.3</td>
+<td>10.7, 88, 1.3</td>
+<td>82.8, 14.4, 2.8</td>
+<td>23.8, 75, 1.2</td>
+</tr>
+<tr>
+<td>P92</td>
+<td>62.8, 29.9, 7.3</td>
+<td>76.7, 18.3, 5</td>
+<td>6.7, 89.3, 4</td>
+<td>65.6, 21.7, 12.8</td>
+<td>41.7, 46.4, 11.9</td>
+</tr>
+<tr>
+<td>P95</td>
+<td>56.2, 28.5, 15.3</td>
+<td>28.3, 68.3, 3.3</td>
+<td>14.7, 78.7, 6.7</td>
+<td>57.8, 17.2, 25</td>
+<td>53.6, 27.4, 19</td>
+</tr>
+<tr>
+<td>P96</td>
+<td>19.7, 19, 61.3</td>
+<td>18.3, 53.3, 28.3</td>
+<td>6.7, 80, 13.3</td>
+<td>27.8, 25, 47.2</td>
+<td>11.9, 23.8, 64.3</td>
+</tr>
+<tr>
+<td>P98</td>
+<td>37.2, 33.6, 29.2</td>
+<td>43.3, 46.7, 10</td>
+<td>24, 69.3, 6.7</td>
+<td>66.7, 8.3, 25</td>
+<td>40.5, 35.7, 23.8</td>
+</tr>
+<tr>
+<td>P100</td>
+<td>26.3, 56.2, 17.5</td>
+<td>20, 50, 30</td>
+<td>16, 72, 12</td>
+<td>38.9, 16.7, 44.4</td>
+<td>21.4, 56, 22.6</td>
+</tr>
+<tr>
+<td>P101</td>
+<td>62.8, 24.8, 12.4</td>
+<td>50, 36.7, 13.3</td>
+<td>10.7, 89.3, 0</td>
+<td>73.3, 14.4, 12.2</td>
+<td>48.8, 39.3, 11.9</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>0.7, 8, 21.9, 24.1, 14.6, 30.7</td>
+<td>0, 21.7, 15, 21.7, 26.7, 15</td>
+<td>6.7, 8, 26.7, 21.3, 17.3, 20</td>
+<td>5.6, 15, 20.6, 17.8, 26.7, 14.4</td>
+<td>11.9, 20.2, 21.4, 21.4, 10.7, 14.3</td>
+</tr>
+<tr>
+<td>count</td>
+<td>137</td>
+<td>60</td>
+<td>75</td>
+<td>180</td>
+<td>84</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chart">Chart</h3>
+<p><img src="../output/final/hierarchical_full/Rplot.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot01.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot02.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot03.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot04.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot05.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot06.png" alt="">
+<img src="../output/final/hierarchical_full/Rplot07.png" alt=""></p>
+<h3 id="takeaway">Takeaway</h3>
+<p>The Hierarchical clustering method did not separate the non-support group from others.</p>
+<h4 id="cluster-1-optimistic-renters">Cluster 1: Optimistic Renters</h4>
+<ul>
+<li><strong>Demographics:</strong> Predominantly male (76.6%) and renters (73.7%), with a wide income spread and a skew toward younger adults.</li>
+<li><strong>Support:</strong> Nearly unanimous backing (97.1%).</li>
+<li><strong>Perceptions:</strong>
+<ul>
+<li>Strongly believe in increased housing values (78.1%) and business opportunities (62.8%).</li>
+<li>Majority see public transit benefits (56.2%).</li>
+<li>However, 61.3% <strong>disagree</strong> that it will save them time, and nearly 30% express moderate noise concerns.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-2-cost-sensitive-homeowners">Cluster 2: Cost-Sensitive Homeowners</h4>
+<ul>
+<li><strong>Demographics:</strong> Largely female (75%) and homeowners (78.3%), spanning middle to older age groups.</li>
+<li><strong>Support:</strong> High overall (95%).</li>
+<li><strong>Perceptions:</strong>
+<ul>
+<li>Overwhelming worry about expense (91.7% agree it’s too costly).</li>
+<li>Strong optimism about business growth (76.7% agree).</li>
+<li>Mixed or neutral on safety and public transit improvements.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-3-ambivalent-renters">Cluster 3: Ambivalent Renters</h4>
+<ul>
+<li><strong>Demographics:</strong> Mixed gender (56% male) and renters (58.7%), with a tilt toward younger adults.</li>
+<li><strong>Support:</strong> Solid backing (93.3%), but the smallest margin among clusters.</li>
+<li><strong>Perceptions:</strong>
+<ul>
+<li>Over 80% neither agree nor disagree on expense, safety, and time savings.</li>
+<li>Only modest agreement on public transit (14.7%) and business (6.7%).</li>
+<li>This group is largely neutral—open to persuasion but not strongly sold.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-4-skeptical-homeowners">Cluster 4: Skeptical Homeowners</h4>
+<ul>
+<li><strong>Demographics:</strong> Mostly male (75%) homeowners (69.4%), skewing middle-aged.</li>
+<li><strong>Support:</strong> Lowest net support (83.9%), with the highest non-support share (16.1%).</li>
+<li><strong>Perceptions:</strong>
+<ul>
+<li>High concern about expense (82.8% agree) and noise (66.7%).</li>
+<li>Significant safety worries (40.6% agree) coupled with doubt about time savings (47.2% disagree).</li>
+<li>Also skeptical of public space benefits (44.4% disagree).</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-5-neutral-homeowners-with-time-doubts">Cluster 5: Neutral Homeowners with Time Doubts</h4>
+<ul>
+<li><strong>Demographics:</strong> Predominantly homeowners (89.3%), fairly balanced gender.</li>
+<li><strong>Support:</strong> Strong overall (95.2%).</li>
+<li><strong>Perceptions:</strong>
+<ul>
+<li>Overwhelming neutrality on housing values (79.8%), safety (92.9%), expense (75%), business (46.4%), and public space (56%).</li>
+<li>Yet most (64.3%) <strong>disagree</strong> that it will save them time—suggesting they see little personal convenience gain.</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
