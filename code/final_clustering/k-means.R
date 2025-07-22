@@ -46,47 +46,85 @@ k_means_summary_table <- km_data_f %>%
 k_means_summary_table$count<-table(km_data_f$cluster)
 print(k_means_summary_table)
 
-# --- optional: view centroids on the original Likert‐scale for interpretation ---
-centroids <- km_final$centers %>%
-  as.data.frame() %>%
-  # if you want to back‐transform to original 1–5 scale roughly:
-  sweep(., 2, attr(km_matrix, "scaled:scale"), `*`) %>%
-  sweep(., 2, attr(km_matrix, "scaled:center"), `+`)
+write.csv(k_means_summary_table, "output/k_means_summary.csv", row.names = FALSE)
 
-print(centroids)
+df <- read.csv("output/k_means_summary.csv", 
+               stringsAsFactors = FALSE, 
+               check.names = FALSE)%>%
+  filter(cluster== 6) %>%  # Exclude cluster 6 if needed
+  select(-count)
+R <- nrow(df)
+group_probs <- rep(1/R, R)
 
+vars <- names(df)[-1]
+probs <- lapply(vars, function(var) {
+  # split each row’s string into numbers, build a matrix (R × K_j)
+  mat <- t(sapply(df[[var]], function(cell) {
+    nums <- as.numeric(strsplit(cell, ",\\s*")[[1]])
+    nums / 100            # convert percent to [0,1]
+  }))
+  # give the columns names if you like (optional)
+  colnames(mat) <- paste0("cat", seq_len(ncol(mat)))
+  mat
+})
+names(probs) <- vars
 
-#### additional plot
-# --- 1. Run PCA on the scaled matrix you already have ---
-pca <- prcomp(km_matrix, center = FALSE, scale. = FALSE)
+plot_custom_group_probs <- function(probs, group_probs, var_labels = names(probs)) {
+  R <- length(group_probs)
+  J <- length(probs)
+  old_par <- par(no.readonly = TRUE)
+  on.exit(par(old_par))
+  
+  par(mfrow = c(R, J), mar = c(4, 4, 2, 1))
+  for (r in seq_len(R)) {
+    for (j in seq_len(J)) {
+      p <- probs[[j]][r, ]
+      cn <- colnames(probs[[j]])
+      barplot(p,
+              horiz     = TRUE,
+              names.arg = cn,
+              main      = paste0("Grp ", r, ": ", var_labels[j]),
+              xlim      = c(0, 1),
+              las       = 1)
+    }
+  }
+}
 
-# --- 2. Build a data frame of the first two PCs + cluster labels ---
-plot_data <- pca$x[, 1:2] %>%
-  as.data.frame() %>%
-  setNames(c("PC1", "PC2")) %>%
-  mutate(cluster = km_data_f$cluster)
+R <- length(group_probs)
+first_idx <- 1:3
+second_idex<- 4:6
+third_idx <- 7:9
+forth_idx <- 10:12
+fifth_idx <- 13:15
+sixth_idx <- 16
 
-# --- 3. (Optional) Compute centroids in PC space for annotation ---
-centroids_pc <- predict(pca,
-                        newdata = sweep(centroids, 2,
-                                        attr(km_matrix, "scaled:center"),
-                                        `-`) %>%
-                          sweep(2,
-                                attr(km_matrix, "scaled:scale"),
-                                `/`)
-)[, 1:2] %>%
-  as.data.frame() %>%
-  setNames(c("PC1", "PC2")) %>%
-  mutate(cluster = factor(1:nrow(.)))
-
-# --- 4. Plot ---
-ggplot(plot_data, aes(x = PC1, y = PC2, color = cluster)) +
-  geom_point(size = 3, alpha = 0.8) +
-  stat_ellipse(type = "norm", linetype = 2, level = 0.68) +  # 1-sd contour
-  geom_point(data = centroids_pc, aes(x = PC1, y = PC2),
-             shape = 17, size = 5, stroke = 1.5, show.legend = FALSE) +
-  labs(title = paste("K-means Clusters (k =", final_k, ") in PCA Space"),
-       x = "Principal Component 1",
-       y = "Principal Component 2",
-       color = "Cluster") +
-  theme_minimal(base_size = 14)
+plot_custom_group_probs(
+  probs[first_idx], 
+  group_probs, 
+  var_labels = names(probs)[first_idx]
+)
+plot_custom_group_probs(
+  probs[second_idex], 
+  group_probs, 
+  var_labels = names(probs)[second_idex]
+)
+plot_custom_group_probs(
+  probs[third_idx], 
+  group_probs, 
+  var_labels = names(probs)[third_idx]
+)
+plot_custom_group_probs(
+  probs[forth_idx], 
+  group_probs, 
+  var_labels = names(probs)[forth_idx]
+)
+plot_custom_group_probs(
+  probs[fifth_idx], 
+  group_probs, 
+  var_labels = names(probs)[fifth_idx]
+)
+plot_custom_group_probs(
+  probs[sixth_idx], 
+  group_probs, 
+  var_labels = names(probs)[sixth_idx]
+)
