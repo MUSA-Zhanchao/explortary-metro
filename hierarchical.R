@@ -47,5 +47,5 @@ summary_table2 <- hc_data %>%
                    ~ paste0(round(prop.table(table(.)) * 100, 1), collapse = ", ")
   ))
 summary_table2$count <- table(hc_data$cluster2)
-cat("\nCluster summaries (k=2):\n")
+cat("\nCluster summaries (k=5):\n")
 print(summary_table2)
