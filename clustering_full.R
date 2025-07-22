@@ -13,7 +13,7 @@ data <- data %>%
   )%>%
   select(-Estacion,-P9)
 
-data<- data %>%
+data <- data %>%
   mutate(across(-ID_Hogar, as_factor))
 
 f <- as.formula(paste("cbind(", paste(names(data)[-1], collapse = ", "), ") ~ 1"))
