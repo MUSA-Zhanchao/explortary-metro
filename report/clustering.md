@@ -303,7 +303,7 @@ The Hierarchical clustering method didn't separate the non-support group from ot
 - **Perceptions:**  
   - Strongly believe in increased housing values (78.1%) and business opportunities (62.8%).  
   - Majority see public transit benefits (56.2%).  
-  - However, 61.3% **disagree** that it will save them time, and nearly 30% express moderate noise concerns. :contentReference[oaicite:0]{index=0}  
+  - However, 61.3% **disagree** that it will save them time, and nearly 30% express moderate noise concerns.  
 
 #### Cluster 2: Cost-Sensitive Homeowners  
 - **Demographics:** Largely female (75%) and homeowners (78.3%), spanning middle to older age groups.  
