@@ -17,7 +17,7 @@ diss <- daisy(hc_data %>% select(-ID_Hogar), metric = "gower")
 # --- Build hierarchical clustering tree ---
 hc <- hclust(diss, method = "ward.D2")
 
-# 可视化树状图
+# Visualize dendrogram
 plot(hc, labels = FALSE, hang = -1, main = "Dendrogram (Ward D2)")
 # 在 k=3 处切分并标出
 rect.hclust(hc, k = 3, border = 2:4)
