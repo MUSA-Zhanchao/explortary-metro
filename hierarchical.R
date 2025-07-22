@@ -23,7 +23,7 @@ plot(hc, labels = FALSE, hang = -1, main = "Dendrogram (Ward D2)")
 rect.hclust(hc, k = 3, border = 2:4)
 
 
-# --- 评估不同簇数的平均轮廓系数 ---
+# --- Evaluate average silhouette coefficient for different cluster numbers ---
 sil_results <- data.frame(Clusters = 2:5, Avg_Silhouette = NA_real_)
 
 for(k in sil_results$Clusters) {
