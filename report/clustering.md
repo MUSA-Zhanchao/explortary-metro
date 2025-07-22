@@ -309,4 +309,3 @@ The table below summarizes clustering results for k=5 clusters. Each row represe
 ![](../output/final/hierarchical_full/Rplot05.png)
 ![](../output/final/hierarchical_full/Rplot06.png)
 ![](../output/final/hierarchical_full/Rplot07.png)
-
