@@ -29,7 +29,7 @@
 
 ## Latent Classic Analytics (LCA) Clustering
 
-Latent Class Analysis is a model‐based clustering method for finding unobserved (“latent”) subgroups in multivariate categorical data. Unlike distance‐based clustering (e.g., k-means), LCA assumes that an underlying categorical variable (the latent class) drives the joint distribution of observed indicators.
+Latent Class Analysis is a model-based clustering method for finding unobserved (“latent”) subgroups in multivariate categorical data. Unlike distance-based clustering (e.g., k-means), LCA assumes that an underlying categorical variable (the latent class) drives the joint distribution of observed indicators.
 
 **Model Formulation**
 
