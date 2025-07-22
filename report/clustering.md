@@ -327,12 +327,12 @@ The Hierarchical clustering method didn't separate the non-support group from ot
 - **Perceptions:**  
   - High concern about expense (82.8% agree) and noise (66.7%).  
   - Significant safety worries (40.6% agree) coupled with doubt about time savings (47.2% disagree).  
-  - Also skeptical of public space benefits (44.4% disagree). :contentReference[oaicite:3]{index=3}  
+  - Also skeptical of public space benefits (44.4% disagree).  
 
 #### Cluster 5: Neutral Homeowners with Time Doubts  
 - **Demographics:** Predominantly homeowners (89.3%), fairly balanced gender.  
 - **Support:** Strong overall (95.2%).  
 - **Perceptions:**  
   - Overwhelming neutrality on housing values (79.8%), safety (92.9%), expense (75%), business (46.4%), and public space (56%).  
-  - Yet most (64.3%) **disagree** that it will save them time—suggesting they see little personal convenience gain. :contentReference[oaicite:4]{index=4}  
+  - Yet most (64.3%) **disagree** that it will save them time—suggesting they see little personal convenience gain.  
 
