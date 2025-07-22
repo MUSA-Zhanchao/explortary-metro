@@ -46,22 +46,22 @@ $$
 **Estimation via EM**
 
 1. **E‐step**: Compute posterior class membership probabilities for each case.
+   
+<img
+  src="https://latex.codecogs.com/svg.latex?
+    \gamma_{i,c}
+    = \frac{\pi_c\prod_{j=1}^{J}\theta_{j,c}(y_{i,j})}
+           {\sum_{c'=1}^{K}\pi_{c'}\prod_{j=1}^{J}\theta_{j,c'}(y_{i,j})}"
+  alt="LCA formula" />
 
-   $$
-   \gamma_{i,c}
-   = P(C=c \mid \mathbf{Y}_i)
-   = \frac{\pi_c \prod_j \theta_{j,c}(y_{i,j})}
-          {\sum_{c'} \pi_{c'} \prod_j \theta_{j,c'}(y_{i,j})}
-   $$
 
-2. **M‐step**: Update parameters using these posteriors:
 
-   $$
-   \pi_c \leftarrow \frac{1}{N} \sum_{i=1}^N \gamma_{i,c},
-   \quad
-   \theta_{j,c}(k) \leftarrow
-   \frac{\sum_{i: y_{i,j}=k} \gamma_{i,c}}{\sum_i \gamma_{i,c}}
-   $$
+
+3. **M‐step**: Update parameters using these posteriors:
+
+![Posterior class probability formula](https://latex.codecogs.com/svg.latex?%5Cdpi%7B120%7D%20%5Cgamma_%7Bi%2Cc%7D%20%3D%20P%28C%3Dc%7C%5Cmathbf%7BY%7D_i%29%20%3D%20%5Cfrac%7B%5Cpi_c%20%5Cprod_%7Bj%3D1%7D%5E%7BJ%7D%20%5Ctheta_%7Bj%2Cc%7D%28y_%7Bi%2Cj%7D%29%7D%7B%5Csum_%7Bc'%3D1%7D%5E%7BK%7D%20%5Cpi_%7Bc'%7D%20%5Cprod_%7Bj%3D1%7D%5E%7BJ%7D%20%5Ctheta_%7Bj%2Cc'%7D%28y_%7Bi%2Cj%7D%29%7D)
+
+
 
 Iterate until convergence of the log‐likelihood.
 
