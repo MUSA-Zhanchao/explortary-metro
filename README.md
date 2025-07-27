@@ -132,3 +132,16 @@ Non-supporters of the Bogotá Metro project are predominantly renters (69%), lon
 Wait
 
 # Unsupervised Cluster for all samples
+
+## Converting Markdown to DOCX
+The repository includes a script `scripts/convert_md_to_docx.py` that converts files in the `report` directory to DOCX format. Before running this script or the accompanying GitHub Actions workflow, install the Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then you can manually run:
+
+```bash
+python scripts/convert_md_to_docx.py
+```
