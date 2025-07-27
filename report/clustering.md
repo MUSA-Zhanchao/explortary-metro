@@ -18,7 +18,7 @@
   - 45-54
   - 55-64
   - Over 64
- 
+
 
 ### Perception Variable
 - P68: Whether to support (binary)
@@ -345,7 +345,7 @@ The Hierarchical clustering method did not separate the non-support group from o
 
 ## Key takeaway
 
-Across latent class, k-means, and hierarchical clustering, housing tenure and demographic factors consistently shape both support for and perceptions of the Metro project, particularly renter versus owner status, age, and income.  Renters, especially younger cohorts, overwhelmingly support the project and anticipate gains in housing values and expense reductions, yet remain skeptical about travel-time savings. Conversely, older homeowners and high-income groups exhibit more ambivalence: while they acknowledge potential economic and safety benefits, they express concerns about noise, cost, and personal convenience, resulting in a lower net support or neutral stance. 
+Across latent class, k-means, and hierarchical clustering, housing tenure and demographic factors consistently shape both support for and perceptions of the Metro project, particularly renter versus owner status, age, and income.  Renters, especially younger cohorts, overwhelmingly support the project and anticipate gains in housing values and expense reductions, yet remain skeptical about travel-time savings. Conversely, older homeowners and high-income groups exhibit more ambivalence: while they acknowledge potential economic and safety benefits, they express concerns about noise, cost, and personal convenience, resulting in a lower net support or neutral stance.
 
 From a technical standpoint, k-means clustering identified almost 99% (44 out of 45) of the metro skeptical sample as belonging to one particular cluster (k-means cluster 5). Those non-support groups are predominantly majority dominated by renters, with mid- to higher-income levels and educational backgrounds. They worried about potential noise concerns, increased living expenses, and were not satisfied with the current public transportation in Bogotá (mainly due to cost of living and noise concerns).  The Hierarchical and Latent Classic Choice method yields mixed results, but with relatively straightforward labels for each clustering specified in the main results documentation.
 
