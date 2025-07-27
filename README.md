@@ -144,4 +144,3 @@ Then you can manually run:
 ```bash
 python scripts/convert_md_to_docx.py
 ```
-
