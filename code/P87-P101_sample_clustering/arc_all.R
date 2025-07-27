@@ -4,7 +4,7 @@ library(tidyverse)
 
 # --- 数据载入 & 清洗 ---
 hog <- readRDS("data/008-24 BBDD Procesamiento Hogares.rds")
-personas<- readRDS("data/008-24 BBDD Procesamiento personas.rds")
+personas<- readRDS("data/008-24 BBDD Procesamiento Personas.rds")
 
 check<- personas%>%
   group_by(posicionActual)%>%
