@@ -3,7 +3,7 @@
 
 **Author**: Zhanchao Yang, Chuwen Zhong
 
-Summer 2025
+Summer 2025, Project complete
 
 # Introduction & Research Questions
 
